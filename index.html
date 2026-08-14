@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <title>DataCareer Academy 🎀 — El Camino de Julieth</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Floating Love Banners on Large Screens -->
+  <aside class="love-banner-left">
+    <i class="fa-solid fa-heart love-icon-lg"></i>
+    <p class="love-text">"Princesa Julieth, ¡estoy súper orgulloso de ti! Cada lección te acerca más a tu meta 💖✨"</p>
+  </aside>
+
+  <aside class="love-banner-right">
+    <i class="fa-solid fa-crown love-icon-lg"></i>
+    <p class="love-text">"¡Tu novio cree en ti al 100%! Sos la mujer más inteligente y vas a ser una dura en SQL 💕🎀"</p>
+  </aside>
+
+  <!-- Mobile Top Navigation Bar -->
+  <div class="mobile-header">
+    <button class="mobile-menu-btn" onclick="toggleMobileSidebar()">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+    <div class="mobile-logo">🎀 DataCareer Academy</div>
+    <div class="mobile-xp"><i class="fa-solid fa-heart text-pink"></i> <span id="mobile-xp-val">1250</span></div>
+  </div>
+
+  <!-- App Layout -->
+  <div id="app" class="app-layout">
+    
+    <!-- Main Sidebar -->
+    <aside id="sidebar" class="sidebar">
+      <div class="sidebar-header">
+        <div class="logo">
+          <div class="kitty-logo">🎀</div>
+          <div class="logo-text">
+            <span class="brand-title">DataCareer</span>
+            <span class="brand-subtitle">Academy • Julieth 💕</span>
+          </div>
+        </div>
+        <button class="sidebar-close-btn" onclick="toggleMobileSidebar()">&times;</button>
+      </div>
+
+      <!-- Student Profile Card -->
+      <div class="profile-card">
+        <div class="avatar-container">
+          <div class="avatar">J</div>
+        </div>
+        <div class="profile-info">
+          <h4 class="student-name">Julieth 👑</h4>
+          <p class="student-role">Futura Data & BI Analyst</p>
+          <div class="xp-badge"><i class="fa-solid fa-heart"></i> <span id="user-xp">1,250</span> XP</div>
+        </div>
+      </div>
+
+      <!-- Progress Tracking Bar -->
+      <div class="sidebar-progress">
+        <div class="progress-label">
+          <span>Progreso General</span>
+          <strong id="progress-percent">0%</strong>
+        </div>
+        <div class="progress-track">
+          <div id="progress-fill" class="progress-fill" style="width: 0%;"></div>
+        </div>
+        <p class="progress-subtext"><span id="completed-modules-count">0</span> de 27 módulos completados</p>
+      </div>
+
+      <!-- View Mode Selector -->
+      <div class="mode-toggle-card">
+        <span class="mode-label">🎀 Modo de Vista</span>
+        <div class="toggle-buttons">
+          <button id="btn-mode-coach" class="mode-btn active" onclick="switchViewMode('coach')">
+            👑 Coach (Tú)
+          </button>
+          <button id="btn-mode-student" class="mode-btn" onclick="switchViewMode('student')">
+            🌸 Julieth
+          </button>
+        </div>
+      </div>
+
+      <!-- Navigation Menu -->
+      <nav class="nav-menu">
+        <a href="#dashboard" class="nav-item active" onclick="showTab('dashboard')">
+          <i class="fa-solid fa-heart text-pink"></i> <span>Roadmap (27 Módulos)</span>
+        </a>
+        <a href="#planificador" class="nav-item" onclick="showTab('planificador')">
+          <i class="fa-solid fa-calendar-days"></i> <span>Plan de 4 Semanas</span>
+        </a>
+        <a href="#logros" class="nav-item" onclick="showTab('logros')">
+          <i class="fa-solid fa-trophy"></i> <span>Logros & Medallas</span>
+        </a>
+        <a href="#playground" class="nav-item" onclick="showTab('playground')">
+          <i class="fa-solid fa-terminal"></i> <span>SQL Server (Playground)</span>
+        </a>
+        <a href="#aichat" class="nav-item" onclick="showTab('aichat')">
+          <i class="fa-solid fa-robot"></i> <span>Tutor IA KittyAI (Groq)</span>
+        </a>
+        <a href="#glosario" class="nav-item" onclick="showTab('glosario')">
+          <i class="fa-solid fa-book-bookmark"></i> <span>Diccionario de Datos</span>
+        </a>
+        <a href="#videoteca" class="nav-item" onclick="showTab('videoteca')">
+          <i class="fa-solid fa-circle-play"></i> <span>Videoteca de Estudio</span>
+        </a>
+        <a href="#flashcards" class="nav-item" onclick="showTab('flashcards')">
+          <i class="fa-solid fa-cards-blank"></i> <span>Flashcards Entrevistas</span>
+        </a>
+        <a href="#simulator" class="nav-item" onclick="showTab('simulator')">
+          <i class="fa-solid fa-award"></i> <span>Simulador Mock Trial</span>
+        </a>
+      </nav>
+
+      <div class="sidebar-footer" style="margin-top: auto; display: flex; flex-direction: column; gap: 8px;">
+        <button class="btn btn-secondary" onclick="openLoveNotesModal()" style="font-size: 11px; padding: 6px 12px; width: 100%; justify-content: center; background-color: #fff0f5; color: #ff1493; border-color: #ff4081;">
+          💌 Carta Motivacional de Tu Novio
+        </button>
+        <button class="btn btn-secondary" onclick="openCheatsheetModal()" style="font-size: 11px; padding: 6px 12px; width: 100%; justify-content: center;">
+          📄 Hoja de Trucos SQL SSMS
+        </button>
+        <div class="db-status-badge" style="font-size: 11px; background: #fff0f5; border: 1px solid #f8bbd0; border-radius: 12px; padding: 8px 12px;">
+          <i class="fa-solid fa-database text-emerald"></i>
+          <span>BD: <strong id="current-db-label">LuchoX12 -> DataCareer</strong></span>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="main-content">
+      
+      <!-- Top Header -->
+      <header class="top-header">
+        <div class="header-search">
+          <i class="fa-solid fa-magnifying-glass text-muted"></i>
+          <input type="text" id="search-input" placeholder="Buscar lección, SELECT, JOIN, DAX, Python o ejercicio..." oninput="filterModules()">
+        </div>
+
+        <div class="header-actions">
+          <div class="level-pill">
+            <i class="fa-solid fa-crown text-amber"></i>
+            <span id="level-title">Nivel 1: Data Apprentice</span>
+          </div>
+        </div>
+      </header>
+
+      <!-- TAB 1: ROADMAP DASHBOARD (ALL 27 MODULES) -->
+      <section id="tab-dashboard" class="tab-page active">
+        
+        <!-- DAILY QUEST / MISIÓN DEL DÍA -->
+        <div class="daily-quest-card">
+          <div class="quest-icon">🎯</div>
+          <div class="quest-content">
+            <h3>Misión de Auto-Estudio de Hoy para Julieth ✨</h3>
+            <p id="daily-quest-text">¡Hola princesa! Tu misión de hoy es abrir SSMS, completar la lección <strong>Módulo 1.1: Tu Primer Día en SSMS</strong> y responder 2 Flashcards. ¡Ganarás +200 XP!</p>
+          </div>
+          <button class="btn btn-primary" onclick="startDailyQuest()" style="white-space: nowrap;">
+            <i class="fa-solid fa-star"></i> Iniciar Misión
+          </button>
+        </div>
+
+        <div class="page-intro" style="margin-top: 24px;">
+          <div>
+            <h1 class="page-title">🌸 Programa de Formación Completo (27 Módulos de 0 a 100)</h1>
+            <p class="page-description">
+              El roadmap definitivo estructurado en 4 Fases: <strong>1. SQL Server en SSMS</strong> ➔ <strong>2. Power BI & DAX</strong> ➔ <strong>3. Python & Groq AI</strong> ➔ <strong>4. Empleabilidad & GitHub</strong>.
+            </p>
+          </div>
+          <div class="phase-filter-pills">
+            <button class="pill active" onclick="filterPhaseGroup('all')">Todos (27)</button>
+            <button class="pill" onclick="filterPhaseGroup('sql')">SQL Server SSMS (9)</button>
+            <button class="pill" onclick="filterPhaseGroup('bi')">Power BI & DAX (6)</button>
+            <button class="pill" onclick="filterPhaseGroup('python')">Python & Groq AI (6)</button>
+            <button class="pill" onclick="filterPhaseGroup('career')">Empleabilidad (6)</button>
+          </div>
+        </div>
+
+        <!-- Modules Grid -->
+        <div id="modules-container" class="modules-grid">
+          <!-- Rendered dynamically -->
+        </div>
+      </section>
+
+      <!-- TAB 2: PLANIFICADOR DE 4 SEMANAS -->
+      <section id="tab-planificador" class="tab-page" style="display: none;">
+        <div class="page-intro">
+          <div>
+            <h1 class="page-title">🗓️ Calendario & Plan de Estudio de 4 Semanas</h1>
+            <p class="page-description">
+              El cronograma diario estructurado para que Julieth alcance la empleabilidad paso a paso.
+            </p>
+          </div>
+        </div>
+
+        <div class="schedule-grid">
+          <div class="week-card">
+            <h3 class="week-title">📅 Semana 1: Dominio Total de SQL Server en SSMS</h3>
+            <p class="week-desc">Aprende a conectarte a LuchoX12, consultar tablas, filtrar con WHERE y agrupar con GROUP BY.</p>
+            <ul class="week-list">
+              <li>Día 1: Módulo 1.1 — Conexión a SSMS y F5</li>
+              <li>Día 2: Módulo 1.2 — Tablas y Tipos de Datos (VARCHAR, INT, DATE)</li>
+              <li>Día 3: Módulo 2.1 — Consultas Básicas (SELECT y FROM)</li>
+              <li>Día 4: Módulo 3.1 — Filtros con WHERE y ORDER BY</li>
+              <li>Día 5: Módulo 4.1 — Agregaciones con GROUP BY y COUNT</li>
+            </ul>
+          </div>
+
+          <div class="week-card">
+            <h3 class="week-title">📅 Semana 2: JOINs, Modelo Estrella y SQL Avanzado</h3>
+            <p class="week-desc">Cruza tablas relacionales, comprende la estructura de hechos y dimensiones, y crea vistas.</p>
+            <ul class="week-list">
+              <li>Día 6: Módulo 5.1 — Cruces con INNER JOIN y LEFT JOIN</li>
+              <li>Día 7: Módulo 6.1 — Arquitectura del Modelo Estrella</li>
+              <li>Día 8: Módulo 7.1 — Subconsultas, CTEs (WITH) y Vistas</li>
+              <li>Día 9: Módulo 8.1 — Window Functions (ROW_NUMBER, LAG)</li>
+              <li>Día 10: Reto Semanal — Proyecto Integrador SQL DataCall</li>
+            </ul>
+          </div>
+
+          <div class="week-card">
+            <h3 class="week-title">📅 Semana 3: Business Intelligence en Power BI & DAX</h3>
+            <p class="week-desc">Conecta SQL Server a Power BI Desktop, crea tableros gerenciales y domina fórmulas DAX.</p>
+            <ul class="week-list">
+              <li>Día 11: Módulo 9.1 — Conexión Power BI a SSMS</li>
+              <li>Día 12: Módulo 10.1 — Transformación en Power Query</li>
+              <li>Día 13: Módulo 11.1 — Modelo Relacional y Tabla Calendario</li>
+              <li>Día 14: Módulo 12.1 & 13.1 — Medidas DAX (CALCULATE & DIVIDE)</li>
+              <li>Día 15: Módulo 14.1 — Inteligencia de Tiempo (YTD, SAMEPERIODLASTYEAR)</li>
+            </ul>
+          </div>
+
+          <div class="week-card">
+            <h3 class="week-title">📅 Semana 4: Python, Groq AI & Portafolio en GitHub</h3>
+            <p class="week-desc">Automatiza análisis estadísticos en VS Code, clasifica encuestas con IA y publica tu portafolio.</p>
+            <ul class="week-list">
+              <li>Día 16: Módulo 15.1 a 18.1 — Python, Pandas y Conexión SQL</li>
+              <li>Día 17: Módulo 19.1 & 20.1 — Groq API Llama 3 para texto</li>
+              <li>Día 18: Módulo 21.1 a 23.1 — Repositorio GitHub y README.md</li>
+              <li>Día 19: Módulo 24.1 a 26.1 — Hoja de Vida, LinkedIn y Mock Trial</li>
+              <li>Día 20: Módulo 27.1 — Graduación & Estrategia de Empleabilidad 🏆</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- TAB 3: LOGROS Y MEDALLAS -->
+      <section id="tab-logros" class="tab-page" style="display: none;">
+        <div class="page-intro">
+          <div>
+            <h1 class="page-title">🏆 Logros & Medallas de Julieth</h1>
+            <p class="page-description">
+              Cada hito completado desbloquea una medalla especial en tu vitrina de reconocimientos. (Se guardan automáticamente en tu navegador).
+            </p>
+          </div>
+        </div>
+
+        <div id="badges-grid" class="badges-grid">
+          <!-- Rendered dynamically -->
+        </div>
+      </section>
+
+      <!-- TAB 4: REAL SQL PLAYGROUND -->
+      <section id="tab-playground" class="tab-page" style="display: none;">
+        <div class="page-intro">
+          <div>
+            <h1 class="page-title">💻 SQL Playground (Ejecución Real & Vercel)</h1>
+            <p class="page-description">
+              Ejecuta consultas SQL sobre la base de datos <strong>DataCareer</strong> o genera casos de negocio aleatorios.
+            </p>
+          </div>
+          <button class="btn btn-secondary" onclick="generateRandomBusinessCase()" style="margin-top: 10px;">
+            ⚡ Generar Desafío Sorpresa de Negocio de Call Center
+          </button>
+        </div>
+
+        <div id="random-case-box" style="display: none; background-color: #fff0f5; border: 2px solid #ff4081; padding: 18px; border-radius: 16px; margin-bottom: 20px;">
+          <h3 style="color: #ff1493; font-size: 15px; font-weight: 800;" id="case-title"></h3>
+          <p style="color: #3c1a26; font-size: 14px; margin-top: 4px;" id="case-desc"></p>
+        </div>
+
+        <div class="playground-layout">
+          <div class="editor-pane">
+            <div class="pane-header">
+              <span><i class="fa-solid fa-code"></i> Editor SQL Server</span>
+              <div class="preset-dropdown">
+                <select id="sql-presets" onchange="loadSQLPreset()">
+                  <option value="">-- Seleccionar Ejemplo de Consulta --</option>
+                  <option value="select_clients">1. Explicación de SELECT: Primeros 10 Clientes de Bogotá</option>
+                  <option value="select_calls">2. Explicación de WHERE: Llamadas con espera > 120s</option>
+                  <option value="group_by">3. Explicación de GROUP BY: Resumen de llamadas por Resultado</option>
+                  <option value="joins">4. Explicación de INNER JOIN: Clientes y sus Compras</option>
+                  <option value="window">5. Explicación de WINDOW FUNCTIONS: DENSE_RANK de Compras</option>
+                </select>
+              </div>
+            </div>
+            <textarea id="sql-editor" spellcheck="false">SELECT TOP 10 
+    cliente_id, 
+    nombre, 
+    ciudad, 
+    edad, 
+    tipo_cliente 
+FROM analytics.dim_cliente 
+WHERE ciudad = 'Bogotá'
+ORDER BY edad DESC;</textarea>
+            <div class="pane-actions">
+              <button class="btn btn-primary" onclick="runRealSQLQuery()">
+                <i class="fa-solid fa-play"></i> Ejecutar Consulta SQL (F5)
+              </button>
+              <button class="btn btn-secondary" onclick="clearSQLEditor()">
+                <i class="fa-solid fa-eraser"></i> Limpiar
+              </button>
+            </div>
+          </div>
+
+          <div class="results-pane">
+            <div class="pane-header">
+              <span><i class="fa-solid fa-table"></i> Resultados (<span id="result-count">0</span> filas)</span>
+              <span id="execution-status" class="exec-time"><i class="fa-solid fa-check text-emerald"></i> Listo</span>
+            </div>
+            <div id="results-table-container" class="table-scroll">
+              <div class="empty-state">
+                <i class="fa-solid fa-database text-muted" style="font-size: 32px; margin-bottom: 8px;"></i>
+                <p>Presiona "Ejecutar Consulta SQL" para ver las filas devueltas.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TAB 5: TUTOR IA KITTYAI (GROQ LLAMA 3) -->
+      <section id="tab-aichat" class="tab-page" style="display: none;">
+        <div class="page-intro">
+          <div>
+            <h1 class="page-title">🤖 Tutor IA KittyAI (Groq llama-3.1-8b-instant)</h1>
+            <p class="page-description">
+              ¿Dudas en SQL, DAX o Python? Pregúntale a KittyAI, tu asistente virtual dulce y motivadora conectada a Groq.
+            </p>
+          </div>
+        </div>
+
+        <div class="ai-chat-card">
+          <div class="chat-header">
+            <div class="chat-avatar">🎀</div>
+            <div>
+              <h3 style="font-size: 18px; font-weight: 800;">KittyAI — Tu Tutora de Datos</h3>
+              <p style="font-size: 12px; opacity: 0.9;"><i class="fa-solid fa-circle text-emerald"></i> En línea • Impulsada por Groq AI</p>
+            </div>
+          </div>
+
+          <div id="chat-messages" class="chat-messages">
+            <div class="msg-bubble ai">
+              ¡Hola Julieth hermosa! 💖✨ Soy KittyAI, tu tutora de datos personal. Estoy aquí para explicarte cualquier tema de SQL Server, Power BI, DAX o Python de forma súper sencilla y dulce. ¿En qué te puedo ayudar hoy, princesa? 💕
+            </div>
+          </div>
+
+          <div class="chat-input-area">
+            <input type="text" id="chat-user-input" placeholder="Pregúntale a KittyAI (ej: ¿Cómo funciona un INNER JOIN?)..." onkeypress="if(event.key==='Enter') sendChatMessage()">
+            <button class="btn btn-primary" onclick="sendChatMessage()"><i class="fa-solid fa-paper-plane"></i> Enviar</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- TAB 6: GLOSARIO Y DICCIONARIO DE DATOS -->
+      <section id="tab-glosario" class="tab-page" style="display: none;">
+        <div class="page-intro">
+          <div>
+            <h1 class="page-title">📖 Diccionario & Glosario de Términos de Datos</h1>
+            <p class="page-description">
+              Consulta rápidamente cualquier término o concepto que olvides mientras estudias sola.
+            </p>
+          </div>
+          <div class="header-search" style="margin-top: 14px; width: 100%; max-width: 500px;">
+            <i class="fa-solid fa-magnifying-glass text-muted"></i>
+            <input type="text" id="glossary-search" placeholder="Buscar término (ej: SELECT, DAX, NULL, CTE, JOIN)..." oninput="filterGlossary()">
+          </div>
+        </div>
+
+        <div id="glossary-grid" class="glossary-grid">
+          <!-- Rendered dynamically -->
+        </div>
+      </section>
+
+      <!-- TAB 7: VIDEOTECA DE ESTUDIO -->
+      <section id="tab-videoteca" class="tab-page" style="display: none;">
+        <div class="page-intro">
+          <div>
+            <h1 class="page-title">🎥 Videoteca de Estudio Curada paso a paso</h1>
+            <p class="page-description">
+              Los mejores recursos y tutoriales seleccionados en YouTube para reforzar los conceptos técnicos de cada fase.
+            </p>
+          </div>
+        </div>
+
+        <div class="videos-grid">
+          <div class="video-card">
+            <div class="video-thumb-placeholder">
+              <i class="fa-brands fa-youtube"></i>
+            </div>
+            <div class="video-title">1. Curso Completo de SQL Server en SSMS desde Cero</div>
+            <p class="video-desc">Aprende a conectarte a SSMS, crear consultas con SELECT, WHERE, GROUP BY y JOINs explicados paso a paso para principiantes.</p>
+            <a href="https://www.youtube.com/results?search_query=curso+sql+server+management+studio+desde+cero" target="_blank" class="btn btn-primary" style="font-size: 12px; text-decoration: none; justify-content: center; margin-top: auto;">
+              <i class="fa-solid fa-play"></i> Ver en YouTube
+            </a>
+          </div>
+
+          <div class="video-card">
+            <div class="video-thumb-placeholder">
+              <i class="fa-brands fa-youtube"></i>
+            </div>
+            <div class="video-title">2. Explicación Visual de JOINS en SQL</div>
+            <p class="video-desc">Entiende los diagramas de Venn de INNER JOIN, LEFT JOIN y RIGHT JOIN con animaciones claras.</p>
+            <a href="https://www.youtube.com/results?search_query=explicacion+visual+sql+joins+espanol" target="_blank" class="btn btn-primary" style="font-size: 12px; text-decoration: none; justify-content: center; margin-top: auto;">
+              <i class="fa-solid fa-play"></i> Ver en YouTube
+            </a>
+          </div>
+
+          <div class="video-card">
+            <div class="video-thumb-placeholder">
+              <i class="fa-brands fa-youtube"></i>
+            </div>
+            <div class="video-title">3. Power BI & Modelo Estrella de 0 a 100</div>
+            <p class="video-desc">Aprende a conectar SQL Server a Power BI Desktop y estructurar tus relaciones de Hechos y Dimensiones.</p>
+            <a href="https://www.youtube.com/results?search_query=power+bi+modelo+estrella+desde+cero" target="_blank" class="btn btn-primary" style="font-size: 12px; text-decoration: none; justify-content: center; margin-top: auto;">
+              <i class="fa-solid fa-play"></i> Ver en YouTube
+            </a>
+          </div>
+
+          <div class="video-card">
+            <div class="video-thumb-placeholder">
+              <i class="fa-brands fa-youtube"></i>
+            </div>
+            <div class="video-title">4. DAX Básico e Intermedio (CALCULATE)</div>
+            <p class="video-desc">Domina la función CALCULATE y el contexto de filtro en Power BI explicados con ejemplos sencillos.</p>
+            <a href="https://www.youtube.com/results?search_query=dax+power+bi+calculate+explicacion" target="_blank" class="btn btn-primary" style="font-size: 12px; text-decoration: none; justify-content: center; margin-top: auto;">
+              <i class="fa-solid fa-play"></i> Ver en YouTube
+            </a>
+          </div>
+
+          <div class="video-card">
+            <div class="video-thumb-placeholder">
+              <i class="fa-brands fa-youtube"></i>
+            </div>
+            <div class="video-title">5. Python y Pandas para Analistas de Datos</div>
+            <p class="video-desc">Manipulación de DataFrames en VS Code, lectura de bases de datos relacionales y análisis exploratorio (EDA).</p>
+            <a href="https://www.youtube.com/results?search_query=python+pandas+analisis+de+datos+desde+cero" target="_blank" class="btn btn-primary" style="font-size: 12px; text-decoration: none; justify-content: center; margin-top: auto;">
+              <i class="fa-solid fa-play"></i> Ver en YouTube
+            </a>
+          </div>
+
+          <div class="video-card">
+            <div class="video-thumb-placeholder">
+              <i class="fa-brands fa-youtube"></i>
+            </div>
+            <div class="video-title">6. Cómo Crear un Portafolio Estelar en GitHub</div>
+            <p class="video-desc">Documenta tus proyectos de datos con un README.md impecable que llame la atención de los reclutadores.</p>
+            <a href="https://www.youtube.com/results?search_query=portafolio+data+analyst+github" target="_blank" class="btn btn-primary" style="font-size: 12px; text-decoration: none; justify-content: center; margin-top: auto;">
+              <i class="fa-solid fa-play"></i> Ver en YouTube
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- TAB 8: FLASHCARDS -->
+      <section id="tab-flashcards" class="tab-page" style="display: none;">
+        <div class="page-intro">
+          <div>
+            <h1 class="page-title">🃏 Flashcards de Entrevista Técnica</h1>
+            <p class="page-description">
+              Preguntas clave de entrevistas para que Julieth gane agilidad mental y responda con seguridad.
+            </p>
+          </div>
+        </div>
+
+        <div class="flashcards-wrapper">
+          <div class="flashcard-controls">
+            <span>Tarjeta <span id="card-index">1</span> de <span id="card-total">5</span></span>
+            <button class="btn btn-secondary" onclick="toggleFlashcardAnswer()" style="font-size: 12px;">
+              <i class="fa-solid fa-eye"></i> Revelar / Ocultar Respuesta
+            </button>
+          </div>
+
+          <div class="flashcard-card">
+            <div>
+              <span class="card-tag" id="card-tag">SQL</span>
+              <h3 class="flashcard-question-title" id="card-question">¿Cuál es la diferencia entre WHERE y HAVING?</h3>
+            </div>
+            
+            <div id="card-answer-container" class="flashcard-answer-box" style="display: none;">
+              <h4><i class="fa-solid fa-circle-check"></i> Respuesta Profesional Esperada:</h4>
+              <p id="card-answer">WHERE filtra filas antes de agrupar. HAVING filtra agregaciones después de agrupar.</p>
+            </div>
+          </div>
+
+          <div class="flashcard-nav">
+            <button class="btn btn-secondary" onclick="prevFlashcard()"><i class="fa-solid fa-arrow-left"></i> Anterior</button>
+            <button class="btn btn-primary" onclick="nextFlashcard()">Siguiente <i class="fa-solid fa-arrow-right"></i></button>
+          </div>
+        </div>
+      </section>
+
+      <!-- TAB 9: MOCK TRIAL SIMULATOR -->
+      <section id="tab-simulator" class="tab-page" style="display: none;">
+        <div class="page-intro">
+          <div>
+            <h1 class="page-title">🏆 Simulador Mock Trial de Entrevistas</h1>
+            <p class="page-description">
+              Simulación interactiva paso a paso para la evaluación final de Julieth.
+            </p>
+          </div>
+        </div>
+
+        <div class="simulator-card">
+          <div class="sim-header">
+            <div class="interviewer-avatar">👑</div>
+            <div>
+              <h3 style="font-size: 16px; font-weight: 800;">Evaluador Técnico (Coach)</h3>
+              <p class="sim-status" style="font-size: 12px; color: var(--emerald);"><span class="pulse-dot"></span> Entrevista en vivo activa</p>
+            </div>
+          </div>
+
+          <div class="sim-body" id="sim-body">
+            <div class="chat-bubble interviewer">
+              <p>Hola Julieth hermosa. Bienvenido a tu entrevista técnica para la posición de <strong>Junior Data Analyst</strong>. Háblanos de tu proyecto estelar <strong>DataCall</strong>.</p>
+            </div>
+          </div>
+
+          <div class="sim-options" id="sim-options">
+            <button class="sim-option-btn" onclick="answerSim(1)">
+              💬 "En DataCall analicé 50,000 llamadas operacionales conectando SQL Server con Power BI y Groq AI para identificar cuellos de botella."
+            </button>
+            <button class="sim-option-btn" onclick="answerSim(2)">
+              💬 "Estudié SQL y Power BI e hice algunas tablas sobre un call center."
+            </button>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+  </div>
+
+  <!-- Detail Modal -->
+  <div id="module-modal" class="modal-overlay" style="display: none;">
+    <div class="modal-card">
+      <button class="modal-close" onclick="closeModal()">&times;</button>
+      <div id="modal-content">
+        <!-- Rendered dynamically -->
+      </div>
+    </div>
+  </div>
+
+  <!-- SQL Cheatsheet Modal -->
+  <div id="cheatsheet-modal" class="modal-overlay" style="display: none;">
+    <div class="modal-card" style="max-width: 720px;">
+      <button class="modal-close" onclick="closeCheatsheetModal()">&times;</button>
+      <h2 style="color: var(--kitty-hotpink); font-size: 22px; font-weight: 900; margin-bottom: 14px;">
+        📄 Hoja de Trucos Rápidos de SQL para SSMS
+      </h2>
+      <p style="color: var(--text-muted); font-size: 13px; margin-bottom: 20px;">Ten estas instrucciones a la mano mientras trabajas en SQL Server Management Studio:</p>
+
+      <div style="display: flex; flex-direction: column; gap: 14px;">
+        <div style="background-color: #fffdfd; border: 2px solid #f8bbd0; padding: 14px; border-radius: 12px;">
+          <strong style="color: var(--kitty-hotpink);">1. Seleccionar la base de datos:</strong>
+          <pre style="color: #c2185b; font-family: monospace; margin-top: 4px;">USE DataCareer;</pre>
+        </div>
+        <div style="background-color: #fffdfd; border: 2px solid #f8bbd0; padding: 14px; border-radius: 12px;">
+          <strong style="color: var(--kitty-hotpink);">2. Traer columnas específicas:</strong>
+          <pre style="color: #c2185b; font-family: monospace; margin-top: 4px;">SELECT cliente_id, nombre, ciudad FROM analytics.dim_cliente;</pre>
+        </div>
+        <div style="background-color: #fffdfd; border: 2px solid #f8bbd0; padding: 14px; border-radius: 12px;">
+          <strong style="color: var(--kitty-hotpink);">3. Filtrar datos con comillas simples en texto:</strong>
+          <pre style="color: #c2185b; font-family: monospace; margin-top: 4px;">SELECT * FROM analytics.dim_cliente WHERE ciudad = 'Bogotá' AND edad >= 30;</pre>
+        </div>
+        <div style="background-color: #fffdfd; border: 2px solid #f8bbd0; padding: 14px; border-radius: 12px;">
+          <strong style="color: var(--kitty-hotpink);">4. Agrupar y contar registros:</strong>
+          <pre style="color: #c2185b; font-family: monospace; margin-top: 4px;">SELECT canal, COUNT(*) AS total FROM analytics.fact_llamadas GROUP BY canal;</pre>
+        </div>
+        <div style="background-color: #fffdfd; border: 2px solid #f8bbd0; padding: 14px; border-radius: 12px;">
+          <strong style="color: var(--kitty-hotpink);">5. Cruzar dos tablas con INNER JOIN:</strong>
+          <pre style="color: #c2185b; font-family: monospace; margin-top: 4px;">SELECT ll.llamada_id, c.nombre FROM analytics.fact_llamadas ll INNER JOIN analytics.dim_cliente c ON ll.cliente_id = c.cliente_id;</pre>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Love Notes Modal (VERBATIM MESSAGE FROM USER) -->
+  <div id="love-notes-modal" class="modal-overlay" style="display: none;">
+    <div class="modal-card" style="max-width: 600px;">
+      <button class="modal-close" onclick="closeLoveNotesModal()">&times;</button>
+      <h2 style="color: #ff1493; font-size: 24px; font-weight: 900; margin-bottom: 18px; text-align: center;">
+        💌 Un Mensaje Especial para Ti 💖
+      </h2>
+      <div style="background-color: #fff0f5; border: 3px dashed #ff4081; padding: 28px; border-radius: 20px; font-size: 18px; color: #ff1493; font-weight: 900; line-height: 1.6; text-align: center; box-shadow: var(--shadow-glow);">
+        "mi reina hermosa te amoooo eres lo que yo mas amo en este mundo tu puedes con todo 💖👑✨"
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

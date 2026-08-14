@@ -1,0 +1,21 @@
+# Secret Environment Variables
+.env
+.env.local
+.env.*.local
+*.env
+
+# Dependencies & Build Outputs
+node_modules/
+.vercel/
+__pycache__/
+*.pyc
+
+# IDE & OS Files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Task & Scratch Logs
+scratch/
+*.log
