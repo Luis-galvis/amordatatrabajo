@@ -1,7 +1,3 @@
 {
-  "version": 2,
-  "rewrites": [
-    { "source": "/api/chat", "destination": "/api/chat" },
-    { "source": "/api/query", "destination": "/api/query" }
-  ]
+  "cleanUrls": true
 }
