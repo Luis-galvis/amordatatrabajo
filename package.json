@@ -1,0 +1,10 @@
+{
+  "name": "datacareer-academy",
+  "version": "1.0.0",
+  "description": "DataCareer Academy for Julieth",
+  "main": "index.html",
+  "scripts": {
+    "build": "echo 'Static build complete'"
+  },
+  "dependencies": {}
+}
