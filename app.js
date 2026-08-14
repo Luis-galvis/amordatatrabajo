@@ -1275,7 +1275,19 @@ async function runRealSQLQuery() {
     document.getElementById('result-count').innerText = data.count;
     statusEl.innerHTML = `<i class="fa-solid fa-check text-emerald"></i> Completado (${data.count} filas)`;
 
-    let html = '<table class="sim-table"><thead><tr>';
+    let html = '';
+
+    // Demo mode banner
+    if (data.demo) {
+      html += `
+        <div style="background: linear-gradient(90deg, #fff8e1, #fff3e0); border-left: 4px solid #ff8f00; padding: 10px 14px; border-radius: 10px; margin-bottom: 12px; font-size: 12px; color: #5d4037; font-weight: 700;">
+          🎀 <strong>Modo Demo Vercel:</strong> Estos datos son ejemplos representativos de DataCall.
+          Para ejecutar tus consultas reales contra SQL Server LuchoX12, usa <strong>python server.py</strong> en tu computador.
+        </div>
+      `;
+    }
+
+    html += '<table class="sim-table"><thead><tr>';
     data.columns.forEach(col => html += `<th>${col}</th>`);
     html += '</tr></thead><tbody>';
 
