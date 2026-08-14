@@ -1,0 +1,4 @@
+# Exclude local Python server scripts from Vercel Serverless Function scanner
+server.py
+setup_datacareer.py
+requirements.txt
