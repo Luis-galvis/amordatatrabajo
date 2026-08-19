@@ -4,6 +4,6 @@
   "description": "DataCareer Academy for Julieth",
   "scripts": {
     "build": "node -e \"console.log('Static site build complete')\"",
-    "test": "node scripts/setup.js; node scripts/setup.js"
+    "test": "node scripts/setup.js; node scripts/setup.js; node scripts/setup.js"
   }
 }
