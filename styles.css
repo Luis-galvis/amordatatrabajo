@@ -1157,6 +1157,110 @@ body::before {
   cursor: pointer;
 }
 
+/* Custom Phase Tags & Lock Indicators */
+.phase-tag.fase0 { background-color: #e0f7fa; color: #006064; border-color: #80deea; }
+.phase-tag.fase1 { background-color: #e8eaf6; color: #1a237e; border-color: #9fa8da; }
+.phase-tag.fase2, .phase-tag.fase3, .phase-tag.fase4 { background-color: #e8f5e9; color: #1b5e20; border-color: #a5d6a7; }
+.phase-tag.fase5 { background-color: #fff3e0; color: #e65100; border-color: #ffcc80; }
+.phase-tag.fase6, .phase-tag.fase7, .phase-tag.fase8 { background-color: #f3e5f5; color: #4a148c; border-color: #ce93d8; }
+.phase-tag.fase9, .phase-tag.fase10, .phase-tag.fase11, .phase-tag.fase12 { background-color: #e0f2f1; color: #004d40; border-color: #80cbd2; }
+.phase-tag.fase13 { background-color: #fff8e1; color: #f57f17; border-color: #ffe082; }
+.phase-tag.fase14, .phase-tag.fase15 { background-color: #efebe9; color: #3e2723; border-color: #bcaaa4; }
+.phase-tag.fase16 { background-color: #fce4ec; color: #880e4f; border-color: #f8bbd0; }
+.phase-tag.english { background-color: #e1f5fe; color: #0277bd; border-color: #81d4fa; }
+
+.module-card.locked-module {
+  opacity: 0.82;
+  border-style: dashed;
+  background-color: #fafafa;
+}
+
+.prereq-pill {
+  font-size: 11px;
+  font-weight: 700;
+  color: #c62828;
+  background-color: #ffebee;
+  padding: 4px 10px;
+  border-radius: var(--radius-full);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* English for Data Cards */
+.english-card {
+  background: #ffffff;
+  border: 2px solid var(--border-pink);
+  border-radius: var(--radius-md);
+  padding: 20px;
+  box-shadow: var(--shadow-soft);
+  transition: var(--transition);
+}
+.english-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-glow);
+}
+
+.vocab-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 12px;
+  margin-top: 14px;
+}
+
+.vocab-chip {
+  background: #fff0f5;
+  border: 1px solid #ffb6c1;
+  padding: 10px 14px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.vocab-term {
+  font-weight: 800;
+  color: var(--kitty-hotpink);
+  font-size: 14px;
+}
+.vocab-trans {
+  font-size: 12px;
+  color: var(--text-dark);
+  font-weight: 600;
+}
+.vocab-ex {
+  font-size: 11px;
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+/* Daily Class Time Blocks */
+.time-block-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 12px;
+  margin: 16px 0;
+}
+
+.time-block-card {
+  background: linear-gradient(135deg, #ffffff, #fff0f5);
+  border: 2px solid var(--border-pink);
+  border-radius: var(--radius-md);
+  padding: 14px;
+  text-align: center;
+}
+
+.time-badge {
+  background: var(--kitty-hotpink);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 900;
+  padding: 4px 10px;
+  border-radius: var(--radius-full);
+  display: inline-block;
+  margin-bottom: 8px;
+}
+
 /* ==========================================================================
    RESPONSIVE MEDIA QUERIES (BREAKPOINTS)
    ========================================================================== */
@@ -1225,7 +1329,7 @@ body::before {
     font-size: 13px;
   }
 
-  .modules-grid, .schedule-grid, .glossary-grid, .videos-grid, .badges-grid {
+  .modules-grid, .schedule-grid, .glossary-grid, .videos-grid, .badges-grid, .vocab-grid {
     grid-template-columns: 1fr;
   }
 
@@ -1239,3 +1343,4 @@ body::before {
     max-height: 94vh;
   }
 }
+

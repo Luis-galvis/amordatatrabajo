@@ -90,7 +90,13 @@
       <!-- Navigation Menu -->
       <nav class="nav-menu">
         <a href="#dashboard" class="nav-item active" onclick="showTab('dashboard')">
-          <i class="fa-solid fa-heart text-pink"></i> <span>Roadmap (27 Módulos)</span>
+          <i class="fa-solid fa-heart text-pink"></i> <span>Roadmap (17 Fases 0➔16)</span>
+        </a>
+        <a href="#english" class="nav-item" onclick="showTab('english')">
+          <i class="fa-solid fa-language"></i> <span>English for Data (A1➔B1)</span>
+        </a>
+        <a href="#clasedehoy" class="nav-item" onclick="showTab('clasedehoy')">
+          <i class="fa-solid fa-chalkboard-user"></i> <span>Clase de Hoy (60-120m)</span>
         </a>
         <a href="#planificador" class="nav-item" onclick="showTab('planificador')">
           <i class="fa-solid fa-calendar-days"></i> <span>Plan de 4 Semanas</span>
@@ -150,7 +156,7 @@
         </div>
       </header>
 
-      <!-- TAB 1: ROADMAP DASHBOARD (ALL 27 MODULES) -->
+      <!-- TAB 1: ROADMAP DASHBOARD (ALL 17 PHASES) -->
       <section id="tab-dashboard" class="tab-page active">
         
         <!-- DAILY QUEST / MISIÓN DEL DÍA -->
@@ -158,7 +164,7 @@
           <div class="quest-icon">🎯</div>
           <div class="quest-content">
             <h3>Misión de Auto-Estudio de Hoy para Julieth ✨</h3>
-            <p id="daily-quest-text">¡Hola princesa! Tu misión de hoy es abrir SSMS, completar la lección <strong>Módulo 1.1: Tu Primer Día en SSMS</strong> y responder 2 Flashcards. ¡Ganarás +200 XP!</p>
+            <p id="daily-quest-text">¡Hola princesa! Tu misión de hoy es abrir SSMS, completar la lección <strong>Módulo 0.1: ¿Qué es la Tecnología?</strong> y repasar 1 frase en Inglés. ¡Ganarás +200 XP!</p>
           </div>
           <button class="btn btn-primary" onclick="startDailyQuest()" style="white-space: nowrap;">
             <i class="fa-solid fa-star"></i> Iniciar Misión
@@ -167,17 +173,22 @@
 
         <div class="page-intro" style="margin-top: 24px;">
           <div>
-            <h1 class="page-title">🌸 Programa de Formación Completo (27 Módulos de 0 a 100)</h1>
+            <h1 class="page-title">🌸 Ruta Completa de Aprendizaje (Cero Absoluto ➔ Junior Data Analyst)</h1>
             <p class="page-description">
-              El roadmap definitivo estructurado en 4 Fases: <strong>1. SQL Server en SSMS</strong> ➔ <strong>2. Power BI & DAX</strong> ➔ <strong>3. Python & Groq AI</strong> ➔ <strong>4. Empleabilidad & GitHub</strong>.
+              Programa estructurado en <strong>17 Fases Graduales (Fase 0 a 16)</strong> adaptado para iniciar desde cero tecnológico hasta tu primer empleo en analítica.
             </p>
           </div>
-          <div class="phase-filter-pills">
-            <button class="pill active" onclick="filterPhaseGroup('all')">Todos (27)</button>
-            <button class="pill" onclick="filterPhaseGroup('sql')">SQL Server SSMS (9)</button>
-            <button class="pill" onclick="filterPhaseGroup('bi')">Power BI & DAX (6)</button>
-            <button class="pill" onclick="filterPhaseGroup('python')">Python & Groq AI (6)</button>
-            <button class="pill" onclick="filterPhaseGroup('career')">Empleabilidad (6)</button>
+          <div class="phase-filter-pills" style="display: flex; flex-wrap: wrap; gap: 6px;">
+            <button class="pill active" onclick="filterPhaseGroup('all')">Todos</button>
+            <button class="pill" onclick="filterPhaseGroup('fase0')">Fase 0: Tech Base</button>
+            <button class="pill" onclick="filterPhaseGroup('fase1')">Fase 1: Lógica</button>
+            <button class="pill" onclick="filterPhaseGroup('sql')">Fase 2-4: SQL</button>
+            <button class="pill" onclick="filterPhaseGroup('excel')">Fase 5: Excel</button>
+            <button class="pill" onclick="filterPhaseGroup('bi')">Fase 6-8: BI & DAX</button>
+            <button class="pill" onclick="filterPhaseGroup('python')">Fase 9-12: Python & ETL</button>
+            <button class="pill" onclick="filterPhaseGroup('ia')">Fase 13: IA</button>
+            <button class="pill" onclick="filterPhaseGroup('git')">Fase 14-15: Git & Proyecto</button>
+            <button class="pill" onclick="filterPhaseGroup('career')">Fase 16: Empleabilidad</button>
           </div>
         </div>
 
@@ -504,40 +515,47 @@ ORDER BY edad DESC;</textarea>
         </div>
       </section>
 
-      <!-- TAB 9: MOCK TRIAL SIMULATOR -->
-      <section id="tab-simulator" class="tab-page" style="display: none;">
+      <!-- TAB 10: ENGLISH FOR DATA (A1 -> B1) -->
+      <section id="tab-english" class="tab-page" style="display: none;">
         <div class="page-intro">
           <div>
-            <h1 class="page-title">🏆 Simulador Mock Trial de Entrevistas</h1>
+            <h1 class="page-title">🇬🇧 English for Data (Ruta Paralela A1 ➔ B1)</h1>
             <p class="page-description">
-              Simulación interactiva paso a paso para la evaluación final de Julieth.
+              Desarrolla tus habilidades de inglés técnico y laboral desde el primer día para desempeñarte con confianza en entrevistas y equipos de analítica.
             </p>
+          </div>
+          <div class="phase-filter-pills" style="display: flex; gap: 8px;">
+            <button class="pill active" onclick="filterEnglishLevel('all')">Todos los Niveles</button>
+            <button class="pill" onclick="filterEnglishLevel('A1')">Nivel A1 (Básico)</button>
+            <button class="pill" onclick="filterEnglishLevel('A2')">Nivel A2 (Pre-Intermedio)</button>
+            <button class="pill" onclick="filterEnglishLevel('B1')">Nivel B1 (Profesional / Entrevistas)</button>
           </div>
         </div>
 
-        <div class="simulator-card">
-          <div class="sim-header">
-            <div class="interviewer-avatar">👑</div>
-            <div>
-              <h3 style="font-size: 16px; font-weight: 800;">Evaluador Técnico (Coach)</h3>
-              <p class="sim-status" style="font-size: 12px; color: var(--emerald);"><span class="pulse-dot"></span> Entrevista en vivo activa</p>
-            </div>
-          </div>
+        <div id="english-container" class="modules-grid" style="grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));">
+          <!-- Rendered dynamically -->
+        </div>
+      </section>
 
-          <div class="sim-body" id="sim-body">
-            <div class="chat-bubble interviewer">
-              <p>Hola Julieth hermosa. Bienvenido a tu entrevista técnica para la posición de <strong>Junior Data Analyst</strong>. Háblanos de tu proyecto estelar <strong>DataCall</strong>.</p>
-            </div>
+      <!-- TAB 11: CLASE DE HOY (60-120 MINUTOS) -->
+      <section id="tab-clasedehoy" class="tab-page" style="display: none;">
+        <div class="page-intro">
+          <div>
+            <h1 class="page-title">🎓 Clase de Hoy — Sesión Guiada (60–120 Minutos)</h1>
+            <p class="page-description">
+              Selecciona cualquier módulo y obtén la estructura de clase lista para el profesor o para tu auto-estudio independiente.
+            </p>
           </div>
+          <div style="margin-top: 10px;">
+            <label style="font-weight: 700; font-size: 13px; color: var(--kitty-hotpink);">Seleccionar Módulo para la Clase:</label>
+            <select id="class-module-select" onchange="renderDailyClass()" style="padding: 10px; border-radius: 12px; border: 2px solid var(--border-pink); font-family: var(--font-main); font-weight: 700; width: 100%; max-width: 450px; margin-top: 4px;">
+              <!-- Options populated dynamically -->
+            </select>
+          </div>
+        </div>
 
-          <div class="sim-options" id="sim-options">
-            <button class="sim-option-btn" onclick="answerSim(1)">
-              💬 "En DataCall analicé 50,000 llamadas operacionales conectando SQL Server con Power BI y Groq AI para identificar cuellos de botella."
-            </button>
-            <button class="sim-option-btn" onclick="answerSim(2)">
-              💬 "Estudié SQL y Power BI e hice algunas tablas sobre un call center."
-            </button>
-          </div>
+        <div id="daily-class-container">
+          <!-- Rendered dynamically -->
         </div>
       </section>
 
