@@ -1,6 +1,6 @@
 /* ==========================================================================
    DataCareer Academy — Master Application Engine (app.js)
-   Ruta Completa Cero Absoluto ➔ Junior Data Analyst (Fases 0 a 16 + English for Data)
+   Programa de Clases Dirigidas de 1 Hora (45–75 Minutos) — Cero Absoluto ➔ Junior Data Analyst
    ========================================================================== */
 
 // --- MOBILE SIDEBAR TOGGLE ---
@@ -11,1826 +11,978 @@ function toggleMobileSidebar() {
   }
 }
 
-// --- DATASET COMPLETO: 17 FASES (FASES 0 A 16) ---
+// --- DATASET COMPLETO: CLASES DIRIGIDAS DE 1 HORA (FASES 0 A 16) ---
 const MODULES_DATA = [
   // ==========================================
-  // FASE 0 — FUNDAMENTOS DE TECNOLOGÍA (0.1 a 0.19)
+  // FASE 0 — TECH FOUNDATIONS (7 Clases de 1h)
   // ==========================================
   {
-    id: "m0_01_tech",
+    id: "c0_01_tech_intro",
     phase: "Fase 0: Tech Base",
     cat: "fase0",
-    title: "Módulo 0.1: ¿Qué es la Tecnología y el Análisis de Datos?",
-    summary: "Descubre qué es la tecnología sin rodeos y por qué los datos son el petróleo del siglo XXI.",
+    title: "Clase 0.1: Introducción al Mundo Tech, Informática y Datos",
+    summary: "Comprende qué es tecnología, informática, datos vs información y los roles clave de Data Analyst, Engineer y Scientist en 1 hora.",
     icon: "fa-laptop-code",
-    purpose: "🎯 Propósito: Perderle el miedo a la tecnología y comprender cómo los datos ayudan a las empresas a tomar decisiones.",
-    deliverable: "🏁 Entregable: Mapa mental conceptual de Tecnología vs Datos creado en tus apuntes.",
-    analogy: "💡 Analogía: La tecnología es como los electrodomésticos de la cocina; los datos son los ingredientes que transformas en una cena deliciosa.",
-    step1_theory: `¿Qué es la Tecnología?
-Es cualquier herramienta creada por el ser humano para resolver problemas de forma más rápida y automática.
+    duration: "45-75 min",
+    capability: "🎯 Capacidad Lograda: Distinguir la diferencia entre datos e información y explicar la función estratégica de un Data Analyst.",
+    concepts: ["¿Qué es tecnología?", "¿Qué es informática?", "Datos vs Información", "Data Analyst", "Data Engineer", "Data Scientist"],
+    intro: "Bienvenida a tu primera clase. Hoy perderás el miedo a los computadores y entenderás por qué los datos guían el mundo moderno.",
+    analogy: "💡 Analogía: La tecnología es la cocina; los datos son los ingredientes frescos; el Data Analyst es el chef que prepara un menú delicioso (decisiones de negocio).",
+    theory: `1. ¿Qué es Tecnología e Informática?
+La tecnología es cualquier herramienta que resuelve un problema. La informática es el tratamiento automático de la información mediante computadores.
 
-¿Qué es un Dato?
-Es una unidad básica de información. Ejemplo: Tu nombre ('Julieth'), tu edad (24), o si llamaste al call center hoy ('Sí').
+2. Dato vs Información:
+- Dato: Un número o letra suelta (Ej: '120').
+- Información: El dato con sentido y contexto de negocio (Ej: '120 segundos de tiempo de espera').
 
-¿Qué es el Análisis de Datos?
-Es examinar miles de datos guardados para descubrir patrones. Ejemplo: Descubrir a qué hora del día llaman más clientes para poner más personal de atención.`,
-    step2_business: "En DataCall, recibimos 50,000 llamadas al mes. El analista de datos no contesta el teléfono; el analista estudia los registros para que los clientes esperen menos tiempo en línea.",
-    step3_code: `-- Concepto fundamental:
-DATO ➔ INFORMACIÓN ➔ CONOCIMIENTO ➔ DECISIÓN DE NEGOCIO`,
-    step4_guided: [
-      "1. Reflexiona sobre 3 tecnologías que usas a diario (WhatsApp, Cajero Automático, Spotify).",
-      "2. Identifica qué datos le entregas a Spotify (canción escuchada, hora, me gusta).",
-      "3. Comprende por qué Spotify te recomienda música usando analítica de datos."
+3. Los Roles del Mundo de Datos:
+- Data Analyst (TÚ): Examina datos limpios para responder preguntas de negocio y crear dashboards.
+- Data Engineer: Construye las tuberías para transportar datos masivos.
+- Data Scientist: Crea modelos matemáticos predictivos avanzados.`,
+    business_case: "En DataCall (nuestro call center), recibimos 50,000 llamadas al mes. El Data Analyst no contesta teléfonos; analiza los registros para que los clientes esperen menos tiempo en línea.",
+    code_example: `-- Flujo de Transformación de Valor de Datos:
+[DATO CRUDO: 120] ➔ [INFORMACIÓN: 120s de espera] ➔ [CONOCIMIENTO: Espera alta en Bogotá] ➔ [DECISIÓN: Reasignar 5 agentes]`,
+    guided_practice: [
+      "1. Abre una hoja de apuntes en tu computador o libreta.",
+      "2. Identifica 3 datos que entregas diariamente a aplicaciones como Spotify o WhatsApp.",
+      "3. Explica qué información obtiene la empresa a partir de esos datos."
     ],
-    step5_individual: "Escribe 2 ejemplos de datos que genera un trabajador de call center durante su turno.",
-    solution_individual: "Ejemplo 1: Duración de la llamada en segundos (300s). Ejemplo 2: Motivo de la consulta ('Facturación').",
-    quiz_question: "¿Cuál es el objetivo principal del Análisis de Datos en una empresa?",
-    quiz_options: ["Tomar decisiones basadas en evidencias y patrones", "Reparar computadores dañados", "Crear redes sociales", "Vender teléfonos"],
+    individual_practice: "Escribe 2 ejemplos de datos que genera un trabajador de call center durante su turno y conviértelos en información de negocio.",
+    solution_practice: "Dato 1: 300 ➔ Información: Duración de llamada de 300 segundos (5 min). Dato 2: 'Facturación' ➔ Información: Motivo de consulta principal.",
+    quiz_question: "¿Cuál es la función principal de un Junior Data Analyst en una empresa?",
+    quiz_options: ["Analizar datos estructurados para responder preguntas de negocio y crear dashboards", "Reparar cables de red y pantallas", "Desarrollar videojuegos", "Contestar llamadas de soporte"],
     quiz_answer: 0,
-    challenge: "Identificar 3 métricas numéricas en tu vida cotidiana.",
-    commonErrors: "Pensar que para ser analista de datos necesitas saber reparar computadores.",
+    challenge: "Identificar 3 métricas numéricas de tu vida diaria y asignarles un objetivo de mejora.",
+    common_errors: "Confundir el rol de soporte técnico de hardware con el de analista de datos.",
     english_vocab: [
-      { term: "Data", trans: "Datos", ex: "Data is very valuable." },
-      { term: "Insight", trans: "Hallazgo / Descubrimiento", ex: "We found a key business insight." },
-      { term: "Data Analyst", trans: "Analista de Datos", ex: "Julieth is a Data Analyst." }
-    ],
-    prereqs: []
+      { term: "Data Analyst", trans: "Analista de Datos", ex: "Julieth is a Junior Data Analyst." },
+      { term: "Business Insight", trans: "Hallazgo de Negocio", ex: "We found a key business insight." },
+      { term: "Raw Data", trans: "Datos Crudos", ex: "Raw data needs processing." }
+    ]
   },
   {
-    id: "m0_02_hw_sw",
+    id: "c0_02_hardware_comp",
     phase: "Fase 0: Tech Base",
     cat: "fase0",
-    title: "Módulo 0.2: Hardware vs Software — Las dos caras del computador",
-    summary: "Diferencia claramente lo físico (Hardware) de los programas (Software).",
+    title: "Clase 0.2: Anatomía del Computador: Hardware, CPU, RAM y Almacenamiento",
+    summary: "Conoce las entrañas de tu equipo: Procesador (CPU), Memoria RAM, Almacenamiento (Storage), GPU y la diferencia con el Software.",
     icon: "fa-hard-drive",
-    purpose: "🎯 Propósito: Entender en qué parte del equipo se procesan y almacenan los datos.",
-    deliverable: "🏁 Entregable: Lista de componentes físicos y virtuales de tu estación de trabajo.",
-    analogy: "💡 Analogía: El Hardware es el cuerpo humano (músculos, ojos); el Software es la mente y tus pensamientos.",
-    step1_theory: `Hardware (Lo que puedes tocar):
-- Pantalla, Teclado, Ratón, Memoria RAM, Disco Duro, Procesador.
+    duration: "45-75 min",
+    capability: "🎯 Capacidad Lograda: Identificar los componentes físicos de un equipo y comprender cómo la memoria RAM afecta el rendimiento de Power BI.",
+    concepts: ["Hardware vs Software", "CPU (Procesador)", "Memoria RAM", "Almacenamiento (SSD/HDD)", "GPU"],
+    intro: "Hoy aprenderás cómo piensa tu computador por dentro y por qué algunas herramientas de datos requieren más memoria que otras.",
+    analogy: "💡 Analogía: El computador es como una oficina de trabajo: la CPU es la mente del trabajador, la Memoria RAM es la superficie del escritorio (donde pones los papeles en uso) y el Almacenamiento (Disco) es el archivador del fondo.",
+    theory: `1. Hardware vs Software:
+- Hardware: Todo lo físico que puedes tocar (pantalla, teclado, memoria).
+- Software: Los programas intangibles que ejecutas (Windows, Excel, SQL Server).
 
-Software (Lo que solo puedes ver):
-- Sistema Operativo (Windows), Navegador (Chrome), SQL Server, Excel, Power BI, Python.`,
-    step2_business: "Cuando trabajas en DataCall, el Hardware es la diadema y el computador; el Software son las herramientas donde registras y analizas las llamadas.",
-    step3_code: `HARDWARE = Computador / Servidor LuchoX12
-SOFTWARE = SQL Server Management Studio (SSMS)`,
-    step4_guided: [
-      "1. Presiona Ctrl + Shift + Esc en tu teclado para abrir el Administrador de Tareas.",
-      "2. Observa el uso de Procesador (CPU) y Memoria RAM (Hardware).",
-      "3. Mira la lista de Aplicaciones abiertas (Software)."
+2. Componentes Fundamentales:
+- CPU (Procesador): El cerebro que realiza los cálculos matemáticos por segundo.
+- Memoria RAM: La memoria ultrarrápida temporal. Cuando abres Power BI o Excel, se cargan en la RAM.
+- Almacenamiento (Storage SSD/HDD): Donde se guardan tus archivos permanentemente cuando apagas el PC.
+- GPU: Procesador gráfico especializado.`,
+    business_case: "Al procesar un dataset de 50,000 llamadas en Power BI, tu computador usa la Memoria RAM para mantener los gráficos interactivos sin pausarse.",
+    code_example: `CONFIGURACIÓN RECOMENDADA PARA DATA ANALYST:
+- CPU: Intel Core i5 / AMD Ryzen 5 o superior
+- RAM: 8 GB o 16 GB (Ideal para Power BI y Python)
+- Almacenamiento: 256 GB SSD (Disco de Estado Sólido)`,
+    guided_practice: [
+      "1. En tu teclado presiona las teclas Ctrl + Shift + Esc para abrir el Administrador de Tareas en Windows.",
+      "2. Haz clic en la pestaña 'Rendimiento'.",
+      "3. Observa el porcentaje de uso actual de tu CPU y de tu Memoria RAM."
     ],
-    step5_individual: "Clasifica los siguientes elementos en HW o SW: Teclado, Excel, Memoria RAM, Windows 11.",
-    solution_individual: "Hardware: Teclado, Memoria RAM. Software: Excel, Windows 11.",
-    quiz_question: "¿A qué categoría pertenece SQL Server Management Studio?",
-    quiz_options: ["Software", "Hardware", "Periférico", "Componente físico"],
+    individual_practice: "Clasifica los siguientes elementos en HW o SW: Teclado, Microsoft Excel, Memoria RAM, Windows 11, Disco SSD.",
+    solution_practice: "Hardware: Teclado, Memoria RAM, Disco SSD. Software: Microsoft Excel, Windows 11.",
+    quiz_question: "¿Qué componente del computador almacena temporalmente los datos de las aplicaciones que estás usando en el momento?",
+    quiz_options: ["Memoria RAM", "Disco Duro SSD", "Teclado", "Fuente de poder"],
     quiz_answer: 0,
-    challenge: "Ver cuánta memoria RAM tiene tu computador.",
-    commonErrors: "Confundir el disco duro con la memoria RAM.",
+    challenge: "Averiguar cuánta memoria RAM en Gigabytes (GB) tiene instalada tu equipo actual.",
+    common_errors: "Confundir el espacio en disco duro (Storage) con la memoria RAM de trabajo.",
     english_vocab: [
       { term: "Hardware", trans: "Componentes Físicos", ex: "The server has fast hardware." },
-      { term: "Software", trans: "Programas y Aplicaciones", ex: "We install data software." },
-      { term: "RAM Memory", trans: "Memoria RAM", ex: "Power BI requires 8GB of RAM." }
-    ],
-    prereqs: ["m0_01_tech"]
+      { term: "RAM Memory", trans: "Memoria RAM", ex: "Power BI requires 8GB of RAM." },
+      { term: "Storage", trans: "Almacenamiento", ex: "Save files to local storage." }
+    ]
   },
   {
-    id: "m0_03_os",
+    id: "c0_03_os_files",
     phase: "Fase 0: Tech Base",
     cat: "fase0",
-    title: "Módulo 0.3: ¿Qué es un Sistema Operativo? (Windows, macOS, Linux)",
-    summary: "Conoce el director de orquesta que administra los recursos de tu computador.",
-    icon: "fa-desktop",
-    purpose: "🎯 Propósito: Aprender cómo el sistema operativo permite ejecutar SQL Server y herramientas analíticas.",
-    deliverable: "🏁 Entregable: Configuración del entorno de trabajo optimizado en Windows.",
-    analogy: "💡 Analogía: El Sistema Operativo es el director del hotel que le asigna habitación a cada huésped.",
-    step1_theory: `El Sistema Operativo (SO) es el software principal que controla el computador.
-- Windows: El más usado en las empresas para SQL Server y Power BI Desktop.
-- macOS: Usado en diseño y desarrollo.
-- Linux: El rey de los servidores en la nube.`,
-    step2_business: "En la empresa, SQL Server se ejecuta sobre servidores Windows Server para almacenar la información del call center.",
-    step3_code: `SISTEMA OPERATIVO = Administrador del Hardware para tus Apps de Data`,
-    step4_guided: [
-      "1. Presiona la tecla Windows + R.",
-      "2. Escribe 'winver' y presiona Enter.",
-      "3. Observa la versión de Windows instalada."
-    ],
-    step5_individual: "Investiga cuál es el sistema operativo líder en servidores empresariales.",
-    solution_individual: "Linux domina los servidores cloud, mientras Windows domina las estaciones de trabajo analíticas.",
-    quiz_question: "¿Cuál es el sistema operativo principal donde corre Power BI Desktop nativamente?",
-    quiz_options: ["Windows", "Android", "iOS", "PlayStation OS"],
-    quiz_answer: 0,
-    challenge: "Aprender los atajos de teclado Windows + E y Windows + D.",
-    commonErrors: "Confundir el navegador de internet con el sistema operativo.",
-    english_vocab: [
-      { term: "Operating System", trans: "Sistema Operativo", ex: "Windows is our operating system." },
-      { term: "File System", trans: "Sistema de Archivos", ex: "Organize your data file system." }
-    ],
-    prereqs: ["m0_02_hw_sw"]
-  },
-  {
-    id: "m0_04_files",
-    phase: "Fase 0: Tech Base",
-    cat: "fase0",
-    title: "Módulo 0.4: Archivos, Carpetas y Extensiones (.csv, .xlsx, .pbix, .sql, .py)",
-    summary: "Domina la organización de archivos de datos y sus extensiones fundamentales.",
+    title: "Clase 0.3: El Sistema Operativo y Organización de Archivos (.csv, .xlsx, .pbix, .sql, .py)",
+    summary: "Aprende a navegar en Windows, gestionar carpetas, rutas absolutas y reconocer extensiones de archivos analíticos.",
     icon: "fa-folder-open",
-    purpose: "🎯 Propósito: Reconocer instantáneamente el tipo de archivo de datos por su extensión.",
-    deliverable: "🏁 Entregable: Estructura de carpetas del proyecto 'DataCall_Analytics' creada.",
-    analogy: "💡 Analogía: Las carpetas son los cajones de un archivador; la extensión del archivo es la etiqueta de color.",
-    step1_theory: `Principales Extensiones en Analítica de Datos:
-- .csv: Archivo de texto plano separado por comas (universal e liviano).
-- .xlsx: Libro de trabajo de Microsoft Excel.
-- .pbix: Informe visual de Power BI Desktop.
-- .sql: Script con consultas de bases de datos.
-- .py: Código fuente de script de Python.
-- .ipynb: Cuaderno interactivo de Jupyter Notebook.`,
-    step2_business: "En DataCall, las extracciones diarias se descargan como archivos .csv o .xlsx para luego cargarlas a SQL Server.",
-    step3_code: `ESTRUTURA PROFESIONAL DE PROYECTO:
+    duration: "45-75 min",
+    capability: "🎯 Capacidad Lograda: Crear la estructura profesional de carpetas para un proyecto de analítica y gestionar sus extensiones.",
+    concepts: ["Sistema Operativo (Windows)", "Archivos y Carpetas", "Extensiones de Archivos", "Rutas Absolutas vs Relativas", "Instalación de Apps"],
+    intro: "El desorden de archivos es el enemigo #1 del analista. Hoy estructurarás tu espacio de trabajo profesional.",
+    analogy: "💡 Analogía: Las carpetas son los cajones de un archivador; la extensión (.csv, .sql) es el código de color de la carpeta.",
+    theory: `1. Sistema Operativo (Windows):
+Es el programa maestro que administra los recursos del computador.
+
+2. Extensiones Clave para Analistas de Datos:
+- .csv: Archivo de texto separado por comas (universal e liviano).
+- .xlsx: Libro de hojas de cálculo de Microsoft Excel.
+- .pbix: Archivo de proyecto de Power BI Desktop.
+- .sql: Script de consultas de base de datos SQL Server.
+- .py: Archivo de código fuente de Python.`,
+    business_case: "En DataCall, organizaremos los archivos de cada proyecto en 4 carpetas estándar: 01_SQL, 02_PowerBI, 03_Python y 04_Data.",
+    step3_code: `ESTRUCTURA PROFESIONAL DE PROYECTO:
 DataCall_Analytics/
-  ├── 01_SQL/ (.sql)
-  ├── 02_PowerBI/ (.pbix)
-  ├── 03_Python/ (.py, .ipynb)
-  └── 04_Data/ (.csv, .xlsx)`,
-    step4_guided: [
-      "1. Abre el Explorador de Archivos (Windows + E).",
-      "2. Ve a la pestaña 'Vista' u 'Opciones' y activa la casilla 'Extensiones de nombre de archivo'.",
-      "3. Crea la carpeta 'DataCall_Analytics' con las subcarpetas 01_SQL, 02_PowerBI, 03_Python y 04_Data."
+  ├── 01_SQL/       (.sql)
+  ├── 02_PowerBI/   (.pbix)
+  ├── 03_Python/    (.py, .ipynb)
+  └── 04_Data/      (.csv, .xlsx)`,
+    guided_practice: [
+      "1. Presiona Windows + E para abrir el Explorador de Archivos.",
+      "2. Activa la casilla 'Extensiones de nombre de archivo' en la pestaña Vista.",
+      "3. Crea la carpeta principal 'DataCall_Analytics' con sus 4 subcarpetas."
     ],
-    step5_individual: "Identifica la extensión del archivo 'ventas_2025.csv'.",
-    solution_individual: "La extensión es .csv (Comma-Separated Values).",
-    quiz_question: "¿Qué extensión le pertenece a un archivo de proyecto de Power BI Desktop?",
+    individual_practice: "Identifica la extensión correcta para un script donde escribes consultas SELECT contra la base de datos.",
+    solution_practice: "La extensión correcta es .sql.",
+    quiz_question: "¿Qué extensión le corresponde a un archivo de informe de Power BI Desktop?",
     quiz_options: [".pbix", ".xlsx", ".docx", ".pdf"],
     quiz_answer: 0,
-    challenge: "Crear una estructura de carpetas organizada para tus tareas.",
-    commonErrors: "Ocultar las extensiones de archivos en Windows.",
+    challenge: "Crear la estructura de carpetas en tu escritorio y tomar una captura.",
+    common_errors: "Dejar las extensiones ocultas en Windows, lo que causa confusiones con archivos de texto.",
     english_vocab: [
-      { term: "File Extension", trans: "Extensión de Archivo", ex: "Check the CSV file extension." },
-      { term: "Folder", trans: "Carpeta", ex: "Save reports in the output folder." }
-    ],
-    prereqs: ["m0_03_os"]
+      { term: "File Extension", trans: "Extensión de Archivo", ex: "Always display file extensions." },
+      { term: "Folder / Directory", trans: "Carpeta / Directorio", ex: "Create a new project folder." }
+    ]
   },
   {
-    id: "m0_05_apps",
+    id: "c0_04_internet_server",
     phase: "Fase 0: Tech Base",
     cat: "fase0",
-    title: "Módulo 0.5: Programas y Aplicaciones del Data Analyst",
-    summary: "Conoce el paquete completo de herramientas que utiliza un analista junior día a día.",
-    icon: "fa-cubes",
-    purpose: "🎯 Propósito: Mapear las 5 herramientas esenciales del perfil de analista de datos.",
-    deliverable: "🏁 Entregable: Verificación de software instalado en tu equipo.",
-    analogy: "💡 Analogía: La caja de herramientas del mecánico (llaves, destornilladores = SSMS, Excel, Power BI, Python).",
-    step1_theory: `El Stack del Data Analyst Junior:
-1. SQL Server SSMS: Consultar la base de datos relacional.
-2. Microsoft Excel: Limpieza rápida y tablas dinámicas.
-3. Power BI Desktop: Dashboards ejecutivos interactivos.
-4. VS Code + Python: Automatización de tareas y estadística.
-5. Git & GitHub: Guardar y publicar el portafolio en internet.`,
-    step2_business: "Un día típico de Julieth: 9 AM consulta SQL en SSMS, 11 AM actualiza Power BI, 3 PM crea un script en Python.",
-    step3_code: `STACK DE HERRAMIENTAS:
-[SSMS] ➔ [EXCEL] ➔ [POWER BI] ➔ [PYTHON] ➔ [GITHUB]`,
-    step4_guided: [
-      "1. Revisa qué herramientas tienes instaladas en tu equipo.",
-      "2. Confirma que tienes acceso a SSMS y VS Code."
-    ],
-    step5_individual: "Nombra las 3 herramientas principales de visualización y consulta de datos.",
-    solution_individual: "SQL Server SSMS (consulta), Power BI (visualización), Excel (análisis rápido).",
-    quiz_question: "¿Cuál es la herramienta principal para crear dashboards ejecutivos interactivos?",
-    quiz_options: ["Power BI Desktop", "Bloc de Notas", "Paint", "Calculator"],
-    quiz_answer: 0,
-    challenge: "Familiarizarte con los íconos de SSMS, Power BI y VS Code.",
-    commonErrors: "Pensar que un analista solo usa Excel.",
-    english_vocab: [
-      { term: "Tool stack", trans: "Conjunto de herramientas", ex: "My tool stack includes SQL and Power BI." }
-    ],
-    prereqs: ["m0_04_files"]
-  },
-  {
-    id: "m0_06_internet",
-    phase: "Fase 0: Tech Base",
-    cat: "fase0",
-    title: "Módulo 0.6: Internet, Navegadores y Protocolo HTTP",
-    summary: "Entiende cómo viajan los datos por la red entre la web y tu computador.",
-    icon: "fa-globe",
-    purpose: "🎯 Propósito: Comprender la infraestructura por donde se consumen APIs e información web.",
-    deliverable: "🏁 Entregable: Inspección de peticiones de red en las herramientas de desarrollador.",
-    analogy: "💡 Analogía: El navegador es un mensajero en bicicleta que va a la oficina central (Servidor) a pedir una carta (Página Web) y te la trae.",
-    step1_theory: `¿Qué es Internet? Una red global de computadores conectados.
-¿Qué es un Navegador? Un programa (Chrome, Edge) que interpreta código web (HTML/CSS/JS).
-Protocolo HTTP/HTTPS: Las reglas de conversación en internet (GET = Dame datos, POST = Guarda datos).`,
-    step2_business: "Los clientes de DataCall realizan compras a través de la página web que envía peticiones HTTP a la base de datos.",
-    step3_code: `PETICIÓN HTTP: GET /api/ventas ➔ RESPUESTA: 200 OK [Datos de Ventas]`,
-    step4_guided: [
-      "1. Abre Google Chrome y presiona F12 (Herramientas de Desarrollador).",
-      "2. Ve a la pestaña 'Red' (Network).",
-      "3. Recarga la página y observa las solicitudes HTTP cargando."
-    ],
-    step5_individual: "¿Qué significa que una petición responda con código 200 vs 404?",
-    solution_individual: "200 significa éxito (OK); 404 significa que la página o recurso no fue encontrado.",
-    quiz_question: "¿Qué método HTTP se usa habitualmente para solicitar/consultar información?",
-    quiz_options: ["GET", "POST", "DELETE", "UPDATE"],
-    quiz_answer: 0,
-    challenge: "Abrir la consola de desarrollador F12 en tu navegador.",
-    commonErrors: "Confundir la red Wi-Fi local con Internet global.",
-    english_vocab: [
-      { term: "Browser", trans: "Navegador Web", ex: "Open Chrome browser." },
-      { term: "Request", trans: "Petición / Solicitud", ex: "Send an HTTP request." }
-    ],
-    prereqs: ["m0_05_apps"]
-  },
-  {
-    id: "m0_07_client_server",
-    phase: "Fase 0: Tech Base",
-    cat: "fase0",
-    title: "Módulo 0.7: Arquitectura Cliente y Servidor",
-    summary: "Comprende la relación entre la computadora que pide datos (Cliente) y el equipo potente que responde (Servidor).",
+    title: "Clase 0.4: Internet, Navegación y Arquitectura Cliente-Servidor",
+    summary: "Entiende cómo viajan los datos por la red mediante el protocolo HTTP y la arquitectura Cliente-Servidor.",
     icon: "fa-network-wired",
-    purpose: "🎯 Propósito: Entender por qué SSMS (Cliente) se conecta al servidor `LuchoX12` para traer datos.",
-    deliverable: "🏁 Entregable: Diagrama de conexión Cliente-Servidor en SSMS.",
-    analogy: "💡 Analogía: En un restaurante, tú eres el Cliente que pide la orden; la cocina central es el Servidor que prepara la comida.",
-    step1_theory: `Cliente: Tu computador personal corriendo SSMS, Power BI o VS Code.
-Servidor: Un computador potente encendido 24/7 (ej: LuchoX12) que guarda las bases de datos masivas.`,
-    step2_business: "El servidor de DataCall guarda 50,000 llamadas. Tu computador (cliente) no necesita almacenar toda la base; solo pide los resultados que necesitas.",
-    step3_code: `CLIENTE (SSMS en tu PC) ─── Petición SQL (F5) ───► SERVIDOR (LuchoX12)
-CLIENTE (SSMS en tu PC) ◄─── Resultados Tabla ──── SERVIDOR (LuchoX12)`,
-    step4_guided: [
-      "1. Entiende que cuando presionas F5 en SSMS, tu cliente le habla al servidor LuchoX12.",
-      "2. El servidor procesa la consulta en milisegundos y devuelve la tabla a tu pantalla."
+    duration: "45-75 min",
+    capability: "🎯 Capacidad Lograda: Explicar cómo una herramienta cliente (SSMS/Navegador) solicita y recibe datos de un servidor distante (LuchoX12).",
+    concepts: ["Internet y Navegadores", "URL, HTTP y HTTPS", "Cliente vs Servidor", "Petición (Request) y Respuesta (Response)"],
+    intro: "Toda la infraestructura moderna de datos funciona conectando Clientes con Servidores remotos.",
+    analogy: "💡 Analogía: En un restaurante, tú eres el Cliente que hace el pedido; el mesero es el protocolo HTTP que lleva la orden; la cocina central es el Servidor.",
+    theory: `1. Arquitectura Cliente-Servidor:
+- Cliente: La aplicación que usas en tu PC (Navegador Chrome, SSMS, Power BI).
+- Servidor: Un equipo potente encendido 24/7 (ej: LuchoX12) que almacena la base de datos central.
+
+2. Protocolo HTTP / HTTPS:
+Las reglas de lenguaje en internet.
+- Request (Petición): "Por favor dame la lista de clientes".
+- Response (Respuesta): El servidor devuelve la lista con código de estado (200 OK).`,
+    business_case: "Cuando en SSMS presionas F5, tu programa Cliente envía una consulta SQL al Servidor LuchoX12 y recibe la tabla resultante.",
+    code_example: `CLIENTE (Tu PC / SSMS) ─── Consulta SQL ───► SERVIDOR (LuchoX12)
+CLIENTE (Tu PC / SSMS) ◄─── Tabla de Datos ──── SERVIDOR (LuchoX12)`,
+    guided_practice: [
+      "1. Abre Google Chrome y presiona F12 para abrir las Herramientas de Desarrollador.",
+      "2. Haz clic en la pestaña 'Network' (Red).",
+      "3. Navega a un sitio web y observa cómo aparecen las peticiones HTTP."
     ],
-    step5_individual: "¿Quién procesa la consulta SQL, el computador del analista o el servidor?",
-    solution_individual: "El servidor procesa los datos y devuelve únicamente el resultado al cliente.",
-    quiz_question: "En nuestro laboratorio, ¿qué función cumple el equipo llamado `LuchoX12`?",
-    quiz_options: ["Servidor de Base de Datos SQL", "Pantalla de cliente", "Teclado", "Impresora"],
+    individual_practice: "¿Quién procesa las consultas masivas de datos, tu computador personal o el servidor remoto?",
+    solution_practice: "El servidor remoto procesa los cálculos masivos y envía solo el resultado final a tu computador cliente.",
+    quiz_question: "En nuestro entorno de laboratorio, ¿qué rol cumple el equipo denominado `LuchoX12`?",
+    quiz_options: ["Servidor de Base de Datos SQL", "Navegador de internet", "Pantalla de cliente", "Teclado"],
     quiz_answer: 0,
-    challenge: "Explicar el modelo cliente-servidor a un compañero.",
-    commonErrors: "Pensar que la base de datos completa está físicamente dentro del programa SSMS.",
+    challenge: "Explicar el modelo cliente-servidor con tus propias palabras.",
+    common_errors: "Pensar que toda la base de datos está guardada físicamente dentro del programa SSMS.",
     english_vocab: [
       { term: "Server", trans: "Servidor", ex: "Connect to the database server." },
-      { term: "Client", trans: "Cliente", ex: "SSMS is our SQL client." }
-    ],
-    prereqs: ["m0_06_internet"]
+      { term: "Client", trans: "Cliente", ex: "SSMS acts as a database client." }
+    ]
   },
   {
-    id: "m0_08_db_intro",
+    id: "c0_05_db_tables_api",
     phase: "Fase 0: Tech Base",
     cat: "fase0",
-    title: "Módulo 0.8: ¿Qué es una Base de Datos y un SGBD?",
-    summary: "Conoce qué es un Sistema Gestor de Bases de Datos (SGBD) como SQL Server.",
+    title: "Clase 0.5: Bases de Datos, SGBD, Tablas, APIs y Formato JSON",
+    summary: "Descubre qué es un SGBD como SQL Server, cómo se organizan las Tablas y cómo se intercambian datos en formato JSON a través de APIs.",
     icon: "fa-database",
-    purpose: "🎯 Propósito: Entender la diferencia entre un archivo de Excel suelto y un Sistema de Base de Datos Relacional.",
-    deliverable: "🏁 Entregable: Lista de ventajas de una Base de Datos frente a hojas de cálculo sueltas.",
-    analogy: "💡 Analogía: Una hoja de Excel es un cuaderno de notas; una Base de Datos es una biblioteca gigante organizada con archivadores automáticos.",
-    step1_theory: `¿Qué es una Base de Datos? Un almacén organizado de datos estructurados.
-¿Qué es un SGBD (DBMS)? El software encargado de gestionar la seguridad, rapidez y acceso multiusuario (Ejemplo: Microsoft SQL Server, PostgreSQL, MySQL).`,
-    step2_business: "Si 100 agentes de call center intentan abrir el mismo archivo de Excel al mismo tiempo, se bloquea. Con SQL Server, 1,000 agentes registran llamadas simultáneamente sin problemas.",
-    step3_code: `SGBD (SQL Server) ➔ Administra la Base de Datos 'DataCareer'`,
-    step4_guided: [
-      "1. Comprende las 3 ventajas clave: Seguridad, Velocidad con millones de datos, Multiusuario."
-    ],
-    step5_individual: "Menciona 2 motores de base de datos relacionales populares además de SQL Server.",
-    solution_individual: "PostgreSQL, MySQL, Oracle, SQLite.",
-    quiz_question: "¿Por qué una empresa usa SQL Server en lugar de guardar todo en archivos de Excel?",
-    quiz_options: ["Permite millones de datos, acceso simultáneo y seguridad avanzada", "Porque Excel es muy caro", "Porque Excel no tiene colores", "Por ninguna razón"],
-    quiz_answer: 0,
-    challenge: "Identificar los nombres de las bases de datos en tu entorno SSMS.",
-    commonErrors: "Confundir el motor de base de datos con el programa de hojas de cálculo.",
-    english_vocab: [
-      { term: "Database", trans: "Base de Datos", ex: "DataCareer is our main database." },
-      { term: "DBMS", trans: "Sistema Gestor de Base de Datos", ex: "SQL Server is a relational DBMS." }
-    ],
-    prereqs: ["m0_07_client_server"]
-  },
-  {
-    id: "m0_09_table_intro",
-    phase: "Fase 0: Tech Base",
-    cat: "fase0",
-    title: "Módulo 0.9: ¿Qué es una Tabla, Filas y Columnas?",
-    summary: "Aprende la estructura rectangular básica donde se guardan los datos.",
-    icon: "fa-table-cells",
-    purpose: "🎯 Propósito: Dominar los conceptos de Filas (Registros) y Columnas (Campos).",
-    deliverable: "🏁 Entregable: Reconocimiento de la tabla `analytics.dim_cliente`.",
-    analogy: "💡 Analogía: Una tabla es como una lista de asistencia; cada renglón horizontal es una persona, cada columna vertical es un dato (Nombre, Asistencia).",
-    step1_theory: `Estructura de una Tabla:
-- Columna (Campo): Atributo vertical fijo (Ej: Nombre, Ciudad, Edad).
-- Fila (Registro): Evento o individuo horizontal (Ej: Cliente ID 104, Julieth Galvis, Bogotá, 24).`,
-    step2_business: "En DataCall, la tabla `fact_llamadas` tiene 50,000 filas (cada una es una llamada) y 10 columnas (duración, fecha, agente, cliente, etc.).",
-    step3_code: `TABLA: analytics.dim_cliente
-| cliente_id | nombre         | ciudad |
-|------------|----------------|--------|
-| 1          | Julieth Galvis | Bogotá |`,
-    step4_guided: [
-      "1. Abre SSMS y expande las tablas del esquema analytics.",
-      "2. Distingue visualmente la cuadrícula de filas y columnas."
-    ],
-    step5_individual: "Si una tabla tiene 500 clientes, ¿cuántas filas tiene la tabla?",
-    solution_individual: "Tiene 500 filas (registros).",
-    quiz_question: "¿Qué representa una fila (registro) en una tabla de llamadas?",
-    quiz_options: ["Una llamada individual realizada", "El nombre de la columna", "El título de la base de datos", "El total de llamadas"],
-    quiz_answer: 0,
-    challenge: "Contar cuántas columnas tiene la tabla `analytics.dim_agente`.",
-    commonErrors: "Confundir las columnas (verticales) con las filas (horizontales).",
-    english_vocab: [
-      { term: "Table", trans: "Tabla", ex: "Query the customer table." },
-      { term: "Row / Record", trans: "Fila / Registro", ex: "The table contains 50,000 rows." },
-      { term: "Column / Field", trans: "Columna / Campo", ex: "Select the city column." }
-    ],
-    prereqs: ["m0_08_db_intro"]
-  },
-  {
-    id: "m0_10_api_intro",
-    phase: "Fase 0: Tech Base",
-    cat: "fase0",
-    title: "Módulo 0.10: Repaso — ¿Qué es una API? (Interfaz de Programación)",
-    summary: "Repasa cómo las APIs permiten que dos sistemas se comuniquen sin compartir su código interno.",
-    icon: "fa-plug",
-    purpose: "🎯 Propósito: Reforzar el concepto de API que ya aprendiste e integrarlo al flujo de datos.",
-    deliverable: "🏁 Entregable: Comprensión del consumo de la API de Groq AI en la plataforma.",
-    analogy: "💡 Analogía: El mesero de un restaurante; lleva tu pedido a la cocina y te trae el plato listo sin que tú entres a cocinar.",
-    step1_theory: `¿Qué es una API (Application Programming Interface)?
-Es un conjunto de definiciones y protocolos que permite a dos aplicaciones comunicarse entre sí.
-Ejemplo: Nuestra plataforma le envía un mensaje a la API de Groq y Groq nos devuelve la respuesta de la IA.`,
-    step2_business: "En DataCall, una API conecta el sistema telefónico con la base de datos SQL Server en tiempo real.",
-    step3_code: `NUESTRA APP ─── Request API (Pregunta) ───► GROQ AI API (Llama 3)
-NUESTRA APP ◄─── Response JSON (Respuesta) ── GROQ AI API (Llama 3)`,
-    step4_guided: [
-      "1. Recuerda la pestaña 'Tutor IA KittyAI'.",
-      "2. Cuando escribes un mensaje, la app usa la API de Groq para responderte."
-    ],
-    step5_individual: "¿Cuál es el formato de datos más común para intercambiar información en una API web?",
-    solution_individual: "El formato JSON (JavaScript Object Notation).",
-    quiz_question: "¿Cuál es la función principal de una API?",
-    quiz_options: ["Permitir la comunicación e intercambio de datos entre dos sistemas", "Diseñar logotipos", "Crear presentaciones de PowerPoint", "Limpiar teclados"],
-    quiz_answer: 0,
-    challenge: "Enviar una pregunta a KittyAI y observar cómo la API responde.",
-    commonErrors: "Creer que una API es una página web visual para usuarios finales.",
-    english_vocab: [
-      { term: "API", trans: "Interfaz de Programación de Aplicaciones", ex: "Fetch data from the REST API." },
-      { term: "Endpoint", trans: "Punto de Acceso de API", ex: "Call the /api/chat endpoint." }
-    ],
-    prereqs: ["m0_09_table_intro"]
-  },
-  {
-    id: "m0_11_json",
-    phase: "Fase 0: Tech Base",
-    cat: "fase0",
-    title: "Módulo 0.11: ¿Qué es el formato JSON?",
-    summary: "Conoce el estándar universal de texto para estructurar información en la web.",
-    icon: "fa-code",
-    purpose: "🎯 Propósito: Leer y entender la estructura de clave-valor en datos tipo JSON.",
-    deliverable: "🏁 Entregable: Objeto JSON escrito para representar un cliente.",
-    analogy: "💡 Analogía: Una ficha bibliográfica donde pones 'Etiqueta': 'Valor' (Ej: Nombre: Julieth).",
-    step1_theory: `JSON (JavaScript Object Notation):
-Es un formato de texto super liviano basado en pares de Clave: Valor.
+    duration: "45-75 min",
+    capability: "🎯 Capacidad Lograda: Leer estructuras de tablas relacionales y entender objetos JSON de intercambio.",
+    concepts: ["Base de Datos", "SGBD (SQL Server)", "Tablas, Filas y Columnas", "API (Interfaz)", "JSON (Pares Clave-Valor)"],
+    intro: "Hoy conectarás los 3 pilares del intercambio de información: Bases de Datos, APIs web y formato JSON.",
+    analogy: "💡 Analogía: Una base de datos es el gran archivo central; la API es la ventanilla de atención al cliente; JSON es el formulario estándar que llenas.",
+    theory: `1. Base de Datos & SGBD:
+Un SGBD (Sistema Gestor) como SQL Server administra la seguridad y rapidez de miles de tablas.
 
-Ejemplo:
+2. Estructura de Tablas:
+- Filas (Registros): Cada entrada individual.
+- Columnas (Campos): Atributos de esa entrada.
+
+3. Formato JSON:
+Formato de texto estructurado en pares "Clave": "Valor".
 {
-  "cliente_id": 1,
+  "cliente_id": 101,
   "nombre": "Julieth Galvis",
-  "ciudad": "Bogotá",
-  "activo": true
+  "ciudad": "Bogotá"
 }`,
-    step2_business: "Las encuestas de satisfacción de DataCall llegan desde la app móvil en formato JSON a la base de datos.",
-    step3_code: `{
-  "llamada_id": 501,
+    business_case: "Las encuestas de satisfacción enviadas desde la app de los clientes llegan en JSON mediante una API y se guardan en la tabla `analytics.fact_encuestas`.",
+    code_example: `{
+  "llamada_id": 5001,
   "duracion_segundos": 240,
   "resultado": "Resuelta"
 }`,
-    step4_guided: [
-      "1. Observa cómo las llaves { } encierran el objeto.",
-      "2. Observa cómo los textos llevan comillas dobles y los números van sueltos."
+    guided_practice: [
+      "1. Observa la estructura del objeto JSON anterior.",
+      "2. Identifica las 3 claves: llamada_id, duracion_segundos y resultado.",
+      "3. Comprende cómo se corresponden con las columnas de una tabla SQL."
     ],
-    step5_individual: "Crea un JSON para un producto con las claves: producto_id, nombre, precio.",
-    solution_individual: '{"producto_id": 10, "nombre": "Diadema USB", "precio": 150000}',
-    quiz_question: "¿Cómo se estructuran los datos dentro de un objeto JSON?",
-    quiz_options: ["En pares de Clave : Valor", "En párrafos de texto libre", "En tablas de Excel", "En columnas de imagen"],
+    individual_practice: "Escribe un objeto JSON que represente a un agente de call center con nombre, turno y nivel.",
+    solution_practice: '{\n  "nombre": "Carlos Mendoza",\n  "turno": "Mañana",\n  "nivel": "Senior"\n}',
+    quiz_question: "¿Cómo se estructuran los datos dentro de un archivo o mensaje en formato JSON?",
+    quiz_options: ["En pares de Clave : Valor entre llaves", "En párrafos sueltos", "En imágenes", "En fórmulas de Excel"],
     quiz_answer: 0,
-    challenge: "Validar la sintaxis de un JSON sencillo.",
-    commonErrors: "Olvidar cerrar las comillas o las comas entre atributos.",
+    challenge: "Crear un JSON válido con 4 atributos de un producto.",
+    common_errors: "Olvidar encerrar entre comillas dobles los nombres de las claves en JSON.",
     english_vocab: [
-      { term: "Key-Value pair", trans: "Par Clave-Valor", ex: "JSON uses key-value pairs." }
-    ],
-    prereqs: ["m0_10_api_intro"]
+      { term: "Database", trans: "Base de Datos", ex: "SQL Server manages the database." },
+      { term: "Key-Value Pair", trans: "Par Clave-Valor", ex: "JSON uses key-value pairs." }
+    ]
   },
   {
-    id: "m0_12_ide",
+    id: "c0_06_ide_terminal_git",
     phase: "Fase 0: Tech Base",
     cat: "fase0",
-    title: "Módulo 0.12: Repaso — ¿Qué es un IDE y un Editor de Código?",
-    summary: "Repasa la diferencia entre redactar texto en Word y escribir código profesional en un IDE o editor como VS Code.",
-    icon: "fa-laptop-code",
-    purpose: "🎯 Propósito: Entender el entorno de trabajo donde los desarrolladores y analistas escriben código.",
-    deliverable: "🏁 Entregable: VS Code configurado con la extensión de Python.",
-    analogy: "💡 Analogía: Word es un cuaderno para cartas; un IDE es una libreta inteligente para arquitectos que te marca errores y te sugiere líneas rectas automáticamente.",
-    step1_theory: `IDE (Integrated Development Environment) / Editor de Código:
-Es un programa diseñado para escribir código con ayuda visual: resaltado de colores, autocompletado y detección de errores de sintaxis (Ejemplos: VS Code, SSMS, PyCharm).`,
-    step2_business: "Usamos VS Code para escribir scripts de Python que se conectan a SQL Server y procesan encuestas.",
-    step3_code: `# En un IDE, el código se resalta con colores según su tipo:
-nombre = "Julieth"  # Texto en verde
-edad = 24           # Número en azul`,
-    step4_guided: [
-      "1. Abre VS Code en tu computador.",
-      "2. Observa la barra lateral con archivos, buscador y extensiones."
-    ],
-    step5_individual: "¿Por qué no se debe usar Microsoft Word para escribir programas o consultas SQL?",
-    solution_individual: "Porque Word agrega formatos ocultos (negritas, comillas curvas) que rompen la ejecución del código.",
-    quiz_question: "¿Cuál es una ventaja principal de usar VS Code o SSMS sobre un bloc de notas?",
-    quiz_options: ["Resalta errores de sintaxis y autocompleta código", "Es más bonito", "Viene con música", "Hace la tarea solo"],
-    quiz_answer: 0,
-    challenge: "Instalar la extensión de español en VS Code.",
-    commonErrors: "Guardar archivos de código con extensión .txt en lugar de .sql o .py.",
-    english_vocab: [
-      { term: "IDE", trans: "Entorno de Desarrollo Integrado", ex: "VS Code is a lightweight IDE." },
-      { term: "Syntax Highlighting", trans: "Resaltado de Sintaxis", ex: "Syntax highlighting helps spot errors." }
-    ],
-    prereqs: ["m0_11_json"]
-  },
-  {
-    id: "m0_13_terminal",
-    phase: "Fase 0: Tech Base",
-    cat: "fase0",
-    title: "Módulo 0.13: ¿Qué es una Terminal o Línea de Comandos?",
-    summary: "Aprende a comunicarte con tu computador mediante comandos escritos sin usar el ratón.",
-    icon: "fa-terminal",
-    purpose: "🎯 Propósito: Ejecutar comandos fundamentales en la Consola / Terminal de Windows (PowerShell / CMD).",
-    deliverable: "🏁 Entregable: Comando `dir` y `python --version` ejecutado con éxito en terminal.",
-    analogy: "💡 Analogía: En lugar de hacer doble clic con el ratón en una carpeta, le escribes una carta formal al computador diciendo 'Abre la carpeta Data'.",
-    step1_theory: `¿Qué es la Terminal / Consola?
-Es una interfaz basada en texto para darle órdenes directas al sistema operativo.
-- Comandos básicos en Windows:
-  dir: Listar archivos de la carpeta actual.
-  cd nombre: Entrar a una carpeta.
-  cls: Limpiar la pantalla.`,
-    step2_business: "Los analistas usan la terminal para instalar librerías de Python (`pip install pandas`) y ejecutar automatizaciones.",
-    step3_code: `# Comandos de terminal:
+    title: "Clase 0.6: Entornos de Trabajo: IDE (VS Code), Terminal y Git/GitHub",
+    summary: "Prepara tu entorno técnico: escribe código en VS Code, ejecuta comandos en la Terminal e introduce el control de versiones con Git y GitHub.",
+    icon: "fa-code-branch",
+    duration: "45-75 min",
+    capability: "🎯 Capacidad Lograda: Ejecutar comandos básicos en terminal y comprender la función de Git y GitHub para tu portafolio.",
+    concepts: ["IDE y Editor de Código (VS Code)", "Terminal / Consola (CMD)", "Git (Control de Versiones)", "GitHub (Portafolio Nube)"],
+    intro: "El IDE es tu taller de carpintería; la terminal es tu cuadro de mandos; GitHub es la vitrina pública de tu trabajo.",
+    analogy: "💡 Analogía: Git es la cámara fotográfica que toma capturas de tu proyecto en cada avance; GitHub es Instagram donde publicas tus álbumes para que el mundo los vea.",
+    theory: `1. VS Code (IDE):
+Editor inteligente que resalta la sintaxis de colores y ayuda a detectar errores en Python y SQL.
+
+2. Terminal (Consola de Comandos):
+Interfaz de texto para dar órdenes directas al sistema operativo.
+Comandos útiles: ` + "`dir`" + ` (listar archivos), ` + "`python --version`" + `.
+
+3. Git vs GitHub:
+- Git: Programa local en tu PC que guarda el historial de versiones de tus archivos.
+- GitHub: Plataforma en la nube donde publicas tu portafolio público para reclutadores.`,
+    business_case: "Todas las consultas SQL y scripts de Python del proyecto DataCall se guardarán con Git y se subirán a tu perfil público de GitHub.",
+    code_example: `# Comandos básicos de terminal:
 dir
 python --version
-pip list`,
-    step4_guided: [
-      "1. Presiona Windows + R, escribe 'cmd' y presiona Enter.",
-      "2. Escribe `dir` y presiona Enter para ver los archivos.",
-      "3. Escribe `cls` para limpiar la terminal."
+git status`,
+    guided_practice: [
+      "1. Presiona Windows + R, escribe 'cmd' y presiona Enter para abrir la terminal.",
+      "2. Escribe `dir` y presiona Enter para ver los archivos de tu carpeta actual.",
+      "3. Escribe `cls` para limpiar la consola."
     ],
-    step5_individual: "¿Cuál comando muestra la versión de Python instalada en la terminal?",
-    solution_individual: "El comando es `python --version` (o `python -V`).",
-    quiz_question: "¿Para qué se usa el comando `dir` en la consola de comandos de Windows?",
-    quiz_options: ["Para listar las carpetas y archivos del directorio actual", "Para borrar la pantalla", "Para apagar el equipo", "Para cambiar la hora"],
+    individual_practice: "¿Cuál es la diferencia principal entre Git y GitHub?",
+    solution_practice: "Git es la herramienta local en tu computador para guardar versiones; GitHub es el sitio web en la nube para alojar y mostrar tu portafolio público.",
+    quiz_question: "¿Para qué sirve la plataforma GitHub en la carrera de un Data Analyst?",
+    quiz_options: ["Para publicar y exhibir tu portafolio de proyectos de código ante reclutadores", "Para editar fotos", "Para enviar correos masivos", "Para jugar en línea"],
     quiz_answer: 0,
-    challenge: "Navegar entre carpetas con el comando `cd`.",
-    commonErrors: "Tener le temor a la pantalla negra de la consola.",
+    challenge: "Crear tu cuenta gratuita en GitHub.com.",
+    commonErrors: "Usar procesadores de texto como Microsoft Word para escribir programas o código SQL.",
     english_vocab: [
-      { term: "Terminal / Command Line", trans: "Terminal / Línea de Comandos", ex: "Open the terminal in VS Code." },
-      { term: "Directory", trans: "Directorio / Carpeta", ex: "List the current directory." }
-    ],
-    prereqs: ["m0_12_ide"]
+      { term: "Terminal", trans: "Terminal de Comandos", ex: "Run commands in the terminal." },
+      { term: "Repository", trans: "Repositorio", ex: "Push your project to GitHub repository." }
+    ]
   },
   {
-    id: "m0_14_git_intro",
+    id: "c0_07_cloud_etl_architecture",
     phase: "Fase 0: Tech Base",
     cat: "fase0",
-    title: "Módulo 0.14: ¿Qué es Git y GitHub? (Concepto Inicial)",
-    summary: "Entiende qué es la red social del código y el sistema de control de versiones.",
-    icon: "fa-code-branch",
-    purpose: "🎯 Propósito: Comprender la diferencia entre el programa local (Git) y la nube pública (GitHub).",
-    deliverable: "🏁 Entregable: Cuenta registrada en GitHub.com.",
-    analogy: "💡 Analogía: Git es la cámara fotográfica que toma capturas de tu proyecto; GitHub es Google Photos donde subes tus fotos a la nube para mostrarlas.",
-    step1_theory: `Git: Herramienta en tu PC que guarda el historial de cambios de tu código.
-GitHub: Sitio web donde publicas tus repositorios para que las empresas y reclutadores vean tu trabajo.`,
-    step2_business: "Al finalizar el programa, Julieth subirá el proyecto DataCall a GitHub para que los seleccionadores vean sus consultas SQL y dashboards.",
-    step3_code: `GIT (Local en tu PC) ─── git push ───► GITHUB (Nube Pública para Reclutadores)`,
-    step4_guided: [
-      "1. Entra a https://github.com en tu navegador.",
-      "2. Crea tu cuenta gratuita con tu correo profesional."
-    ],
-    step5_individual: "¿Cuál es la función principal de GitHub en tu carrera de analista?",
-    solution_individual: "Servir como tu portafolio público de proyectos demostrables para conseguir empleo.",
-    quiz_question: "¿Qué es GitHub?",
-    quiz_options: ["Una plataforma web para alojar y mostrar proyectos de código y datos", "Un antivirus", "Un buscador de películas", "Una base de datos de Excel"],
-    quiz_answer: 0,
-    challenge: "Elegir un nombre de usuario profesional en GitHub (ej: JuliethGalvisData).",
-    commonErrors: "Usar apodos no profesionales en tu cuenta de GitHub.",
-    english_vocab: [
-      { term: "Repository (Repo)", trans: "Repositorio", ex: "Create a public GitHub repository." },
-      { term: "Commit", trans: "Guardar Cambios", ex: "Save your progress with a commit." }
-    ],
-    prereqs: ["m0_13_terminal"]
-  },
-  {
-    id: "m0_15_cloud",
-    phase: "Fase 0: Tech Base",
-    cat: "fase0",
-    title: "Módulo 0.15: ¿Qué es la Nube? (Cloud Computing - Azure, AWS)",
-    summary: "Descubre qué significa guardar e procesar datos en la nube.",
-    icon: "fa-cloud",
-    purpose: "🎯 Propósito: Conocer dónde viven los servidores modernos de las grandes empresas.",
-    deliverable: "🏁 Entregable: Comprensión de los servicios de nube de Microsoft Azure y AWS.",
-    analogy: "💡 Analogía: Alquilar un locker seguro en un centro comercial en lugar de cargar todos tus bolsos pesados en la mano.",
-    step1_theory: `Cloud Computing (Computación en la Nube):
-Alquilar servidores, almacenamiento y bases de datos por internet en lugar de comprar computadores físicos caros para la empresa.
-- Proveedores líderes: Microsoft Azure, Amazon Web Services (AWS), Google Cloud.`,
-    step2_business: "DataCall aloja su infraestructura en Microsoft Azure para que el sistema nunca se caiga durante picos de llamadas.",
-    step3_code: `BASE DE DATOS EN LA NUBE (Azure SQL Database) ◄─── Conexión remota por internet`,
-    step4_guided: [
-      "1. Comprende las 3 ventajas de la Nube: Escalabilidad, Seguridad y Acceso remoto desde cualquier lugar."
-    ],
-    step5_individual: "¿Cuál es la nube oficial de Microsoft integrada con Power BI y SQL Server?",
-    solution_individual: "Microsoft Azure.",
-    quiz_question: "¿Qué ventaja principal ofrece la nube a una empresa en crecimiento?",
-    quiz_options: ["Permite escalar servidores y recursos instantáneamente por internet", "Regala computadores físicos", "Hace que el internet sea gratis", "No requiere electricidad"],
-    quiz_answer: 0,
-    challenge: "Identificar qué empresas conocidas usan la nube de Azure o AWS.",
-    commonErrors: "Pensar que la nube es literalmente el clima en el cielo.",
-    english_vocab: [
-      { term: "Cloud Computing", trans: "Computación en la Nube", ex: "We deploy databases to the cloud." }
-    ],
-    prereqs: ["m0_14_git_intro"]
-  },
-  {
-    id: "m0_16_role_analyst",
-    phase: "Fase 0: Tech Base",
-    cat: "fase0",
-    title: "Módulo 0.16: ¿Qué hace exactamente un Junior Data Analyst?",
-    summary: "Visualiza el día a día, las responsabilidades y el impacto de tu futuro rol profesional.",
-    icon: "fa-user-tie",
-    purpose: "🎯 Propósito: Tener claridad absoluta sobre las tareas reales del puesto de trabajo al que aspiras.",
-    deliverable: "🏁 Entregable: Descripción personal de tu rol ideal como Junior Data Analyst.",
-    analogy: "💡 Analogía: El analista de datos es como el médico general de una empresa; examina los exámenes de laboratorio (datos), diagnostica problemas (esperas altas) y prescribe tratamientos (decisiones).",
-    step1_theory: `Funciones de un Junior Data Analyst:
-1. Extraer datos de SQL Server o archivos.
-2. Limpiar y transformar datos en Excel/Power Query/Pandas.
-3. Construir dashboards interactivos en Power BI.
-4. Responder preguntas de negocio de gerencia.
-5. Comunicar hallazgos de forma clara (Storytelling).`,
-    step2_business: "En DataCall, Julieth no toma llamadas de clientes; ayuda al gerente a entender por qué los clientes están satisfechos o insatisfechos.",
-    step3_code: `FLUJO DEL DATA ANALYST:
-[DATOS CRUDOS] ➔ [LIMPIEZA] ➔ [ANÁLISIS] ➔ [DASHBOARD] ➔ [DECISIÓN DE NEGOCIO]`,
-    step4_guided: [
-      "1. Interioriza los 4 pasos del valor analítico: Recolectar ➔ Limpiar ➔ Analizar ➔ Presentar."
-    ],
-    step5_individual: "Escribe la diferencia entre un programador de software y un analista de datos.",
-    solution_individual: "El programador crea aplicaciones para usuarios; el analista examina los datos generados para guiar decisiones de negocio.",
-    quiz_question: "¿Cuál es el producto final más común que entrega un Data Analyst a la gerencia?",
-    quiz_options: ["Un dashboard o reporte interactivo con recomendaciones de negocio", "Un cable de red", "Una llamada de ventas", "Un teclado nuevo"],
-    quiz_answer: 0,
-    challenge: "Visualizarte trabajando en tu primer empleo como Data Analyst.",
-    commonErrors: "Pensar que un analista pasa todo el día haciendo llamadas de soporte.",
-    english_vocab: [
-      { term: "Data-driven", trans: "Basado en datos", ex: "We make data-driven decisions." },
-      { term: "Stakeholder", trans: "Interesado / Gerente", ex: "Present dashboard to stakeholders." }
-    ],
-    prereqs: ["m0_15_cloud"]
-  },
-  {
-    id: "m0_17_etl_intro",
-    phase: "Fase 0: Tech Base",
-    cat: "fase0",
-    title: "Módulo 0.17: Repaso — ¿Qué es el proceso ETL? (Extract, Transform, Load)",
-    summary: "Repasa los 3 pasos sagrados de la ingeniería y análisis de datos.",
-    icon: "fa-filter-circle-dollar",
-    purpose: "🎯 Propósito: Comprender el ciclo completo de vida de los datos antes de analizarlos.",
-    deliverable: "🏁 Entregable: Diagrama del proceso ETL de DataCall.",
-    analogy: "💡 Analogía: Cocinar una sopa: Extraer las verduras de la huerta (Extract), Lavar y picar las verduras (Transform), Servir la sopa en la mesa (Load).",
-    step1_theory: `Proceso ETL:
-1. Extract (Extraer): Traer datos desde SQL Server, Excel o APIs.
-2. Transform (Transformar): Limpiar nulos, cambiar formatos, filtrar errores.
-3. Load (Cargar): Guardar los datos limpios en el Data Warehouse o Power BI.`,
-    step2_business: "En DataCall, extraemos 50,000 llamadas brutas, eliminamos llamadas de prueba de 0 segundos y cargamos el resumen a Power BI.",
-    step3_code: `E (Extraer llamadas) ➔ T (Filtrar errores) ➔ L (Cargar a Power BI)`,
-    step4_guided: [
-      "1. Recuerda los 3 pasos: E ➔ T ➔ L.",
-      "2. Identifica en qué herramienta se hace la T en Power BI (Power Query)."
-    ],
-    step5_individual: "¿En qué etapa del ETL se corrigen las fechas mal escritas o casillas vacías?",
-    solution_individual: "En la etapa de Transformación (T).",
-    quiz_question: "¿Qué significan las siglas ETL?",
-    quiz_options: ["Extract, Transform, Load (Extraer, Transformar, Cargar)", "Excel, Table, Logic", "Error, Test, List", "Execution, Time, Limit"],
-    quiz_answer: 0,
-    challenge: "Identificar la etapa de Transformación en un reporte sencillo.",
-    commonErrors: "Intentar graficar datos crudos sin pasar por la etapa de Transformación.",
-    english_vocab: [
-      { term: "ETL Process", trans: "Proceso ETL", ex: "Run the daily ETL process." },
-      { term: "Data Pipeline", trans: "Tubería de Datos", ex: "The data pipeline extracts CRM records." }
-    ],
-    prereqs: ["m0_16_role_analyst"]
-  },
-  {
-    id: "m0_18_warehouse",
-    phase: "Fase 0: Tech Base",
-    cat: "fase0",
-    title: "Módulo 0.18: Data Lake vs Data Warehouse",
-    summary: "Aprende dónde se guardan los datos crudos (Lake) vs los datos limpios y organizados (Warehouse).",
-    icon: "fa-warehouse",
-    purpose: "🎯 Propósito: Distinguir los dos grandes depósitos de información empresariales.",
-    deliverable: "🏁 Entregable: Cuadro comparativo entre Data Lake y Data Warehouse.",
-    analogy: "💡 Analogía: El Data Lake es un lago natural con peces, agua y barro revuelto; el Data Warehouse es una piscina limpia de agua filtrada lista para nadar.",
-    step1_theory: `Data Lake: Almacena datos masivos en su estado crudo original (imágenes, archivos de texto, logs).
-Data Warehouse (DW): Depósito estructurado y super limpio optimizado para consultas analíticas rápidas de negocio.`,
-    step2_business: "DataCall guarda las grabaciones de voz en un Data Lake; la base `DataCareer` en SQL Server es nuestro Data Warehouse estructurado.",
-    step3_code: `DATA LAKE (Datos crudos sin filtrar) ─── Proceso ETL ───► DATA WAREHOUSE (Tablas SQL organizadas)`,
-    step4_guided: [
-      "1. Recuerda que como analista de datos consultarás principalmente el Data Warehouse estructurado."
-    ],
-    step5_individual: "¿Dónde prefieres hacer tus consultas para reportes ejecutivos, en el Data Lake o Data Warehouse?",
-    solution_individual: "En el Data Warehouse, porque los datos ya están estructurados, limpios y optimizados.",
-    quiz_question: "¿Cuál es la característica principal de un Data Warehouse?",
-    quiz_options: ["Guarda datos estructurados, limpios y preparados para análisis de negocio", "Guarda solo archivos de música", "Es un programa de chat", "No tiene tablas"],
-    quiz_answer: 0,
-    challenge: "Explicar la diferencia entre lago y bodega de datos.",
-    commonErrors: "Confundir un Data Lake desorganizado con una base de datos relacional limpia.",
-    english_vocab: [
-      { term: "Data Warehouse", trans: "Bodega / Almacén de Datos", ex: "Query the enterprise Data Warehouse." },
-      { term: "Data Lake", trans: "Lago de Datos", ex: "Raw logs are stored in the Data Lake." }
-    ],
-    prereqs: ["m0_17_etl_intro"]
-  },
-  {
-    id: "m0_19_medallion",
-    phase: "Fase 0: Tech Base",
-    cat: "fase0",
-    title: "Módulo 0.19: Arquitectura Medallón (Bronze / Silver / Gold)",
-    summary: "Repasa los 3 niveles de calidad de datos en la industria moderna.",
+    title: "Clase 0.7: Infraestructura Cloud, ETL vs ELT, Data Warehouse y Arquitectura Medallón",
+    summary: "Comprende dónde viven los datos empresariales en la Nube (Azure/AWS), el flujo ETL/ELT y las capas de calidad Bronze, Silver y Gold.",
     icon: "fa-layer-group",
-    purpose: "🎯 Propósito: Conocer los estándares de calidad de datos desde el origen hasta el reporte final.",
-    deliverable: "🏁 Entregable: Clasificación de capas de datos de DataCall.",
-    analogy: "💡 Analogía: Las medallas olímpicas: Bronce (materia prima sin pulir), Plata (limpio y pulido), Oro (la copa de campeón lista para exhibir).",
-    step1_theory: `Arquitectura Medallón:
-- Capa Bronze (Bronce): Datos crudos tal cual se extrajeron de los sistemas de origen.
-- Capa Silver (Plata): Datos limpios, sin duplicados ni nulos, consolidados.
-- Capa Gold (Oro): Datos agregados en KPIs y modelos estrella listos para dashboards gerenciales.`,
-    step2_business: "Nuestra base `DataCareer` representa la Capa Silver/Gold de DataCall, lista para alimentar Power BI.",
-    step3_code: `BRONZE (Extraído) ➔ SILVER (Limpio y Validado) ➔ GOLD (KPIs Gerenciales)`,
-    step4_guided: [
-      "1. Visualiza los 3 pasos de maduración de la información."
+    duration: "45-75 min",
+    capability: "🎯 Capacidad Lograda: Explicar la arquitectura de datos desde la extracción cruda hasta la capa gerencial de reportes.",
+    concepts: ["Cloud Computing (Azure, AWS)", "ETL vs ELT", "Data Lake vs Data Warehouse", "Arquitectura Medallón (Bronze, Silver, Gold)"],
+    intro: "Con esta clase cerrarás la Fase 0 comprendiendo cómo las grandes empresas organizan la información desde la recolección hasta los tableros gerenciales.",
+    analogy: "💡 Analogía: El agua de ciudad: la fuente natural es el Data Lake (Bronze); la planta de tratamiento filtra el agua en la capa Silver; la botella de agua mineral lista para tomar es el Data Warehouse (Gold).",
+    theory: `1. Cloud Computing (Nube):
+Alquilar servidores y bases de datos por internet (Microsoft Azure, AWS) en lugar de comprar equipos físicos.
+
+2. Proceso ETL:
+- Extract (Extraer): Traer datos desde las fuentes de origen.
+- Transform (Transformar): Limpiar nulos, duplicados y corregir formatos.
+- Load (Cargar): Guardar los datos limpios en el Data Warehouse.
+
+3. Arquitectura Medallón:
+- Capa Bronze (Bronce): Datos crudos sin modificar.
+- Capa Silver (Plata): Datos limpios, filtrados y validados.
+- Capa Gold (Oro): Datos agregados en KPIs y modelos estrella listos para dashboards.`,
+    business_case: "En DataCall, las llamadas crudas llegan a la capa Bronze; las limpiamos a la capa Silver en SQL Server; y creamos los KPIs de gerencia en la capa Gold en Power BI.",
+    code_example: `ARQUITECTURA DE DATOS DATACALL:
+[Fuentes Crudas] ➔ BRONZE ➔ ETL Limpieza ➔ SILVER (DataCareer SQL) ➔ GOLD (Power BI Dashboards)`,
+    guided_practice: [
+      "1. Repasa visualmente las 3 capas: Bronze ➔ Silver ➔ Gold.",
+      "2. Identifica en cuál capa ubicarías un gráfico ejecutivo para el Gerente General (Gold)."
     ],
-    step5_individual: "¿En qué capa se ubica un tablero de control publicado en Power BI?",
-    solution_individual: "En la Capa Gold (Oro).",
-    quiz_question: "¿Qué capa de la arquitectura medallón contiene los datos filtrados y validados sin duplicados?",
-    quiz_options: ["Capa Silver (Plata)", "Capa Bronze (Bronce)", "Capa Madera", "Capa Papel"],
+    individual_practice: "¿Qué diferencia existe entre un Data Lake y un Data Warehouse?",
+    solution_practice: "El Data Lake almacena datos crudos desorganizados de cualquier tipo; el Data Warehouse guarda datos estructurados, limpios y optimizados para consultas analíticas.",
+    quiz_question: "¿Qué capa de la arquitectura medallón contiene los indicadores KPIs finales listos para ser visualizados en Power BI?",
+    quiz_options: ["Capa Gold (Oro)", "Capa Bronze (Bronce)", "Capa Plata", "Capa Madera"],
     quiz_answer: 0,
-    challenge: "Identificar la capa de origen de tus consultas SQL.",
-    commonErrors: "Intentar crear indicadores de negocio directamente en la Capa Bronze sin limpiar.",
+    challenge: "Dibujar la arquitectura de datos de DataCall en una hoja de papel.",
+    common_errors: "Intentar graficar indicadores de negocio directamente desde datos crudos de la capa Bronze sin limpiar.",
     english_vocab: [
-      { term: "Raw data", trans: "Datos Crudos (Bronze)", ex: "Ingest raw data into Bronze layer." },
-      { term: "Curated data", trans: "Datos Curados (Gold)", ex: "Gold layer provides curated metrics." }
-    ],
-    prereqs: ["m0_18_warehouse"]
+      { term: "Cloud Computing", trans: "Computación en la Nube", ex: "Azure is a cloud computing platform." },
+      { term: "Data Warehouse", trans: "Almacén / Bodega de Datos", ex: "The Data Warehouse stores Gold tables." }
+    ]
   },
 
   // ==========================================
-  // FASE 1 — PENSAMIENTO LÓGICO Y FUNDAMENTOS DE DATOS (1.1 a 1.13)
+  // FASE 1 — DATA & LOGICAL THINKING (5 Clases de 1h)
   // ==========================================
   {
-    id: "m1_01_data_def",
+    id: "c1_01_data_info_struct",
     phase: "Fase 1: Lógica",
     cat: "fase1",
-    title: "Módulo 1.1: ¿Qué es un dato realmente?",
-    summary: "Comprende la diferencia entre un dato suelto y la información con sentido.",
-    icon: "fa-shapes",
-    purpose: "🎯 Propósito: Entender cómo los datos individuales se transforman en conocimiento de negocio.",
-    deliverable: "🏁 Entregable: Ejercicio de transformación de datos en información.",
-    analogy: "💡 Analogía: Las letras individuales (D, A, T, O) son datos; la palabra 'DATO' es información; entender el significado es conocimiento.",
-    step1_theory: `Un Dato es un valor crudo sin contexto. Ejemplo: 120.
-Información es el dato con contexto. Ejemplo: 120 segundos de tiempo de espera en llamadas.
-Conocimiento es entender la implicación. Ejemplo: 120s es el doble del objetivo permitido.`,
-    step2_business: "En DataCall, ver el número '5' no dice nada. Ver 'Satisfacción de cliente: 5 sobre 5' indica excelencia en la atención.",
-    step3_code: `Dato: 5 ➔ Información: Satisfacción = 5 ➔ Conocimiento: Excelente atención del agente`,
-    step4_guided: ["1. Toma 3 números al azar.", "2. Agrégales contexto de negocio de call center."],
-    step5_individual: "Transforma el dato '300' en información útil de llamadas.",
-    solution_individual: "Información: 'Duración de la llamada: 300 segundos (5 minutos)'.",
-    quiz_question: "¿Cuál es la diferencia entre un dato y la información?",
-    quiz_options: ["La información es el dato al que se le agrega contexto y significado", "Son exactamente lo mismo", "El dato es más largo que la información", "No tienen relación"],
-    quiz_answer: 0,
-    challenge: "Dar contexto a 5 números de tu día a día.",
-    commonErrors: "Entregar reportes con números sueltos sin etiquetas descriptivas.",
-    english_vocab: [
-      { term: "Raw value", trans: "Valor Crudo", ex: "A raw value needs context." }
-    ],
-    prereqs: ["m0_19_medallion"]
-  },
-  {
-    id: "m1_02_rows_cols",
-    phase: "Fase 1: Lógica",
-    cat: "fase1",
-    title: "Módulo 1.2: Pensar en Filas y Columnas",
-    summary: "Desarrolla la estructura mental matricial para leer cualquier tabla.",
+    title: "Clase 1.1: Fundamentos de Datos: De casillas a información estructurada",
+    summary: "Aprende a transformar valores sueltos en información con sentido mediante matrices de filas y columnas.",
     icon: "fa-border-all",
-    purpose: "🎯 Propósito: Organizar cualquier problema de la vida real en una tabla de doble entrada.",
-    deliverable: "🏁 Entregable: Matriz de datos diseñada en papel.",
-    analogy: "💡 Analogía: El tablero del juego Batalla Naval; ubicas cada barco en la intersección de una Letra (Columna) y un Número (Fila).",
-    step1_theory: `Pensamiento Matricial:
-Cualquier evento se compone de Atributos (Columnas) y Ocurrencias (Filas).
-Ejemplo: Gastos del Mes.
-Columnas: Fecha, Concepto, Valor.
-Filas: (2025-08-01, Arriendo, $800.000), (2025-08-02, Mercado, $200.000).`,
-    step2_business: "Toda la base de DataCall está organizada en tablas de filas y columnas bien definidas.",
-    step3_code: `MATRIZ:
-| Fecha      | Concepto | Valor   |
-|------------|----------|---------|
-| 2025-08-01 | Arriendo | 800000  |`,
-    step4_guided: ["1. Dibuja una tabla de 3 filas y 3 columnas sobre tu rutina de estudio."],
-    step5_individual: "Diseña la estructura de columnas para registrar los turnos de trabajo de agentes.",
-    solution_individual: "Columnas recomendadas: agente_id, nombre, fecha, hora_inicio, hora_fin, turno.",
-    quiz_question: "¿Qué representa una intersección entre una fila y una columna?",
-    quiz_options: ["Una Celda con un valor específico", "Una tabla nueva", "Un error", "Un título"],
+    duration: "45-75 min",
+    capability: "🎯 Capacidad Lograda: Estructurar cualquier conjunto de eventos en tablas compuestas por registros y campos.",
+    concepts: ["Dato vs Información", "Registros (Filas)", "Campos (Columnas)", "Estructura Matricial"],
+    intro: "Hoy entrenarás tu cerebro para ver el mundo en forma de tablas estructuradas.",
+    analogy: "💡 Analogía: El tablero de ajedrez o de Batalla Naval; ubicas cada pieza exactamente en la intersección de una Columna (Letra) y una Fila (Número).",
+    theory: `1. Filas (Registros):
+Cada renglón horizontal representa un evento o sujeto único (Ejemplo: Una llamada realizada o un cliente registrado).
+
+2. Columnas (Campos):
+Cada columna vertical representa un atributo específico de ese evento (Ejemplo: Nombre, Ciudad, Tiempo de Espera).`,
+    business_case: "La tabla `analytics.fact_llamadas` de DataCall organiza 50,000 llamadas en 50,000 filas y 8 columnas.",
+    code_example: `TABLA ESTRUCTURADA:
+| llamada_id | cliente_id | duracion_seg | resultado |
+|------------|------------|--------------|-----------|
+| 1001       | 45         | 180          | Resuelta  |`,
+    guided_practice: ["1. Diseña en papel una tabla para registrar los gastos de transporte de la semana."],
+    individual_practice: "Si una empresa tiene 1,200 empleados, ¿cuántas filas tendrá su tabla de empleados?",
+    solution_practice: "Tendrá exactamente 1,200 filas (una por cada empleado).",
+    quiz_question: "¿Qué representa cada fila horizontal en una tabla de base de datos?",
+    quiz_options: ["Un registro u ocurrencia única", "El título de la tabla", "El tipo de dato", "Una columna"],
     quiz_answer: 0,
-    challenge: "Estructurar tus gastos semanales en filas y columnas.",
-    commonErrors: "Mezclar diferentes conceptos en una sola columna.",
+    challenge: "Estructurar en filas y columnas el inventario de tu cocina.",
+    common_errors: "Mezclar conceptos diferentes en una misma columna.",
     english_vocab: [
-      { term: "Grid / Matrix", trans: "Cuadrícula / Matriz", ex: "Data is structured in a grid." }
-    ],
-    prereqs: ["m1_01_data_def"]
+      { term: "Row / Record", trans: "Fila / Registro", ex: "Each row represents a customer call." },
+      { term: "Column / Field", trans: "Columna / Campo", ex: "Select the city field." }
+    ]
   },
   {
-    id: "m1_03_data_types",
+    id: "c1_02_data_types_null",
     phase: "Fase 1: Lógica",
     cat: "fase1",
-    title: "Módulo 1.3: Tipos de Datos — Texto, Números y Fechas",
-    summary: "Aprende por qué la computadora debe saber qué tipo de valor hay en cada casilla.",
-    icon: "fa-font",
-    purpose: "🎯 Propósito: Evitar errores de cálculo identificando el tipo de dato correcto.",
-    deliverable: "🏁 Entregable: Clasificación de tipos de datos de un formulario de cliente.",
-    analogy: "💡 Analogía: Clasificar la ropa para lavar: no mezclas camisas blancas con prendas de color; en datos no sumas palabras con fechas.",
-    step1_theory: `Tipos de Datos Universales:
-1. Texto (String / VARCHAR): Palabras o letras. Ej: 'Julieth', 'Bogotá'.
-2. Entero (Integer / INT): Números enteros sin decimales. Ej: 24, 100.
-3. Decimal (Float / DECIMAL): Números con decimales. Ej: 99.50, 4.5.
-4. Fecha (Date / Datetime): Momentos en el tiempo. Ej: '2025-08-19'.
-5. Booleano (Boolean): Verdadero o Falso (True/False).`,
-    step2_business: "Si guardas la edad como texto ('24'), no podrás calcular el promedio de edad en SQL o Power BI.",
-    step3_code: `TEXTO = "Julieth" | NUMERO = 24 | FECHA = 2025-08-19 | BOOLEANO = True`,
-    step4_guided: ["1. Identifica el tipo de dato de: 'Calle 100', 4500.50, '2025-01-01', 15."],
-    step5_individual: "¿De qué tipo de dato debe ser la columna `duracion_segundos`?",
-    solution_individual: "De tipo Número Entero (INT).",
-    quiz_question: "¿Qué sucede si intentas sumar un número con una palabra de texto?",
-    quiz_options: ["Se genera un error de tipo de datos (Type Error)", "Se calcula automáticamente", "Se borra la tabla", "Se apaga la PC"],
-    quiz_answer: 0,
-    challenge: "Identificar 4 tipos de datos en la cédula de ciudadanía.",
-    commonErrors: "Guardar números telefónicos como enteros si empiezan con ceros a la izquierda.",
-    english_vocab: [
-      { term: "Data Type", trans: "Tipo de Dato", ex: "Select the correct data type." },
-      { term: "String", trans: "Cadena de Texto", ex: "Customer name is a string." }
-    ],
-    prereqs: ["m1_02_rows_cols"]
-  },
-  {
-    id: "m1_04_null_concept",
-    phase: "Fase 1: Lógica",
-    cat: "fase1",
-    title: "Módulo 1.4: El Concepto de NULL (La Ausencia de Dato)",
-    summary: "Comprende qué significa la casilla vacía (NULL) y por qué NO es igual a cero ni a espacio en blanco.",
+    title: "Clase 1.2: Tipos de Datos y Ausencia de Información (NULL)",
+    summary: "Conoce los tipos de datos universales (Texto, Enteros, Decimales, Fechas, Booleanos) y domina el valor especial NULL.",
     icon: "fa-ban",
-    purpose: "🎯 Propósito: Tratar correctamente las casillas sin información sin alterar promedios ni conteos.",
-    deliverable: "🏁 Entregable: Ejercicio de interpretación de nulos en encuestas.",
-    analogy: "💡 Analogía: El número 0 es tener $0 en la billetera; NULL es no tener la billetera a la mano para revisar.",
-    step1_theory: `NULL = Ausencia total de dato (Desconocido / No respondido).
+    duration: "45-75 min",
+    capability: "🎯 Capacidad Lograda: Asignar el tipo de dato correcto a cada columna y manejar casillas sin información (NULL).",
+    concepts: ["Texto (String)", "Entero (INT)", "Decimal (FLOAT)", "Fecha (DATE)", "Booleano (BOOL)", "NULL (Casilla Vacía)"],
+    intro: "Asignar el tipo de dato equivocado rompe los cálculos. Hoy aprenderás a clasificarlos perfectamente.",
+    analogy: "💡 Analogía: Clasificar la ropa antes de lavar: no mezclas prendas de lana con zapatillas; en datos no sumas palabras con fechas.",
+    theory: `1. Tipos de Datos Fundamentales:
+- Texto (String): Nombres, ciudades, comentarios. Ej: 'Julieth'.
+- Entero (INT): Cantidades sin decimales. Ej: 24 años, 300 segundos.
+- Decimal (FLOAT): Valores continuos. Ej: $150.50, 4.5 estrellas.
+- Fecha (DATE): Momentos en el tiempo. Ej: '2025-08-19'.
+- Booleano: Verdadero o Falso (True/False).
+
+2. El Valor NULL:
+Significa que el dato es DESCONOCIDO o NO FUE PROPORCIONADO.
 - NULL NO es igual a cero (0).
-- NULL NO es igual a un texto vacío ('').
-- Si sumas 100 + NULL, el resultado es NULL (desconocido).`,
-    step2_business: "Si un cliente no responde la encuesta de satisfacción en DataCall, la columna `satisfaccion` queda como NULL.",
-    step3_code: `PROMEDIO con NULL:
-Fila 1: 5 | Fila 2: 5 | Fila 3: NULL ➔ Promedio de respuestas = (5 + 5) / 2 = 5.0`,
-    step4_guided: ["1. Diferencia entre tener 0 llamadas y no haber registrado el dato (NULL)."],
-    step5_individual: "¿Cómo afecta un valor NULL a la función de promedio en una base de datos?",
-    solution_individual: "Las funciones de agregación como AVG() ignoran los registros NULL en su cálculo.",
-    quiz_question: "¿Qué significa el valor NULL en una casilla de base de datos?",
-    quiz_options: ["Que el valor es desconocido o no fue proporcionado", "Que es igual al número cero", "Que hay un error grave de sistema", "Que el valor es texto 'NULL'"],
+- NULL NO es igual a texto vacío ('').`,
+    business_case: "Si un cliente no responde la encuesta de satisfacción, la columna `satisfaccion` queda como NULL. El promedio ignora los nulos sin distorsionar la nota real.",
+    code_example: `PROMEDIO CON NULL:
+Valores: [5, 5, NULL] ➔ Promedio de respuestas reales = (5 + 5) / 2 = 5.0 (¡No es 3.3!)`,
+    guided_practice: ["1. Clasifica el tipo de dato de: 'Bogotá', 25000, 2025-12-31, True."],
+    individual_practice: "¿Por qué no debemos reemplazar automáticamente los valores NULL por el número 0?",
+    solution_practice: "Porque 0 es un valor numérico real (ej: 0 llamadas), mientras que NULL significa que el cliente no respondió o no se tiene el dato.",
+    quiz_question: "¿Qué representa el valor NULL en una base de datos?",
+    quiz_options: ["Ausencia de información o dato desconocido", "El número cero", "Un error de sistema", "Un texto en blanco"],
     quiz_answer: 0,
-    challenge: "Explicar la diferencia entre 0 y NULL.",
-    commonErrors: "Reemplazar nulos por ceros sin analizar si altera la estadística.",
+    challenge: "Explicar la diferencia entre 0 y NULL a un compañero.",
+    common_errors: "Confundir el número cero con la casilla vacía NULL.",
     english_vocab: [
-      { term: "Missing value", trans: "Valor Faltante / Ausente", ex: "Handle missing values in SQL." }
-    ],
-    prereqs: ["m1_03_data_types"]
+      { term: "Data Type", trans: "Tipo de Dato", ex: "Assign the correct data type." },
+      { term: "Null Value", trans: "Valor Nulo / Vacío", ex: "NULL indicates a missing value." }
+    ]
   },
   {
-    id: "m1_05_identifiers",
+    id: "c1_03_identifiers_comparisons",
     phase: "Fase 1: Lógica",
     cat: "fase1",
-    title: "Módulo 1.5: Identificadores Únicos (IDs y Claves)",
-    summary: "Aprende por qué cada fila necesita una huella digital única (ID).",
-    icon: "fa-fingerprint",
-    purpose: "🎯 Propósito: Evitar confusiones entre registros con nombres duplicados.",
-    deliverable: "🏁 Entregable: Identificación de claves únicas en tablas relacionales.",
-    analogy: "💡 Analogía: En Colombia existen miles de personas llamadas 'Carlos Rodríguez', pero solo una tiene tu número de Cédula de Ciudadanía.",
-    step1_theory: `Identificador Único (ID):
-Una columna especial que asigna un código numérico irrepetible a cada fila.
-Ejemplos: cliente_id, llamada_id, agente_id.`,
-    step2_business: "En DataCall hay 3 agentes llamados 'Juan Pérez'. El campo `agente_id` (101, 102, 103) permite saber exactamente a cuál premiar.",
-    step3_code: `| cliente_id (ID Único) | nombre       |
-|-----------------------|--------------|
-| 1001                  | Carlos Gómez |
-| 1002                  | Carlos Gómez |`,
-    step4_guided: ["1. Observa cómo los IDs permiten diferenciar filas idénticas en todo lo demás."],
-    step5_individual: "Si no existiera el campo `llamada_id`, ¿cómo identificarías una llamada específica?",
-    solution_individual: "Sería casi imposible o muy lento tener que buscar por fecha, hora, cliente y duración al mismo tiempo.",
-    quiz_question: "¿Cuál es la función principal de una columna de ID en una tabla?",
-    quiz_options: ["Identificar de forma única e irrepetible cada registro", "Hacer la tabla más larga", "Poner números bonitos", "Ninguna"],
-    quiz_answer: 0,
-    challenge: "Crear un esquema de IDs para una tienda de ropa.",
-    commonErrors: "Usar nombres de personas como claves primarias.",
-    english_vocab: [
-      { term: "Unique Identifier", trans: "Identificador Único", ex: "Each row has a unique identifier." }
-    ],
-    prereqs: ["m1_04_null_concept"]
-  },
-  {
-    id: "m1_06_comparisons",
-    phase: "Fase 1: Lógica",
-    cat: "fase1",
-    title: "Módulo 1.6: Comparaciones Lógicas (=, >, <, >=, <=, <>)",
-    summary: "Domina los operadores matemáticos de comparación que alimentan los filtros.",
+    title: "Clase 1.3: Identificadores Únicos (IDs) y Comparaciones Lógicas",
+    summary: "Comprende por qué cada fila necesita una clave única (ID) y domina los operadores de comparación (=, >, <, >=, <=, <>).",
     icon: "fa-equals",
-    purpose: "🎯 Propósito: Evaluar condiciones verdaderas o falsas sobre los datos.",
-    deliverable: "🏁 Entregable: Respuestas de evaluación lógica de comparaciones.",
-    analogy: "💡 Analogía: El semáforo de velocidad; si tu velocidad es > 60 km/h, se enciende la fotomulta (Verdadero).",
-    step1_theory: `Operadores de Comparación:
+    duration: "45-75 min",
+    capability: "🎯 Capacidad Lograda: Evaluar condiciones verdaderas o falsas sobre registros e identificar filas unívocamente.",
+    concepts: ["IDs (Identificadores)", "Valores Únicos", "Operadores de Comparación (=, >, <, >=, <=, <>)"],
+    intro: "Para filtrar datos primero debes aprender a comparar valores numéricos y de texto.",
+    analogy: "💡 Analogía: Tu número de Cédula de Ciudadanía; en el país hay miles de personas con tu mismo nombre, pero solo tú tienes tu número de documento.",
+    theory: `1. Identificador Único (ID):
+Una columna numérica irrepetible que identifica exactamente una fila.
+
+2. Operadores de Comparación:
 - Igual a: =
 - Mayor que: >
 - Menor que: <
 - Mayor o igual a: >=
 - Menor o igual a: <=
 - Diferente de: <> (o !=)`,
-    step2_business: "En DataCall buscamos llamadas donde `tiempo_espera_segundos > 120` para enviar una alerta al supervisor.",
-    step3_code: `EVALUACIÓN LÓGICA:
-duracion = 300 ➔ (duracion > 120) ➔ VERDADERO (True)
+    business_case: "Buscamos llamadas en DataCall donde `tiempo_espera_segundos > 120` para enviar una alerta de servicio.",
+    code_example: `EVALUACIÓN DE REGLAS:
+espera = 150 ➔ (espera > 120) ➔ VERDADERO (True)
 edad = 24 ➔ (edad >= 30) ➔ FALSO (False)`,
-    step4_guided: ["1. Evalúa si 150 > 200 (Falso).", "2. Evalúa si 'Bogotá' = 'Bogotá' (Verdadero)."],
-    step5_individual: "Escribe la condición lógica para encontrar llamadas que duraron menos de 60 segundos.",
-    solution_individual: "La condición es: `duracion_segundos < 60`.",
-    quiz_question: "¿Qué operador representa 'Diferente de' en la mayoría de bases de datos SQL?",
-    quiz_options: ["<>", "==", "??", "&&"],
+    guided_practice: ["1. Evalúa si 200 > 150 (Verdadero).", "2. Evalúa si 'Cali' = 'Bogotá' (Falso)."],
+    individual_practice: "Escribe la condición lógica para encontrar agentes cuyo nivel sea diferente de 'Junior'.",
+    solution_practice: "La condición es: `nivel <> 'Junior'` (o `nivel != 'Junior'`).",
+    quiz_question: "¿Qué operador representa 'Diferente de' en SQL y lógica de datos?",
+    quiz_options: ["<>", "==", "&&", "++"],
     quiz_answer: 0,
-    challenge: "Resolver 5 ejercicios de lógica de mayor/menor.",
-    commonErrors: "Confundir el signo de mayor que (>) con menor que (<).",
+    challenge: "Resolver 5 ejercicios de comparaciones lógicas.",
+    common_errors: "Confundir el operador mayor que (>) con menor que (<).",
     english_vocab: [
-      { term: "Comparison Operator", trans: "Operador de Comparación", ex: "Use comparison operators in filtering." }
-    ],
-    prereqs: ["m1_05_identifiers"]
+      { term: "Unique Identifier (ID)", trans: "Identificador Único", ex: "Each customer has a unique ID." },
+      { term: "Comparison Operator", trans: "Operador de Comparación", ex: "Evaluate conditions using comparison operators." }
+    ]
   },
   {
-    id: "m1_07_conditions_and_or",
+    id: "c1_04_boolean_logic_and_or",
     phase: "Fase 1: Lógica",
     cat: "fase1",
-    title: "Módulo 1.7: Pensamiento Lógico con AND, OR y NOT",
-    summary: "Combina múltiples reglas de negocio con los tres conectores lógicos principales.",
+    title: "Clase 1.4: Condiciones Múltiples y Lógica Booleana (AND, OR, NOT)",
+    summary: "Combina múltiples criterios de negocio utilizando los operadores lógicos AND, OR y NOT.",
     icon: "fa-diagram-project",
-    purpose: "🎯 Propósito: Construir filtros complejos combinando múltiples criterios de análisis.",
-    deliverable: "🏁 Entregable: Tabla de verdad aplicada a casos del Call Center.",
-    analogy: "💡 Analogía: Salir de fiesta: Entras si eres mayor de edad (18) AND llevas cédula. En cambio, tomas taxi si llueve OR está muy oscuro.",
-    step1_theory: `Operadores Lógicos:
-- AND (Y): Ambas condiciones deben ser VERDADERAS.
-- OR (O): Al menos UNA condición debe ser VERDADERA.
-- NOT (NO): Invierte el resultado (Verdadero se vuelve Falso).`,
-    step2_business: "Buscamos clientes VIP en DataCall: `ciudad = 'Bogotá' AND tipo_cliente = 'Premium'`.",
-    step3_code: `REGLAS DE NEGOCIO:
-(ciudad = 'Bogotá' AND edad > 25) ➔ Requiere CUMPLIR AMBAS.
-(ciudad = 'Bogotá' OR ciudad = 'Cali') ➔ CUMPLE SI ES BOGOTÁ O CALI.`,
-    step4_guided: [
-      "1. Evalúa: (Verdadero AND Falso) ➔ FALSO.",
-      "2. Evalúa: (Verdadero OR Falso) ➔ VERDADERO."
+    duration: "45-75 min",
+    capability: "🎯 Capacidad Lograda: Construir filtros complejos combinando múltiples reglas condicionales.",
+    concepts: ["Lógica Booleana", "Operador AND", "Operador OR", "Operador NOT", "Condiciones Compuestas"],
+    intro: "En la vida real las preguntas de negocio requieren cumplir más de una regla a la vez.",
+    analogy: "💡 Analogía: Salir de fiesta: Entras a la discoteca si eres mayor de edad (18) AND llevas tu documento. En cambio, tomas taxi si llueve OR está muy oscuro.",
+    theory: `1. Operadores Lógicos:
+- AND (Y): Exige que AMBAS condiciones sean Verdaderas.
+- OR (O): Requiere que al menos UNA condición sea Verdadera.
+- NOT (NO): Invierte el valor (Verdadero se convierte en Falso).`,
+    business_case: "Buscamos clientes VIP prioritarios en DataCall: `ciudad = 'Bogotá' AND tipo_cliente = 'Premium'`.",
+    code_example: `TABLA DE VERDAD:
+Verdadero AND Verdadero ➔ VERDADERO
+Verdadero AND Falso     ➔ FALSO
+Verdadero OR Falso      ➔ VERDADERO`,
+    guided_practice: [
+      "1. Evalúa: (espera > 120 AND ciudad = 'Cali') con espera=150 y ciudad='Bogotá' ➔ FALSO."
     ],
-    step5_individual: "Escribe la regla lógica para llamadas de turno 'Noche' con espera mayor a 180 segundos.",
-    solution_individual: "La regla es: `turno = 'Noche' AND tiempo_espera_segundos > 180`.",
-    quiz_question: "Si usamos el operador AND entre dos condiciones, ¿cuándo se cumple el resultado?",
-    quiz_options: ["Solo cuando AMBAS condiciones son Verdaderas", "Cuando al menos una se cumple", "Nunca se cumple", "Cuando ambas son Falsas"],
+    individual_practice: "Escribe la condición lógica para seleccionar llamadas del turno 'Noche' OR con tiempo de espera mayor a 200 segundos.",
+    solution_practice: "La condición es: `turno = 'Noche' OR tiempo_espera_segundos > 200`.",
+    quiz_question: "Si utilizas el operador AND entre dos condiciones, ¿cuándo se cumple el resultado final?",
+    quiz_options: ["Únicamente cuando AMBAS condiciones son Verdaderas", "Cuando al menos una se cumple", "Nunca", "Cuando ambas son Falsas"],
     quiz_answer: 0,
-    challenge: "Crear una tabla de verdad sencilla en papel.",
-    commonErrors: "Usar OR cuando de verdad querías exigir que se cumplieran ambas reglas (AND).",
+    challenge: "Crear un filtro compuesto con 3 condiciones.",
+    common_errors: "Usar OR cuando la regla de negocio exige que se cumplan ambas condiciones obligatoriamente (AND).",
     english_vocab: [
-      { term: "Logical Operator", trans: "Operador Lógico", ex: "Combine filters with AND/OR." }
-    ],
-    prereqs: ["m1_06_comparisons"]
+      { term: "Logical Condition", trans: "Condición Lógica", ex: "Combine rules with logical AND/OR." }
+    ]
   },
   {
-    id: "m1_08_metrics_kpis",
+    id: "c1_05_analytical_thinking_kpis",
     phase: "Fase 1: Lógica",
     cat: "fase1",
-    title: "Módulo 1.8: ¿Qué es una Métrica y un KPI?",
-    summary: "Diferencia un número simple de un Indicador Clave de Rendimiento (KPI).",
-    icon: "fa-chart-line",
-    purpose: "🎯 Propósito: Aprender a medir el éxito de un negocio mediante indicadores gerenciales.",
-    deliverable: "🏁 Entregable: Lista de 3 KPIs estratégicos para DataCall.",
-    analogy: "💡 Analogía: Una Métrica es tu temperatura corporal (37°C); un KPI es saber si tienes fiebre porque sobrepasó el límite normal (38.5°C).",
-    step1_theory: `Métrica: Cualquier medida numérica cuantitativa (Ej: Total de llamadas = 50,000).
-KPI (Key Performance Indicator / Indicador Clave de Rendimiento): Una métrica crítica comparada contra una meta u objetivo de negocio (Ej: Tasa de Abandono de Llamadas < 5%).`,
-    step2_business: "En DataCall, la meta gerencial (KPI) es que el tiempo de espera promedio sea menor a 45 segundos.",
-    step3_code: `MÉTRICA = Conteo total de llamadas (50,000)
-KPI = Tasa de satisfacción (% de notas 5/5 contra la meta del 90%)`,
-    step4_guided: ["1. Distingue entre contar cosas (Métrica) y evaluar el desempeño contra una meta (KPI)."],
-    step5_individual: "Propón un KPI de eficiencia para los agentes del call center.",
-    solution_individual: "KPI: Tiempo Promedio de Operación (AHT) < 300 segundos por llamada.",
-    quiz_question: "¿Qué convierte a una métrica cualquiera en un KPI?",
-    quiz_options: ["Estar vinculada a un objetivo estratégico y meta de negocio", "Ser un número muy grande", "Estar escrita en verde", "No tener decimales"],
-    quiz_answer: 0,
-    challenge: "Identificar 2 KPIs que medirían el éxito de una tienda de café.",
-    commonErrors: "Llamar KPI a cualquier número suelto sin objetivo definido.",
-    english_vocab: [
-      { term: "KPI", trans: "Indicador Clave de Rendimiento", ex: "Track weekly business KPIs." },
-      { term: "Metric", trans: "Métrica", ex: "Measure call volume metrics." }
-    ],
-    prereqs: ["m1_07_conditions_and_or"]
-  },
-  {
-    id: "m1_09_logic_problem_solving",
-    phase: "Fase 1: Lógica",
-    cat: "fase1",
-    title: "Módulo 1.9: Resolver Problemas Cotidianos con Lógica de Datos",
-    summary: "Aplica la metodología del analista para descomponer cualquier problema en preguntas de datos.",
+    title: "Clase 1.5: Pensamiento Analítico, Métricas, KPIs y Preguntas de Negocio",
+    summary: "Aprende a transformar problemas cotidianos en preguntas de datos y diferencia métricas sueltas de KPIs con metas.",
     icon: "fa-lightbulb",
-    purpose: "🎯 Propósito: Desarrollar la mentalidad analítica orientada a la solución de problemas reales.",
-    deliverable: "🏁 Entregable: Caso práctico cotidiano resuelto con pasos analíticos.",
-    analogy: "💡 Analogía: El detective Sherlock Holmes; observa las pistas en la escena del crimen (datos) para deducir quién es el responsable.",
-    step1_theory: `Pasos del Pensamiento Analítico:
-1. Definir el problema claro (Ej: Los clientes están cancelando sus suscripciones).
-2. Formular preguntas (Ej: ¿En qué ciudad ocurren más cancelaciones? ¿Qué tiempo de espera tuvieron?).
-3. Buscar las tablas de datos necesarias.
-4. Aplicar filtros y agregaciones.
-5. Proponer una solución basada en datos.`,
-    step2_business: "Caso DataCall: 'Las encuestas bajaron un 10%'. Julieth desglosa por ciudad, horario y tiempo de espera para encontrar la causa raíz.",
-    step3_code: `PROBLEMA ➔ PREGUNTAS DE DATOS ➔ FILTROS DE TABLAS ➔ HALLAZGO ➔ SOLUCIÓN`,
-    step4_guided: ["1. Aplica los 5 pasos a un problema cotidiano (llegar tarde al trabajo)."],
-    step5_individual: "Diseña 2 preguntas de datos para investigar por qué las ventas cayeron los domingos.",
-    solution_individual: "Pregunta 1: ¿Cuántos agentes trabajaron el domingo? Pregunta 2: ¿Cuál fue la tasa de llamadas no contestadas?",
-    quiz_question: "¿Cuál es el primer paso metodológico antes de escribir cualquier consulta SQL o gráfica?",
-    quiz_options: ["Definir claramente el problema de negocio y la pregunta a responder", "Abrir Power BI a ciegas", "Borrar la base de datos", "Graficar sin pensar"],
+    duration: "45-75 min",
+    capability: "🎯 Capacidad Lograda: Convertir un problema cualitativo de negocio en una serie de preguntas de datos accionables.",
+    concepts: ["Pensamiento Analítico", "Métricas vs KPIs", "Dimensiones vs Medidas", "Preguntas de Negocio ➔ Preguntas de Datos"],
+    intro: "Con esta clase cerrarás la Fase 1 dominando la mentalidad de resolución de problemas basada en evidencias.",
+    analogy: "💡 Analogía: El médico general: Examina los síntomas del paciente (preguntas), pide exámenes de laboratorio (datos) y receta el tratamiento (decisión de negocio).",
+    theory: `1. Métrica vs KPI:
+- Métrica: Un número cuantitativo suelto (Ej: Total de llamadas = 50,000).
+- KPI (Key Performance Indicator): Una métrica crítica comparada contra una meta (Ej: Tasa de Abandono < 5%).
+
+2. Convertir Problemas en Datos:
+- Problema: "Los clientes están molestos".
+- Pregunta de Datos: "¿El tiempo de espera promedio aumentó este mes en alguna ciudad específica?"`,
+    business_case: "Caso DataCall: El KPI principal del equipo es lograr un Tiempo Promedio de Operación (AHT) inferior a 300 segundos.",
+    code_example: `DESGLOSE ANALÍTICO:
+PROBLEMA ➔ PREGUNTA DE DATOS ➔ FILTRO DE TABLA ➔ HALLAZGO ➔ DECISIÓN`,
+    guided_practice: ["1. Desglosa un problema de negocio sencillo usando los 5 pasos del pensamiento analítico."],
+    individual_practice: "Propón 2 preguntas de datos para investigar por qué las ventas disminuyeron en la ciudad de Medellín.",
+    solution_practice: "Pregunta 1: ¿Disminuyó el número de llamadas de ventas atendidas? Pregunta 2: ¿Aumentó el tiempo de espera promedio en Medellín?",
+    quiz_question: "¿Qué convierte a una métrica cualquiera en un KPI?",
+    quiz_options: ["Estar vinculada a un objetivo estratégico y meta de negocio", "Tener muchos decimales", "Ser un número muy grande", "Estar escrita en color verde"],
     quiz_answer: 0,
-    challenge: "Resolver un caso hipotético de insatisfacción usando lógica.",
-    commonErrors: "Saltar a hacer gráficos bonitos sin entender el problema de negocio primero.",
+    challenge: "Definir 2 KPIs estratégicos para una tienda de café.",
+    common_errors: "Confundir una métrica cualquiera con un KPI de rendimiento estratégico.",
     english_vocab: [
-      { term: "Problem solving", trans: "Resolución de Problemas", ex: "Analytical problem solving skills." }
-    ],
-    prereqs: ["m1_08_metrics_kpis"]
+      { term: "Key Performance Indicator (KPI)", trans: "Indicador Clave de Rendimiento", ex: "Track operational KPIs daily." },
+      { term: "Analytical Mindset", trans: "Mentalidad Analítica", ex: "Apply an analytical mindset to business questions." }
+    ]
   },
 
   // ==========================================
-  // FASES 2 A 16 (RE-MAPEADAS Y AMPLIADAS CON LA ESTRUCTURA COMPLETA)
+  // FASES 2 A 16 (RE-MAPEADAS EN CLASES COMPLETAS DE 1 HORA)
   // ==========================================
   {
-    id: "m2_01_ssms_intro",
-    phase: "Fase 2: SQL Básico",
+    id: "c2_01_ssms_connect",
+    phase: "Fase 2: SQL Fundamentals",
     cat: "sql",
-    title: "Módulo 2.1: Primer día en SQL Server Management Studio (SSMS)",
-    summary: "Conéctate al servidor LuchoX12, selecciona DataCareer y ejecuta F5.",
+    title: "Clase 2.1: Primer contacto con SQL Server, SSMS y Navegación",
+    summary: "Abre SSMS, conéctate al servidor LuchoX12, navega por las bases de datos y ejecuta tu primera consulta USE con F5.",
     icon: "fa-database",
-    purpose: "🎯 Propósito: Dominar el entorno de trabajo oficial de Microsoft para consultar bases de datos.",
-    deliverable: "🏁 Entregable: Primera consulta ejecutada con F5 en SSMS.",
-    analogy: "💡 Analogía: Abrir la aplicación de tu banco para consultar tu saldo.",
-    step1_theory: `SSMS es el cliente oficial para administrar SQL Server.
-- F5 ejecuta la consulta seleccionada.
-- USE DataCareer; fija la base de datos sobre la cual trabajaremos.`,
-    step2_business: "Todos los reportes de DataCall inician abriendo SSMS y conectándote a LuchoX12.",
-    step3_code: `USE DataCareer;
-SELECT '¡Hola SSMS! Soy Julieth y seré Data Analyst' AS Saludo;`,
-    step4_guided: ["1. Abre SSMS.", "2. Conéctate a LuchoX12.", "3. Escribe USE DataCareer; y presiona F5."],
-    step5_individual: "Selecciona el nombre de la base de datos actual con SELECT DB_NAME();",
-    solution_individual: "SELECT DB_NAME() AS Base_Actual; (presiona F5).",
-    quiz_question: "¿Cuál tecla ejecuta las consultas SQL en SSMS?",
-    quiz_options: ["F5", "F12", "Enter", "Espacio"],
-    quiz_answer: 0,
-    challenge: "Usar el atajo Ctrl + N para abrir nueva consulta.",
-    commonErrors: "Ejecutar consultas teniendo seleccionada la base 'master'.",
-    english_vocab: [
-      { term: "Query", trans: "Consulta SQL", ex: "Run the SQL query with F5." }
+    duration: "45-75 min",
+    capability: "🎯 Capacidad Lograda: Conectarte de forma autónoma al servidor de la empresa y preparar el entorno de trabajo en SSMS.",
+    concepts: ["¿Qué es SQL?", "SQL Server", "SSMS", "Conexión a LuchoX12", "Sentencia USE", "Tecla F5"],
+    intro: "Bienvenida a tu primera clase práctica de SQL. Hoy ingresarás al servidor real de la empresa.",
+    analogy: "💡 Analogía: Abrir la banca en línea de tu banco para consultar tu saldo bancario.",
+    theory: `1. SQL Server Management Studio (SSMS):
+El programa oficial de Microsoft donde los analistas escriben consultas SQL.
+
+2. Pasos de Conexión:
+- Servidor: LuchoX12
+- Autenticación: Windows
+- Ejecutar consulta: Tecla F5 (o botón verde ! Ejecutar).
+
+3. Fijar la Base de Datos:
+USE DataCareer; indica que trabajaremos sobre la base de la empresa.`,
+    business_case: "Todos los reportes diarios en DataCall inician abriendo SSMS y conectándote al servidor LuchoX12.",
+    code_example: `USE DataCareer;
+
+SELECT '¡Hola SSMS! Soy Julieth y seré Data Analyst' AS Bienvenida;`,
+    guided_practice: [
+      "1. Abre el programa SQL Server Management Studio (SSMS).",
+      "2. En Nombre del servidor escribe: LuchoX12 y haz clic en Conectar.",
+      "3. Abre una ventana de Nueva Consulta (Ctrl + N), escribe USE DataCareer; y presiona F5."
     ],
-    prereqs: ["m1_09_logic_problem_solving"]
+    individual_practice: "Escribe una consulta que seleccione el nombre de la base de datos actual usando SELECT DB_NAME();",
+    solution_practice: "USE DataCareer;\nSELECT DB_NAME() AS Base_Actual;",
+    quiz_question: "¿Cuál es la tecla de teclado para ejecutar una consulta SQL en SSMS?",
+    quiz_options: ["F5 (o Ctrl + E)", "F12", "Enter", "Espacio"],
+    quiz_answer: 0,
+    challenge: "Aprender el atajo Ctrl + N para abrir ventanas de consulta en SSMS.",
+    common_errors: "Ejecutar consultas teniendo seleccionada la base de datos 'master' por error.",
+    english_vocab: [
+      { term: "Query", trans: "Consulta SQL", ex: "Execute the query using F5." },
+      { term: "Server Connection", trans: "Conexión al Servidor", ex: "Establish a server connection." }
+    ]
   },
   {
-    id: "m2_02_tables_types",
-    phase: "Fase 2: SQL Básico",
+    id: "c2_02_select_from_alias",
+    phase: "Fase 2: SQL Fundamentals",
     cat: "sql",
-    title: "Módulo 2.2: Tablas y Tipos de Datos en SQL Server",
-    summary: "Revisa las tablas de DataCareer y sus columnas VARCHAR, INT y DATE.",
-    icon: "fa-table",
-    purpose: "🎯 Propósito: Entender la estructura del esquema analytics en SQL Server.",
-    deliverable: "🏁 Entregable: Inspección de columnas de analytics.dim_cliente.",
-    analogy: "💡 Analogía: Consultar la libreta de contactos por columnas etiquetadas.",
-    step1_theory: `Tipos en SQL Server:
-- VARCHAR(n): Texto de hasta n caracteres.
-- INT: Enteros.
-- DATE / DATETIME: Fechas y horas.`,
-    step2_business: "Inspeccionar las columnas de clientes para saber cómo filtrar en el futuro.",
-    step3_code: `USE DataCareer;
-SELECT cliente_id, nombre, ciudad, fecha_registro FROM analytics.dim_cliente;`,
-    step4_guided: ["1. Pega la consulta en SSMS.", "2. Presiona F5."],
-    step5_individual: "Inspecciona los primeros registros de la tabla analytics.dim_agente.",
-    solution_individual: "SELECT TOP 10 * FROM analytics.dim_agente;",
-    quiz_question: "¿Qué tipo de dato guarda nombres en SQL Server?",
-    quiz_options: ["VARCHAR", "INT", "DATE", "FLOAT"],
-    quiz_answer: 0,
-    challenge: "Identificar 3 columnas VARCHAR en dim_cliente.",
-    commonErrors: "Confundir tipos de texto con números.",
-    english_vocab: [
-      { term: "Schema", trans: "Esquema de BD", ex: "The table belongs to analytics schema." }
-    ],
-    prereqs: ["m2_01_ssms_intro"]
-  },
-  {
-    id: "m2_03_select_from",
-    phase: "Fase 2: SQL Básico",
-    cat: "sql",
-    title: "Módulo 2.3: Estructura Fundamental SELECT y FROM",
-    summary: "Domina las dos palabras clave obligatorias de cualquier consulta SQL.",
+    title: "Clase 2.2: Primeras Consultas SQL: SELECT, FROM, *, Aliases, DISTINCT y TOP",
+    summary: "Domina la extracción de datos: elige columnas específicas, asigna nombres claros con AS, elimina duplicados con DISTINCT y limita muestras con TOP.",
     icon: "fa-eye",
-    purpose: "🎯 Propósito: Extraer exactamente las columnas que el negocio requiere.",
-    deliverable: "🏁 Entregable: Consulta personalizada de 3 columnas en SSMS.",
-    analogy: "💡 Analogía: Pedir los ingredientes que quieres (SELECT) sacados de la nevera (FROM).",
-    step1_theory: `Sintaxis:
+    duration: "45-75 min",
+    capability: "🎯 Capacidad Lograda: Consultar cualquier tabla relacional seleccionando únicamente las columnas necesarias, renombrándolas y limitando filas.",
+    concepts: ["SELECT", "FROM", "Comodín *", "Columnas específicas", "Alias (AS)", "DISTINCT", "TOP"],
+    intro: "Hoy aprenderás a pedirle exactamente los datos que necesitas a la base de datos sin sobrecargar la memoria.",
+    analogy: "💡 Analogía: Pedir comida en el restaurante: indicas los platos del menú (SELECT) traídos de la cocina (FROM).",
+    theory: `1. Estrutura Básica:
 SELECT columna1, columna2 FROM esquema.tabla;
-El asterisco (*) trae TODAS las columnas.`,
-    step2_business: "Solicitar solo las 3 columnas necesarias ahorra memoria y acelera la respuesta 10 veces.",
-    step3_code: `USE DataCareer;
-SELECT cliente_id, nombre, ciudad FROM analytics.dim_cliente;`,
-    step4_guided: ["1. Escribe la consulta en SSMS.", "2. Ejecuta F5."],
-    step5_individual: "Selecciona el nombre, turno y nivel de la tabla analytics.dim_agente.",
-    solution_individual: "SELECT nombre, turno, nivel FROM analytics.dim_agente;",
-    quiz_question: "¿Qué hace la instrucción SELECT * en SQL?",
-    quiz_options: ["Trae todas las columnas de la tabla", "Multiplica las filas", "Borra datos", "Filtra errores"],
-    quiz_answer: 0,
-    challenge: "Escribir una consulta limpia sin usar el asterisco *.",
-    commonErrors: "Olvidar poner comas entre los nombres de columnas.",
-    english_vocab: [
-      { term: "Select statement", trans: "Sentencia SELECT", ex: "Write a clean SELECT statement." }
+
+2. Elementos Clave:
+- *: Trae TODAS las columnas (usar solo para explorar).
+- AS NuevoNombre: Asigna un alias o etiqueta limpia a la columna.
+- DISTINCT: Elimina valores duplicados del resultado.
+- TOP N: Muestra solo las primeras N filas.`,
+    business_case: "Extraer una muestra limpia de los 10 primeros clientes de DataCall con sus nombres y ciudades.",
+    code_example: `USE DataCareer;
+
+SELECT TOP 10 
+    cliente_id AS ID_Cliente,
+    nombre AS Nombre_Cliente,
+    ciudad AS Ciudad
+FROM analytics.dim_cliente;
+
+SELECT DISTINCT ciudad FROM analytics.dim_cliente;`,
+    guided_practice: [
+      "1. En SSMS escribe la consulta para traer los nombres y ciudades de dim_cliente.",
+      "2. Asigna alias en español a las columnas.",
+      "3. Ejecuta con F5 y observa el resultado."
     ],
-    prereqs: ["m2_02_tables_types"]
+    individual_practice: "Escribe una consulta que obtenga los turnos de trabajo únicos (DISTINCT) que existen en la tabla analytics.dim_agente.",
+    solution_practice: "SELECT DISTINCT turno FROM analytics.dim_agente;",
+    quiz_question: "¿Qué hace la palabra clave DISTINCT en una sentencia SELECT?",
+    quiz_options: ["Elimina los valores duplicados del resultado de la consulta", "Suma los valores", "Ordena de mayor a menor", "Borra las filas de la tabla"],
+    quiz_answer: 0,
+    challenge: "Obtener las primeras 5 llamadas de la tabla fact_llamadas.",
+    common_errors: "Olvidar colocar comas entre los nombres de las columnas en la cláusula SELECT.",
+    english_vocab: [
+      { term: "Select Statement", trans: "Sentencia SELECT", ex: "Write a SELECT statement." },
+      { term: "Alias", trans: "Alias / Nombre Temporal", ex: "Assign a column alias with AS." }
+    ]
   },
   {
-    id: "m2_04_distinct_top",
-    phase: "Fase 2: SQL Básico",
+    id: "c2_03_where_filtering",
+    phase: "Fase 2: SQL Fundamentals",
     cat: "sql",
-    title: "Módulo 2.4: Eliminando Duplicados (DISTINCT) y Muestras (TOP)",
-    summary: "Descubre valores únicos con DISTINCT y limita filas devueltas con TOP.",
-    icon: "fa-list-ol",
-    purpose: "🎯 Propósito: Obtener catalogos únicos y explorar muestras de tablas masivas.",
-    deliverable: "🏁 Entregable: Lista de ciudades únicas donde habitan los clientes.",
-    analogy: "💡 Analogía: Preguntar en qué ciudades tienes amigos sin que te repitan Bogotá 50 veces.",
-    step1_theory: `SELECT DISTINCT columna FROM tabla; -> Valores sin repetir.
-SELECT TOP 10 * FROM tabla; -> Muestra las primeras 10 filas.`,
-    step2_business: "Saber exactamente en cuántas ciudades diferentes opera DataCall.",
-    step3_code: `USE DataCareer;
-SELECT DISTINCT ciudad FROM analytics.dim_cliente;
-SELECT TOP 5 * FROM analytics.fact_llamadas;`,
-    step4_guided: ["1. Ejecuta DISTINCT ciudad en SSMS.", "2. Cuenta las ciudades devueltas."],
-    step5_individual: "Obtén los turnos de trabajo únicos que existen en dim_agente.",
-    solution_individual: "SELECT DISTINCT turno FROM analytics.dim_agente;",
-    quiz_question: "¿Qué hace DISTINCT en una consulta SQL?",
-    quiz_options: ["Elimina los valores duplicados del resultado", "Ordena de mayor a menor", "Suma los valores", "Borra filas"],
-    quiz_answer: 0,
-    challenge: "Usar TOP 20 en la tabla de ventas.",
-    commonErrors: "Pensar que DISTINCT borra datos de la base física.",
-    english_vocab: [
-      { term: "Distinct values", trans: "Valores Únicos / Sin Repetir", ex: "Fetch distinct city names." }
-    ],
-    prereqs: ["m2_03_select_from"]
-  },
-  {
-    id: "m2_05_where_basic",
-    phase: "Fase 2: SQL Básico",
-    cat: "sql",
-    title: "Módulo 2.5: Filtrando Filas con WHERE y Operadores",
-    summary: "Filtra la información para analizar solo los registros que cumplen reglas.",
+    title: "Clase 2.3: Filtrando Datos con SQL: Cláusula WHERE y Operadores Lógicos",
+    summary: "Filtra registros específicos combinando la cláusula WHERE con operadores de comparación y conectores AND, OR, NOT.",
     icon: "fa-filter",
-    purpose: "🎯 Propósito: Filtrar información estratégica en SQL Server.",
-    deliverable: "🏁 Entregable: Reporte de clientes pertenecientes a la ciudad de Bogotá.",
-    analogy: "💡 Analogía: Usar el filtro de búsquedas en MercadoLibre por precio y marca.",
-    step1_theory: `Sintaxis:
-SELECT * FROM tabla WHERE columna = 'Valor';
-Textos con comillas simples ('Bogotá'), números sin comillas.`,
-    step2_business: "Filtrar solo las llamadas con tiempo de espera crítico > 120 segundos.",
-    step3_code: `USE DataCareer;
-SELECT * FROM analytics.fact_llamadas WHERE tiempo_espera_segundos > 120;`,
-    step4_guided: ["1. Pega la consulta en SSMS.", "2. Verifica que todas las esperas sean > 120."],
-    step5_individual: "Filtra los clientes cuyo tipo de cliente sea 'Premium'.",
-    solution_individual: "SELECT * FROM analytics.dim_cliente WHERE tipo_cliente = 'Premium';",
-    quiz_question: "¿Cómo deben escribirse los valores de texto dentro de la cláusula WHERE?",
-    quiz_options: ["Entre comillas simples ('Texto')", "Sin comillas", "Entre corchetes", "Con signo $"],
-    quiz_answer: 0,
-    challenge: "Filtrar por clientes de edad >= 30.",
-    commonErrors: "Olvidar las comillas simples al buscar textos en WHERE.",
-    english_vocab: [
-      { term: "Where clause", trans: "Cláusula WHERE", ex: "Filter rows using WHERE clause." }
+    duration: "45-75 min",
+    capability: "🎯 Capacidad Lograda: Filtrar tablas masivas para extraer únicamente las filas que responden a un criterio de negocio.",
+    concepts: ["Cláusula WHERE", "Operadores de Comparación (=, >, <, >=, <=, <>)", "Conectores Lógicos (AND, OR, NOT)"],
+    intro: "La cláusula WHERE es el colador del analista de datos. Hoy aprenderás a filtrar con precisión quirúrgica.",
+    analogy: "💡 Analogía: Aplicar filtros en MercadoLibre por precio, marca y ciudad para ver solo los productos que deseas.",
+    theory: `1. Cláusula WHERE:
+Se coloca inmediatamente después del FROM para establecer reglas de filtrado de filas.
+
+2. Regla de Comillas:
+- Textos y Fechas: Siempre entre comillas simples ('Bogotá', '2025-08-19').
+- Números: Directamente sin comillas (120, 300).`,
+    business_case: "Filtrar únicamente las llamadas operacionales donde el tiempo de espera superó los 120 segundos en la ciudad de Bogotá.",
+    code_example: `USE DataCareer;
+
+SELECT llamada_id, cliente_id, tiempo_espera_segundos, canal
+FROM analytics.fact_llamadas
+WHERE tiempo_espera_segundos > 120 AND canal = 'Telefónico';`,
+    guided_practice: [
+      "1. Copia el código SQL del ejemplo en SSMS.",
+      "2. Ejecuta con F5 y verifica que todas las esperas sean mayores a 120 segundos."
     ],
-    prereqs: ["m2_04_distinct_top"]
-  },
-  {
-    id: "m2_06_operators_advanced",
-    phase: "Fase 2: SQL Básico",
-    cat: "sql",
-    title: "Módulo 2.6: Operadores Especiales — IN, BETWEEN y LIKE",
-    summary: "Simplifica listas con IN, rangos con BETWEEN y búsquedas de texto parcial con LIKE.",
-    icon: "fa-magnifying-glass",
-    purpose: "🎯 Propósito: Filtrar datos avanzados sin escribir múltiples OR repetitivos.",
-    deliverable: "🏁 Entregable: Búsqueda de clientes por patrón de nombre con LIKE.",
-    analogy: "💡 Analogía: Buscar personas cuyo apellido empiece por 'G' en el directorio.",
-    step1_theory: `Operadores:
-- IN ('Bogotá', 'Cali', 'Medellín'): En una lista de valores.
-- BETWEEN 20 AND 30: En un rango inclusivo.
-- LIKE 'Jul%': Textos que empiezan por 'Jul' (% es el comodín).`,
-    step2_business: "Encontrar todas las llamadas atendidas en las 3 ciudades principales de DataCall.",
-    step3_code: `USE DataCareer;
-SELECT * FROM analytics.dim_cliente WHERE ciudad IN ('Bogotá', 'Medellín');
-SELECT * FROM analytics.dim_cliente WHERE nombre LIKE 'J%';`,
-    step4_guided: ["1. Prueba la consulta LIKE 'J%' en SSMS.", "2. Observa cómo trae todos los nombres con J."],
-    step5_individual: "Busca llamadas con duración entre 100 y 300 segundos usando BETWEEN.",
-    solution_individual: "SELECT * FROM analytics.fact_llamadas WHERE duracion_segundos BETWEEN 100 AND 300;",
-    quiz_question: "¿Qué comodín se usa en el operador LIKE para representar cualquier secuencia de caracteres?",
-    quiz_options: ["%", "*", "$", "#"],
+    individual_practice: "Filtra los clientes de la tabla dim_cliente que vivan en 'Medellín' AND tengan un tipo de cliente 'Premium'.",
+    solution_practice: "SELECT * FROM analytics.dim_cliente WHERE ciudad = 'Medellín' AND tipo_cliente = 'Premium';",
+    quiz_question: "¿Cómo deben delimitarse los valores de texto dentro de una condición WHERE?",
+    quiz_options: ["Entre comillas simples ('Texto')", "Sin comillas", "Entre corchetes", "Con comillas dobles"],
     quiz_answer: 0,
-    challenge: "Buscar clientes cuyo correo termine en '@gmail.com'.",
-    commonErrors: "Usar BETWEEN sin especificar el límite menor primero.",
+    challenge: "Filtrar llamadas con espera > 180s O duración > 500s.",
+    common_errors: "Olvidar incluir las comillas simples en valores de texto dentro de WHERE.",
     english_vocab: [
-      { term: "Wildcard", trans: "Comodín (% / _)", ex: "The percent sign is a wildcard." }
-    ],
-    prereqs: ["m2_05_where_basic"]
-  },
-  {
-    id: "m2_07_null_sql",
-    phase: "Fase 2: SQL Básico",
-    cat: "sql",
-    title: "Módulo 2.7: Evaluando Nulos en SQL — IS NULL / IS NOT NULL",
-    summary: "Aprende la forma correcta de consultar casillas vacías en SQL Server.",
-    icon: "fa-circle-question",
-    purpose: "🎯 Propósito: Detectar datos faltantes o encuestas sin responder en las tablas.",
-    deliverable: "🏁 Entregable: Consulta de llamadas que no recibieron encuesta (IS NULL).",
-    analogy: "💡 Analogía: Revisar la lista de alumnos para ver quiénes no entregaron la tarea.",
-    step1_theory: `En SQL NUNCA se usa: WHERE columna = NULL.
-La forma correcta es:
-- WHERE columna IS NULL (está vacío).
-- WHERE columna IS NOT NULL (tiene dato).`,
-    step2_business: "Identificar encuestas donde el cliente no dejó comentario escrito para hacerle seguimiento.",
-    step3_code: `USE DataCareer;
-SELECT * FROM analytics.fact_encuestas WHERE comentario IS NULL;`,
-    step4_guided: ["1. Ejecuta la consulta IS NULL en SSMS.", "2. Verifica que las casillas digan NULL en amarillo."],
-    step5_individual: "Consulta las encuestas que SÍ tienen comentario registrado (IS NOT NULL).",
-    solution_individual: "SELECT * FROM analytics.fact_encuestas WHERE comentario IS NOT NULL;",
-    quiz_question: "¿Cuál es la sintaxis correcta para buscar filas con casillas vacías en SQL?",
-    quiz_options: ["WHERE columna IS NULL", "WHERE columna = NULL", "WHERE columna == NULL", "WHERE columna IS EMPTY"],
-    quiz_answer: 0,
-    challenge: "Contar cuántas encuestas no tienen comentario.",
-    commonErrors: "Usar el operador signo igual (= NULL) en lugar de IS NULL.",
-    english_vocab: [
-      { term: "Null check", trans: "Verificación de Nulos", ex: "Perform a null check using IS NULL." }
-    ],
-    prereqs: ["m2_06_operators_advanced"]
-  },
-  {
-    id: "m2_08_orderby",
-    phase: "Fase 2: SQL Básico",
-    cat: "sql",
-    title: "Módulo 2.8: Ordenando Resultados con ORDER BY (ASC y DESC)",
-    summary: "Organiza las tablas de menor a mayor o de mayor a menor para presentación ejecutiva.",
-    icon: "fa-arrow-down-short-wide",
-    purpose: "🎯 Propósito: Presentar los resultados ordenados por prioridad de negocio.",
-    deliverable: "🏁 Entregable: Top 10 de llamadas con mayor tiempo de espera ordenadas descendente.",
-    analogy: "💡 Analogía: Ordenar una fila de personas por estatura de la más alta a la más baja.",
-    step1_theory: `Sintaxis:
-SELECT * FROM tabla ORDER BY columna ASC; (Ascendente A-Z, 0-9, Predeterminado)
-SELECT * FROM tabla ORDER BY columna DESC; (Descendente Z-A, 9-0)`,
-    step2_business: "Mostrar primero las llamadas con esperas más largas para la revisión del equipo directivo.",
-    step3_code: `USE DataCareer;
-SELECT TOP 10 llamada_id, tiempo_espera_segundos 
-FROM analytics.fact_llamadas 
-ORDER BY tiempo_espera_segundos DESC;`,
-    step4_guided: ["1. Copia y ejecuta en SSMS.", "2. Verifica que el número más alto quede arriba."],
-    step5_individual: "Ordena los clientes alfabéticamente por su nombre de la A a la Z.",
-    solution_individual: "SELECT * FROM analytics.dim_cliente ORDER BY nombre ASC;",
-    quiz_question: "¿Qué palabra clave ordena los resultados de mayor a menor?",
-    quiz_options: ["DESC", "ASC", "TOP", "DOWN"],
-    quiz_answer: 0,
-    challenge: "Ordenar por dos columnas a la vez (ciudad ASC, edad DESC).",
-    commonErrors: "Pensar que ORDER BY va antes del WHERE (ORDER BY siempre va al final).",
-    english_vocab: [
-      { term: "Sort order", trans: "Orden de Clasificación", ex: "Set sort order to DESC." }
-    ],
-    prereqs: ["m2_07_null_sql"]
+      { term: "Where Clause", trans: "Cláusula WHERE", ex: "Apply a WHERE clause to filter rows." }
+    ]
   },
 
-  // --- RESTO DE FASES 3 A 16 RESUMIDAS EN EL DATASET CON ESTRUCTURA UNIFORME ---
+  // RESTO DE FASES (3 A 16) RE-MAPEADAS EN CLASES COMPLETAS CON LA NUEVA ESTRUCTURA Y NAVEGACIÓN ABIERTA
   {
-    id: "m3_01_aggregations",
-    phase: "Fase 3: SQL Intermedio",
+    id: "c3_01_aggregations_groupby",
+    phase: "Fase 3: SQL Intermediate",
     cat: "sql",
-    title: "Módulo 3.1: Funciones de Agregación — COUNT, SUM, AVG, MIN, MAX",
-    summary: "Resume miles de filas en indicadores numéricos consolidados.",
-    icon: "fa-calculator",
-    purpose: "🎯 Propósito: Calcular totales, promedios, mínimos y máximos en SQL.",
-    deliverable: "🏁 Entregable: Resumen estadístico de llamadas de DataCall.",
-    analogy: "💡 Analogía: La calculadora del cajero al final del día acumulando ventas.",
-    step1_theory: `Funciones:
-- COUNT(*): Cuenta filas.
-- SUM(col): Suma números.
-- AVG(col): Calcula el promedio.
-- MIN(col) / MAX(col): Mínimo y máximo.`,
-    step2_business: "Calcular la duración promedio de las llamadas de todo el call center.",
-    step3_code: `USE DataCareer;
-SELECT COUNT(*) AS Total_Llamadas, AVG(duracion_segundos) AS Duracion_Promedio FROM analytics.fact_llamadas;`,
-    step4_guided: ["1. Ejecuta las agregaciones en SSMS.", "2. Observa el resultado de 1 sola fila."],
-    step5_individual: "Calcula el tiempo de espera máximo registrado en fact_llamadas.",
-    solution_individual: "SELECT MAX(tiempo_espera_segundos) AS Espera_Maxima FROM analytics.fact_llamadas;",
-    quiz_question: "¿Qué función de SQL calcula el valor promedio de una columna numérica?",
-    quiz_options: ["AVG()", "COUNT()", "SUM()", "MAX()"],
-    quiz_answer: 0,
-    challenge: "Calcular MIN y MAX de la edad de clientes.",
-    commonErrors: "Intentar usar SUM en columnas de texto.",
-    english_vocab: [{ term: "Aggregation", trans: "Agregación", ex: "Apply aggregation functions." }],
-    prereqs: ["m2_08_orderby"]
-  },
-  {
-    id: "m3_02_groupby",
-    phase: "Fase 3: SQL Intermedio",
-    cat: "sql",
-    title: "Módulo 3.2: Agrupando Información con GROUP BY y HAVING",
-    summary: "Calcula métricas separadas por canal, ciudad o turno de trabajo.",
+    title: "Clase 3.1: Calculando Métricas y KPIs: Agregaciones, GROUP BY y HAVING",
+    summary: "Resume miles de filas en indicadores numéricos consolidados (COUNT, SUM, AVG, MIN, MAX) agrupados por categorías con GROUP BY y HAVING.",
     icon: "fa-chart-pie",
-    purpose: "🎯 Propósito: Resumir volúmenes masivos agrupados por categorías.",
-    deliverable: "🏁 Entregable: Tabla resumida de llamadas por canal de atención.",
-    analogy: "💡 Analogía: Separar monedas en montoncitos de $100, $200 y $500 para contar cada montón.",
-    step1_theory: `Sintaxis:
-SELECT canal, COUNT(*) AS Total FROM tabla GROUP BY canal HAVING COUNT(*) > 1000;
-HAVING filtra los resultados agrupados (a diferencia de WHERE).`,
-    step2_business: "Saber cuántas llamadas entraron por teléfono vs WhatsApp en DataCall.",
-    step3_code: `USE DataCareer;
-SELECT canal, COUNT(*) AS Total FROM analytics.fact_llamadas GROUP BY canal;`,
-    step4_guided: ["1. Ejecuta GROUP BY en SSMS.", "2. Revisa los totales por canal."],
-    step5_individual: "Agrupa los clientes por ciudad y cuenta cuántos hay en cada una.",
-    solution_individual: "SELECT ciudad, COUNT(*) AS Total FROM analytics.dim_cliente GROUP BY ciudad;",
-    quiz_question: "¿Qué instrucción de SQL agrupa filas con el mismo valor en categorías?",
-    quiz_options: ["GROUP BY", "ORDER BY", "WHERE", "JOIN"],
+    duration: "45-75 min",
+    capability: "🎯 Capacidad Lograda: Construir tablas resumidas de KPIs gerenciales agrupadas por canales o ciudades.",
+    concepts: ["Agregaciones (COUNT, SUM, AVG, MIN, MAX)", "GROUP BY simple y múltiple", "HAVING"],
+    intro: "Los gerentes no leen 50,000 filas; leen resúmenes ejecutivos. Hoy aprenderás a agrupar datos masivos.",
+    analogy: "💡 Analogía: Separar las monedas de tu alcancía en montoncitos de $100, $200 y $500 para contar el total de cada montón.",
+    theory: `1. Funciones de Agregación:
+- COUNT(*): Cuenta filas.
+- SUM(col): Suma montos numéricos.
+- AVG(col): Calcula el promedio.
+- MIN() / MAX(): Mínimo y máximo.
+
+2. GROUP BY:
+Agrupa las filas por una categoría.
+
+3. HAVING:
+Filtra los resultados DESPUÉS de agrupar (a diferencia de WHERE).`,
+    business_case: "Calcular el volumen total de llamadas y el tiempo promedio de duración agrupado por canal de atención en DataCall.",
+    code_example: `USE DataCareer;
+
+SELECT 
+    canal,
+    COUNT(*) AS Total_Llamadas,
+    AVG(duracion_segundos) AS Duracion_Promedio_Seg
+FROM analytics.fact_llamadas
+GROUP BY canal
+HAVING COUNT(*) > 1000
+ORDER BY Total_Llamadas DESC;`,
+    guided_practice: ["1. Copia la consulta agrupada en SSMS.", "2. Ejecuta F5 y analiza las métricas por canal."],
+    individual_practice: "Agrupa las encuestas por calificación de satisfacción y cuenta cuántas encuestas recibió cada nota.",
+    solution_practice: "SELECT satisfaccion, COUNT(*) AS Total FROM analytics.fact_encuestas GROUP BY satisfaccion ORDER BY satisfaccion DESC;",
+    quiz_question: "¿Qué instrucción de SQL permite calcular métricas agregadas por categorías?",
+    quiz_options: ["GROUP BY", "ORDER BY", "WHERE", "DISTINCT"],
     quiz_answer: 0,
-    challenge: "Usar HAVING COUNT(*) > 5000.",
-    commonErrors: "Incluir columnas sin agregar en el SELECT que no están en el GROUP BY.",
-    english_vocab: [{ term: "Group By", trans: "Agrupar Por", ex: "Group by channel and count rows." }],
-    prereqs: ["m3_01_aggregations"]
+    challenge: "Filtrar grupos con HAVING AVG(duracion_segundos) > 200.",
+    common_errors: "Incluir columnas sueltas en el SELECT que no están dentro del GROUP BY.",
+    english_vocab: [
+      { term: "Aggregation", trans: "Agregación", ex: "Calculate metric aggregations." },
+      { term: "Group By Clause", trans: "Cláusula GROUP BY", ex: "Group records by category." }
+    ]
   },
   {
-    id: "m3_03_joins",
-    phase: "Fase 3: SQL Intermedio",
+    id: "c3_02_joins_relations",
+    phase: "Fase 3: SQL Intermediate",
     cat: "sql",
-    title: "Módulo 3.3: Conectando Tablas — INNER JOIN y LEFT JOIN",
-    summary: "Combina la tabla de llamadas con los nombres de clientes y agentes.",
+    title: "Clase 3.2: Uniendo Tablas Relacionales: Primary Keys, Foreign Keys, INNER y LEFT JOIN",
+    summary: "Conecta tablas relacionales usando claves primarias y foráneas mediante INNER JOIN y LEFT JOIN.",
     icon: "fa-link",
-    purpose: "🎯 Propósito: Unir tablas relacionales para mostrar información descriptiva.",
-    deliverable: "🏁 Entregable: Consulta con INNER JOIN uniendo llamadas, clientes y agentes.",
-    analogy: "💡 Analogía: Cruzar la lista de invitados con la lista de regalos usando el número de mesa.",
-    step1_theory: `INNER JOIN: Muestra solo las filas con coincidencia exacta en ambas tablas.
-LEFT JOIN: Conserva TODAS las filas de la tabla izquierda aun si no coinciden.`,
-    step2_business: "Reemplazar los IDs de clientes por sus nombres reales en los reportes de llamadas.",
-    step3_code: `USE DataCareer;
-SELECT TOP 10 ll.llamada_id, c.nombre AS Cliente, a.nombre AS Agente
+    duration: "45-75 min",
+    capability: "🎯 Capacidad Lograda: Cruzar tablas relacionales para mostrar nombres reales en lugar de códigos numéricos de IDs.",
+    concepts: ["Primary Key (PK)", "Foreign Key (FK)", "Relaciones", "INNER JOIN", "LEFT JOIN", "Errores de cruce"],
+    intro: "Las bases de datos dividen la información en tablas. Hoy aprenderás a unirlas como un rompecabezas.",
+    analogy: "💡 Analogía: Cruzar la lista de invitados a una boda con la lista de mesas usando el número de boleto.",
+    theory: `1. Claves Relacionales:
+- Primary Key (PK): Clave única de la tabla dimensión.
+- Foreign Key (FK): Clave foránea en la tabla de hechos.
+
+2. Tipos de JOIN:
+- INNER JOIN: Devuelve solo las filas con coincidencia exacta en ambas tablas.
+- LEFT JOIN: Conserva TODAS las filas de la tabla izquierda, coincidan o no.`,
+    business_case: "Reemplazar los IDs de clientes y agentes por sus nombres reales en el reporte de llamadas de DataCall.",
+    code_example: `USE DataCareer;
+
+SELECT TOP 15
+    ll.llamada_id,
+    c.nombre AS Nombre_Cliente,
+    c.ciudad AS Ciudad_Cliente,
+    a.nombre AS Nombre_Agente
 FROM analytics.fact_llamadas ll
 INNER JOIN analytics.dim_cliente c ON ll.cliente_id = c.cliente_id
 INNER JOIN analytics.dim_agente a ON ll.agente_id = a.agente_id;`,
-    step4_guided: ["1. Copia y ejecuta la consulta con JOINs.", "2. Observa cómo aparecen los nombres en pantalla."],
-    step5_individual: "Realiza un LEFT JOIN entre clientes y ventas para encontrar clientes que no han comprado.",
-    solution_individual: "SELECT c.nombre FROM analytics.dim_cliente c LEFT JOIN analytics.fact_ventas v ON c.cliente_id = v.cliente_id WHERE v.venta_id IS NULL;",
-    quiz_question: "¿Qué tipo de JOIN mantiene todos los registros de la primera tabla sin importar si coinciden?",
+    guided_practice: ["1. Pega la consulta con JOINs en SSMS.", "2. Ejecuta F5 y verifica la unión de tablas."],
+    individual_practice: "Realiza un LEFT JOIN entre clientes y ventas para identificar clientes que nunca han realizado una compra.",
+    solution_practice: "SELECT c.nombre FROM analytics.dim_cliente c LEFT JOIN analytics.fact_ventas v ON c.cliente_id = v.cliente_id WHERE v.venta_id IS NULL;",
+    quiz_question: "¿Qué tipo de JOIN conserva todos los registros de la primera tabla sin importar si tienen coincidencia?",
     quiz_options: ["LEFT JOIN", "INNER JOIN", "RIGHT JOIN", "CROSS JOIN"],
     quiz_answer: 0,
-    challenge: "Cruzar 3 tablas en una sola consulta.",
-    commonErrors: "Olvidar la condición ON de cruce entre las claves.",
-    english_vocab: [{ term: "Join", trans: "Unión / Cruce de Tablas", ex: "Perform an INNER JOIN on primary key." }],
-    prereqs: ["m3_02_groupby"]
+    challenge: "Unir 3 tablas relacionales en una sola consulta.",
+    common_errors: "Olvidar la condición ON de enlace entre las claves PK y FK.",
+    english_vocab: [
+      { term: "Inner Join", trans: "Unión Interna", ex: "Combine records with INNER JOIN." },
+      { term: "Foreign Key", trans: "Clave Foránea", ex: "Link tables using the foreign key." }
+    ]
   },
 
-  // FASE 4: SQL AVANZADO
+  // FASE 5: EXCEL FOR DATA ANALYSIS
   {
-    id: "m4_01_cte_views",
-    phase: "Fase 4: SQL Avanzado",
-    cat: "sql",
-    title: "Módulo 4.1: CTEs (WITH) y Vistas (CREATE VIEW)",
-    summary: "Organiza código complejo en bloques temporales y guarda tablas virtuales.",
-    icon: "fa-cubes",
-    purpose: "🎯 Propósito: Modularizar código SQL profesional en SSMS.",
-    deliverable: "🏁 Entregable: Vista guardada en la base de datos DataCareer.",
-    analogy: "💡 Analogía: Guardar una receta de cocina como acceso directo en tu teléfono.",
-    step1_theory: `WITH CTE_Nombre AS (SELECT...) ➔ Consulta temporal reutilizable.
-CREATE VIEW Nombre AS SELECT... ➔ Guardar la consulta como tabla virtual.`,
-    step2_business: "Crear una vista gerencial `analytics.vw_resumen_llamadas` para consumo rápido.",
-    step3_code: `USE DataCareer;
-WITH Resumen AS (
-    SELECT agente_id, COUNT(*) AS Total FROM analytics.fact_llamadas GROUP BY agente_id
-)
-SELECT a.nombre, r.Total FROM Resumen r JOIN analytics.dim_agente a ON r.agente_id = a.agente_id;`,
-    step4_guided: ["1. Ejecuta la CTE en SSMS.", "2. Revisa la limpieza de la consulta."],
-    step5_individual: "Crea una vista con CREATE VIEW que seleccione clientes de Bogotá.",
-    solution_individual: "CREATE VIEW analytics.vw_bogota AS SELECT * FROM analytics.dim_cliente WHERE ciudad = 'Bogotá';",
-    quiz_question: "¿Qué hace la instrucción CREATE VIEW?",
-    quiz_options: ["Guarda una consulta como tabla virtual permanente", "Borra la tabla", "Modifica columnas", "Crea un archivo Excel"],
-    quiz_answer: 0,
-    challenge: "Crear una CTE y consultarla.",
-    commonErrors: "Ejecutar la consulta final sin seleccionar la sentencia WITH.",
-    english_vocab: [{ term: "Common Table Expression (CTE)", trans: "Expresión de Tabla Común", ex: "Simplify queries using CTEs." }],
-    prereqs: ["m3_03_joins"]
-  },
-  {
-    id: "m4_02_window",
-    phase: "Fase 4: SQL Avanzado",
-    cat: "sql",
-    title: "Módulo 4.2: Funciones de Ventana (ROW_NUMBER, LAG, OVER)",
-    summary: "Calcula rankings y compara la fila actual con la fila anterior.",
-    icon: "fa-arrow-up-right-dots",
-    purpose: "🎯 Propósito: Realizar análisis analíticos avanzados conservando las filas individuales.",
-    deliverable: "🏁 Entregable: Ranking de clientes por compras con ROW_NUMBER().",
-    analogy: "💡 Analogía: Mirar el puesto de carrera de cada corredor mientras cruza la meta.",
-    step1_theory: `ROW_NUMBER() OVER(PARTITION BY... ORDER BY...).
-LAG(col, 1) trae el valor de la fila anterior.`,
-    step2_business: "Identificar llamadas consecutivas con demoras altas para el mismo cliente.",
-    step3_code: `USE DataCareer;
-SELECT cliente_id, llamada_id, tiempo_espera_segundos,
-       LAG(tiempo_espera_segundos, 1) OVER(PARTITION BY cliente_id ORDER BY llamada_id) AS espera_anterior
-FROM analytics.fact_llamadas;`,
-    step4_guided: ["1. Ejecuta la función de ventana en SSMS.", "2. Observa la columna espera_anterior."],
-    step5_individual: "Calcula el ranking DENSE_RANK de clientes por edad dentro de cada ciudad.",
-    solution_individual: "SELECT ciudad, nombre, edad, DENSE_RANK() OVER(PARTITION BY ciudad ORDER BY edad DESC) FROM analytics.dim_cliente;",
-    quiz_question: "¿Qué función consulta el valor de la fila anterior dentro de un conjunto de ventanas?",
-    quiz_options: ["LAG()", "LEAD()", "RANK()", "OVER()"],
-    quiz_answer: 0,
-    challenge: "Obtener los 3 mejores agentes con ranking.",
-    commonErrors: "Olvidar incluir la cláusula OVER() en funciones de ventana.",
-    english_vocab: [{ term: "Window function", trans: "Función de Ventana", ex: "Calculate running totals with window functions." }],
-    prereqs: ["m4_01_cte_views"]
-  },
-
-  // FASE 5: EXCEL
-  {
-    id: "m5_01_excel_intro",
+    id: "c5_01_excel_data_foundations",
     phase: "Fase 5: Excel Analyst",
     cat: "excel",
-    title: "Módulo 5.1: Excel para Data Analysts — Tablas y Limpieza",
-    summary: "Domina atajos, tablas de Excel y limpieza de espacios con ESPACIOS() y NOMPROPIO().",
+    title: "Clase 5.1: Fundamentos de Excel para Data: Tablas, Limpieza y Fórmulas",
+    summary: "Domina la interfaz de Excel para analistas: Tablas estructuradas (Ctrl+T), fórmulas (SUM, AVERAGE, COUNT, IF, SUMIF) y limpieza de texto.",
     icon: "fa-file-excel",
-    purpose: "🎯 Propósito: Limpiar y preparar datos rápidamente en hojas de cálculo.",
-    deliverable: "🏁 Entregable: Archivo de Excel formateado como Tabla de Excel oficial.",
-    analogy: "💡 Analogía: Organizar tu escritorio físico antes de empezar a redactar un informe.",
-    step1_theory: `Formato de Tabla (Ctrl + T):
-- Filtros automáticos y referencias estructuradas.
-Funciones de Limpieza:
-- ESPACIOS(texto): Quita espacios dobles sobrantes.
-- NOMPROPIO(texto): Pone la primera letra en mayúscula.`,
-    step2_business: "Limpiar listas de clientes descargadas antes de cargarlas al sistema.",
-    step3_code: `=ESPACIOS(NOMPROPIO(A2))`,
-    step4_guided: ["1. Abre Excel.", "2. Convierte un rango a Tabla con Ctrl + T.", "3. Aplica la fórmula de limpieza."],
-    step5_individual: "Usa la función BUSCARX (XLOOKUP) para traer el correo de un cliente.",
-    solution_individual: "=BUSCARX(B2; Clientes[ID]; Clientes[Correo]; 'No Encontrado')",
-    quiz_question: "¿Qué atajo de teclado en Excel convierte un rango normal en una Tabla Oficial?",
+    duration: "45-75 min",
+    capability: "🎯 Capacidad Lograda: Formatear conjuntos de datos como tablas oficiales, limpiar textos y aplicar condicionales en Excel.",
+    concepts: ["Formato de Tabla (Ctrl+T)", "Fórmulas Fundamentales", "Funciones Condicionales (IF, SUMIF, COUNTIF)", "Limpieza de Texto (ESPACIOS, NOMPROPIO)"],
+    intro: "Excel sigue siendo la herramienta #1 de análisis rápido en las empresas. Hoy la usarás como una profesional.",
+    analogy: "💡 Analogía: Organizar los utensilios de cocina en gavetas etiquetadas antes de empezar a cocinar.",
+    theory: `1. Formato de Tabla (Ctrl + T):
+Transforma un rango plano en una tabla con referencias estructuradas.
+
+2. Funciones Clave:
+- =SI(condicion; valor_verdadero; valor_falso)
+- =SUMAR.SI(rango; criterio; rango_suma)
+- =ESPACIOS(texto): Elimina espacios dobles sobrantes.`,
+    business_case: "Limpiar la lista de clientes descargada en Excel y etiquetar con 'Alerta' a quienes esperaron más de 120s.",
+    code_example: `=SI(C2 > 120; "Alerta Espera"; "Normal")
+=SUMAR.SI(Clientes[Ciudad]; "Bogotá"; Clientes[Ventas])`,
+    guided_practice: ["1. Abre Excel.", "2. Convierte un rango de datos a Tabla oficial con Ctrl + T.", "3. Aplica la fórmula condicional =SI()."],
+    individual_practice: "Escribe la fórmula en Excel para contar cuántas llamadas del canal 'Telefónico' se registraron.",
+    solution_practice: "=CONTAR.SI(Llamadas[Canal]; 'Telefónico')",
+    quiz_question: "¿Qué atajo de teclado convierte un rango normal de datos en una Tabla Oficial en Excel?",
     quiz_options: ["Ctrl + T (o Ctrl + Q)", "Ctrl + C", "Alt + F4", "Ctrl + Z"],
     quiz_answer: 0,
-    challenge: "Crear una tabla dinámica de resumen de ventas.",
-    commonErrors: "Trabajar sobre rangos sueltos sin formato de tabla estructurada.",
-    english_vocab: [{ term: "Spreadsheet", trans: "Hoja de Cálculo", ex: "Clean data in the Excel spreadsheet." }],
-    prereqs: ["m4_02_window"]
-  },
-  {
-    id: "m5_02_pivots",
-    phase: "Fase 5: Excel Analyst",
-    cat: "excel",
-    title: "Módulo 5.2: Tablas Dinámicas y Power Query en Excel",
-    summary: "Crea resúmenes ejecutivos instantáneos con Tablas Dinámicas y automatiza en Power Query.",
-    icon: "fa-chart-column",
-    purpose: "🎯 Propósito: Analizar miles de filas sin escribir fórmulas manuales.",
-    deliverable: "🏁 Entregable: Dashboard interactivo en Excel con Segmentadores de datos.",
-    analogy: "💡 Analogía: El cubo Rubik; giras las caras para ver el color que deseas arriba (Ciudad, Mes).",
-    step1_theory: `Tabla Dinámica:
-Arrastra campos a Filas, Columnas y Valores para resumir datos.
-Power Query en Excel:
-Obtener datos ➔ Desde archivo/CSV ➔ Transformar datos.`,
-    step2_business: "Presentar el resumen semanal de llamadas por agente en 2 minutos.",
-    step3_code: `Insertar ➔ Tabla Dinámica ➔ Arrastrar 'Canal' a Filas y 'Duración' a Valores (Promedio)`,
-    step4_guided: ["1. Selecciona la tabla en Excel.", "2. Insertar Tabla Dinámica.", "3. Agrega Segmentadores de Datos."],
-    step5_individual: "Crea un gráfico dinámico de barras de llamadas por ciudad.",
-    solution_individual: "Haz clic en la Tabla Dinámica ➔ Insertar Gráfico Dinámico ➔ Barras 2D.",
-    quiz_question: "¿Qué herramienta interna de Excel permite transformar y limpiar datos antes de cargarlos?",
-    quiz_options: ["Power Query", "Paint", "WordArt", "Autosuma"],
-    quiz_answer: 0,
-    challenge: "Conectar 2 tablas dinámicas a un solo segmentador.",
-    commonErrors: "No actualizar (F5) la tabla dinámica al cambiar los datos de origen.",
-    english_vocab: [{ term: "Pivot Table", trans: "Tabla Dinámica", ex: "Build a pivot table summary." }],
-    prereqs: ["m5_01_excel_intro"]
+    challenge: "Crear una tabla formateada con referencias estructuradas.",
+    common_errors: "Trabajar sobre rangos planos sin formato de tabla oficial.",
+    english_vocab: [
+      { term: "Spreadsheet", trans: "Hoja de Cálculo", ex: "Clean the dataset in Excel spreadsheet." }
+    ]
   },
 
-  // FASE 6, 7, 8: MODELADO, POWER BI & DAX
+  // FASE 7: POWER BI
   {
-    id: "m6_01_star_schema",
-    phase: "Fase 6: Modelado",
-    cat: "bi",
-    title: "Módulo 6.1: Entidades, Relaciones y Modelo Estrella",
-    summary: "Diseña la arquitectura analítica dividiendo Hechos (Fact) y Dimensiones (Dim).",
-    icon: "fa-sitemap",
-    purpose: "🎯 Propósito: Construir el modelo relacional óptimo para analítica y Power BI.",
-    deliverable: "🏁 Entregable: Diagrama de Modelo Estrella activo.",
-    analogy: "💡 Analogía: El tique de la caja registradora (Hecho) rodeado de los catálogos de clientes y productos (Dimensiones).",
-    step1_theory: `Modelo Estrella:
-- Tabla de Hechos (Fact): Guarda eventos numéricos y claves (ej: fact_llamadas).
-- Tablas de Dimensiones (Dim): Guardan detalles descriptivos (ej: dim_cliente, dim_agente).
-- Relación 1 a varios (1:*): Una dimensión (1) filtra la tabla de hechos (*).`,
-    step2_business: "Entender la estructura de la base DataCareer para Power BI.",
-    step3_code: `MODELO ESTRELLA:
-dim_cliente (1) ─────── ( * ) fact_llamadas ( * ) ─────── (1) dim_agente`,
-    step4_guided: ["1. Identifica la tabla de hechos central.", "2. Identifica las tablas dimensiones alrededor."],
-    step5_individual: "Diseña las dimensiones de un sistema de entregas a domicilio.",
-    solution_individual: "Fact: Pedidos. Dim: Usuarios, Restaurantes, Repartidores, Calendario.",
-    quiz_question: "¿Qué tabla ocupa la posición central en un Modelo Estrella?",
-    quiz_options: ["Tabla de Hechos (Fact Table)", "Tabla de Dimensión", "Tabla de Configuración", "Tabla de Clientes"],
-    quiz_answer: 0,
-    challenge: "Explicar por qué evitamos relaciones varios a varios (*:*).",
-    commonErrors: "Poner textos descriptivos largos repetidos en la tabla de hechos.",
-    english_vocab: [{ term: "Star Schema", trans: "Modelo Estrella", ex: "Design a clean star schema model." }],
-    prereqs: ["m5_02_pivots"]
-  },
-  {
-    id: "m7_01_pbi_desktop",
+    id: "c7_01_pbi_foundations_dashboard",
     phase: "Fase 7: Power BI",
     cat: "bi",
-    title: "Módulo 7.1: Conexión de Power BI Desktop a SQL Server LuchoX12",
-    summary: "Importa las tablas de DataCareer a Power BI Desktop y crea la Tabla Calendario.",
+    title: "Clase 7.1: Primer contacto con Power BI Desktop: Importación, Power Query y Dashboards",
+    summary: "Conecta Power BI Desktop a SQL Server LuchoX12, limpia datos en Power Query y construye tu primer dashboard interactivo.",
     icon: "fa-chart-column",
-    purpose: "🎯 Propósito: Traer los datos limpios de SQL Server al entorno gráfico de Power BI.",
-    deliverable: "🏁 Entregable: Dashboard preliminar `.pbix` cargado.",
-    analogy: "💡 Analogía: Conectar el cable HDMI entre la consola y el televisor 4K.",
-    step1_theory: `Pasos en Power BI:
-1. Obtener Datos ➔ SQL Server (Servidor: LuchoX12, Base: DataCareer).
-2. Modo Importar para máxima velocidad.
-3. Vista de Modelo ➔ Establecer relaciones 1:*.
-4. Crear Tabla Dim_Calendario con DAX.`,
-    step2_business: "Crear la vista gerencial interactiva de DataCall para los directivos.",
-    step3_code: `Dim_Calendario = 
-ADDCOLUMNS(
-    CALENDAR(DATE(2025,1,1), DATE(2026,12,31)),
-    "Año", YEAR([Date]),
-    "NombreMes", FORMAT([Date], "mmmm")
-)`,
-    step4_guided: ["1. Abre Power BI Desktop.", "2. Carga las tablas de DataCareer.", "3. Crea Dim_Calendario."],
-    step5_individual: "Relaciona Dim_Calendario[Date] con fact_llamadas[fecha_llamada].",
-    solution_individual: "Arrastra Date de Dim_Calendario hasta fecha_llamada en la Vista de Modelo.",
-    quiz_question: "¿Cuál es el modo recomendado para cargar datos en Power BI para máxima velocidad?",
-    quiz_options: ["Modo Importar (Import)", "DirectQuery", "Live Connection", "Web API"],
+    duration: "45-75 min",
+    capability: "🎯 Capacidad Lograda: Conectar Power BI a bases de datos relacionales y diseñar tableros de control ejecutivos.",
+    concepts: ["Power BI Desktop", "Obtener Datos de SQL Server", "Power Query (Limpieza)", "Visualizaciones (Cards, Charts, Slicers)", "Diseño e Interactividad"],
+    intro: "Hoy darás el salto a Business Intelligence creando tu primer tablero gerencial en Power BI.",
+    analogy: "💡 Analogía: Diseñar el tablero digital de instrumentos de un auto de carreras.",
+    theory: `1. Flujo en Power BI:
+Obtener Datos ➔ Transformar en Power Query ➔ Vista de Modelo ➔ Vista de Informe (Dashboards).
+
+2. Elementos Visuales Principales:
+- Tarjetas (Cards): Muestran un único KPI numérico en gigante.
+- Gráficos de Barras / Líneas: Tendencias y comparaciones.
+- Segmentadores (Slicers): Filtros dinámicos interactivos.`,
+    business_case: "Construir el dashboard de operaciones de DataCall mostrando el total de llamadas, esperas y satisfacción por ciudad.",
+    code_example: `PASOS EN POWER BI:
+1. Obtener datos ➔ SQL Server ➔ LuchoX12 ➔ DataCareer.
+2. Transformar en Power Query ➔ Cerrar y Aplicar.
+3. Arrastrar Tarjetas, Gráficos y Segmentadores al lienzo.`,
+    guided_practice: ["1. Abre Power BI Desktop.", "2. Conéctate al servidor.", "3. Diseña una tarjeta con el total de llamadas."],
+    individual_practice: "¿Cuál es el componente visual ideal para mostrar una sola métrica principal como el Total de Ventas?",
+    solution_practice: "La Tarjeta Visual (Card).",
+    quiz_question: "¿Qué herramienta interna de Power BI se encarga de la limpieza y transformación de datos?",
+    quiz_options: ["Power Query", "Paint", "Excel", "WordArt"],
     quiz_answer: 0,
-    challenge: "Marcar Dim_Calendario como tabla de fechas oficial.",
-    commonErrors: "Escribir mal el nombre del servidor LuchoX12.",
-    english_vocab: [{ term: "Data Model", trans: "Modelo de Datos", ex: "Build the data model in Power BI." }],
-    prereqs: ["m6_01_star_schema"]
-  },
-  {
-    id: "m8_01_dax_measures",
-    phase: "Fase 8: DAX Master",
-    cat: "bi",
-    title: "Módulo 8.1: Fórmulas DAX — CALCULATE, DIVIDE y Inteligencia de Tiempo",
-    summary: "Calcula métricas dinámicas y comparaciones contra el año anterior en Power BI.",
-    icon: "fa-calculator",
-    purpose: "🎯 Propósito: Dominar el lenguaje de fórmulas DAX para tableros profesionales.",
-    deliverable: "🏁 Entregable: Tabla `_Medidas` con indicadores gerenciales en Power BI.",
-    analogy: "💡 Analogía: Una balanza digital que calcula el precio cuando pones el producto encima (Contexto de Filtro).",
-    step1_theory: `Medidas Fundamentales DAX:
-- [Total Llamadas] = COUNTROWS(fact_llamadas)
-- [Tasa Abandono %] = DIVIDE(CALCULATE([Total Llamadas], fact_llamadas[abandono]=1), [Total Llamadas], 0)
-- [Llamadas Año Anterior] = CALCULATE([Total Llamadas], SAMEPERIODLASTYEAR(Dim_Calendario[Date]))`,
-    step2_business: "Calcular la tasa de abandono y crecimiento YoY de DataCall en tiempo real.",
-    step3_code: `Tasa Abandono % = 
-DIVIDE(
-    CALCULATE(COUNTROWS(fact_llamadas), fact_llamadas[abandono] = 1),
-    COUNTROWS(fact_llamadas),
-    0
-)`,
-    step4_guided: ["1. Crea la medida en Power BI.", "2. Formatea como porcentaje (%).", "3. Arrastra a una tarjeta visual."],
-    step5_individual: "Crea la medida [Satisfacción Promedio].",
-    solution_individual: "[Satisfaccion Prom] = AVERAGE(fact_encuestas[satisfaccion])",
-    quiz_question: "¿Qué función de DAX permite modificar el Contexto de Filtro de un reporte?",
-    quiz_options: ["CALCULATE()", "FILTER()", "ALL()", "SUM()"],
-    quiz_answer: 0,
-    challenge: "Crear una medida con SAMEPERIODLASTYEAR.",
-    commonErrors: "Usar el operador / en lugar de DIVIDE() para prevenir división por cero.",
-    english_vocab: [{ term: "Filter Context", trans: "Contexto de Filtro", ex: "CALCULATE modifies the filter context." }],
-    prereqs: ["m7_01_pbi_desktop"]
+    challenge: "Guardar tu primer informe `.pbix` en la carpeta 02_PowerBI.",
+    common_errors: "Construir gráficos antes de verificar la limpieza de los datos en Power Query.",
+    english_vocab: [
+      { term: "Dashboard", trans: "Tablero de Control", ex: "Design an interactive Power BI dashboard." }
+    ]
   },
 
-  // FASES 9 A 12: PYTHON & ETL
+  // FASE 9: PYTHON FUNDAMENTALS
   {
-    id: "m9_01_python_intro",
+    id: "c9_01_python_first_steps",
     phase: "Fase 9: Python Base",
     cat: "python",
-    title: "Módulo 9.1: Python Desde Cero Absoluto — Variables, print e if/else",
-    summary: "Escribe tu primer programa de Python sin asumir conocimientos previos.",
+    title: "Clase 9.1: Mis Primeros Programas en Python: Variables, print e if/else",
+    summary: "Escribe tu primer script en Python desde cero absoluto: usa VS Code, crea variables, imprime con print() y toma decisiones condicionales.",
     icon: "fa-brands fa-python",
-    purpose: "🎯 Propósito: Dominar la sintaxis básica de Python paso a paso.",
-    deliverable: "🏁 Entregable: Script 'primer_programa.py' ejecutado en VS Code.",
-    analogy: "💡 Analogía: Escribir una receta paso a paso para que un robot la siga al pie de la letra.",
-    step1_theory: `Sintaxis Básica de Python:
-- print("Texto"): Muestra un mensaje en pantalla.
-- Variables: Cajas para guardar datos ('nombre = "Julieth"', 'edad = 24').
-- Condicionales:
-  if edad >= 18:
-      print("Mayor de edad")
-  else:
-      print("Menor de edad")`,
-    step2_business: "Automatizar la revisión de alertas de tiempo de espera en DataCall con Python.",
-    step3_code: `# Primer programa de Julieth 💖
-nombre = "Julieth"
-espera = 150
+    duration: "45-75 min",
+    capability: "🎯 Capacidad Lograda: Escribir y ejecutar scripts autónomos de Python en VS Code que evalúen reglas condicionales.",
+    concepts: ["¿Qué es Python?", "VS Code", "Archivos .py", "Función print()", "Variables y Tipos", "Condicionales (if / elif / else)"],
+    intro: "Bienvenida a la programación. No asumiremos ningún conocimiento previo; aprenderás paso a paso.",
+    analogy: "💡 Analogía: Escribir una lista de instrucciones claras para un asistente que las ejecuta exactamente en orden.",
+    theory: `1. Conceptos Básicos:
+- print("Texto"): Muestra un mensaje en consola.
+- Variables: Cajas con nombre para guardar valores (` + "`nombre = 'Julieth'`" + `, ` + "`espera = 150`" + `).
 
-print(f"Analista: {nombre}")
-
+2. Condicionales:
 if espera > 120:
-    print("⚠️ Alerta: Tiempo de espera crítico")
+    print("Alerta de espera")
 else:
-    print("✅ Tiempo de espera normal")`,
-    step4_guided: ["1. Abre VS Code.", "2. Crea 'programa.py'.", "3. Ejecuta con el botón de Play en la esquina superior."],
-    step5_individual: "Crea una variable `duracion` y un condicional que imprima 'Llamada Larga' si supera los 300 segundos.",
-    solution_individual: "duracion = 350\nif duracion > 300:\n    print('Llamada Larga')\nelse:\n    print('Llamada Normal')",
-    quiz_question: "¿Qué función de Python imprime información en la consola de texto?",
+    print("Tiempo normal")`,
+    business_case: "Crear un script en Python que evalúe si la llamada de un cliente superó el límite de tiempo permitido.",
+    code_example: `# Primer programa de Julieth en Python 💖
+nombre_analista = "Julieth"
+tiempo_espera = 150
+
+print(f"Analista a cargo: {nombre_analista}")
+
+if tiempo_espera > 120:
+    print("⚠️ ALERTA: Tiempo de espera crítico")
+else:
+    print("✅ Estado normal")`,
+    guided_practice: [
+      "1. Abre VS Code y crea el archivo `programa.py`.",
+      "2. Copia el código de ejemplo.",
+      "3. Ejecuta el archivo presionando el botón de Play."
+    ],
+    individual_practice: "Crea una variable `duracion = 350` y un bloque if/else que imprima 'Llamada Larga' si es mayor a 300 segundos.",
+    solution_practice: "duracion = 350\nif duracion > 300:\n    print('Llamada Larga')\nelse:\n    print('Llamada Normal')",
+    quiz_question: "¿Qué función nativa de Python se utiliza para mostrar texto e información en la consola de comandos?",
     quiz_options: ["print()", "write()", "output()", "display()"],
     quiz_answer: 0,
-    challenge: "Crear un bucle for que cuente del 1 al 5.",
-    commonErrors: "Olvidar la sangría (indentación de 4 espacios) dentro del bloque if.",
-    english_vocab: [{ term: "Indentation", trans: "Sangría / Indentación", ex: "Python relies on indentation." }],
-    prereqs: ["m8_01_dax_measures"]
-  },
-  {
-    id: "m10_01_pandas_intro",
-    phase: "Fase 10: Pandas & EDA",
-    cat: "python",
-    title: "Módulo 10.1: Manipulación de DataFrames con Pandas en Jupyter Notebooks",
-    summary: "Carga datos masivos y realiza análisis exploratorios con Pandas.",
-    icon: "fa-book-open-reader",
-    purpose: "🎯 Propósito: Procesar millones de filas con código interactivo en Python.",
-    deliverable: "🏁 Entregable: Notebook `.ipynb` con análisis exploratorio (EDA).",
-    analogy: "💡 Analogía: Un cuaderno de bocetos donde ves el resultado de cada trazo de código al instante.",
-    step1_theory: `Pandas: La librería #1 para ciencia y analítica de datos.
-- DataFrame (df): Tabla bidimensional en memoria.
-- Métodos esenciales: df.head(), df.info(), df.describe(), df.groupby().`,
-    step2_business: "Leer 50,000 llamadas desde SQL Server o CSV a un DataFrame en 1 segundo.",
-    step3_code: `import pandas as pd
-
-# Crear un DataFrame de prueba
-data = {'Cliente': ['Julieth', 'Carlos', 'Andrea'], 'Espera': [150, 45, 210]}
-df = pd.DataFrame(data)
-
-print(df.describe())
-print(df[df['Espera'] > 120])`,
-    step4_guided: ["1. Crea 'exploracion.ipynb' en VS Code.", "2. Ejecuta la celda con Shift + Enter."],
-    step5_individual: "Filtra el DataFrame para mostrar solo esperas mayores a 100 segundos.",
-    solution_individual: "df_filtrado = df[df['Espera'] > 100]",
-    quiz_question: "¿Qué atajo de teclado ejecuta una celda en un Jupyter Notebook?",
-    quiz_options: ["Shift + Enter", "Ctrl + C", "F5", "Alt + Tab"],
-    quiz_answer: 0,
-    challenge: "Usar df.groupby('Ciudad')['Espera'].mean()",
-    commonErrors: "No tener instalada la librería pandas (`pip install pandas`).",
-    english_vocab: [{ term: "DataFrame", trans: "Estructura de Tabla en Pandas", ex: "Load data into a Pandas DataFrame." }],
-    prereqs: ["m9_01_python_intro"]
-  },
-  {
-    id: "m12_01_etl_python",
-    phase: "Fase 12: APIs & ETL",
-    cat: "python",
-    title: "Módulo 12.1: Conexión de Python a SQL Server y Consumo de APIs",
-    summary: "Extrae datos de APIs web y SQL Server automáticamente con Python.",
-    icon: "fa-plug",
-    purpose: "🎯 Propósito: Construir pipelines de extracción y carga automatizados.",
-    deliverable: "🏁 Entregable: Script de ETL ejecutándose automáticamente.",
-    analogy: "💡 Analogía: La cinta transportadora de una fábrica que mueve productos de una máquina a otra.",
-    step1_theory: `Librerías:
-- requests: Consumir APIs web HTTP.
-- sqlalchemy / pyodbc: Conectarse a SQL Server.
-- pd.read_sql(): Cargar consultas SQL a DataFrames.`,
-    step2_business: "Traer el clima o el indicador de moneda por API y combinarlo con las llamadas de DataCall.",
-    step3_code: `from sqlalchemy import create_engine
-import pandas as pd
-
-engine = create_engine("mssql+pyodbc://@LuchoX12/DataCareer?driver=ODBC+Driver+18+for+SQL+Server&trusted_connection=yes&TrustServerCertificate=yes")
-df = pd.read_sql("SELECT * FROM analytics.fact_llamadas", engine)
-print(f"Total llamadas cargadas a Python: {len(df)}")`,
-    step4_guided: ["1. Pega la cadena de conexión en VS Code.", "2. Ejecuta y verifica el conteo de filas."],
-    step5_individual: "Guarda el DataFrame procesado a un archivo Excel con df.to_excel().",
-    solution_individual: "df.to_excel('llamadas_procesadas.xlsx', index=False)",
-    quiz_question: "¿Qué función de Pandas permite leer una consulta SQL directamente a un DataFrame?",
-    quiz_options: ["pd.read_sql()", "pd.get_sql()", "pd.import_db()", "pd.sql_load()"],
-    quiz_answer: 0,
-    challenge: "Exportar el resultado a CSV con df.to_csv().",
-    commonErrors: "Falta de controladores ODBC de SQL Server instalados en Windows.",
-    english_vocab: [{ term: "Connection string", trans: "Cadena de Conexión BD", ex: "Configure the database connection string." }],
-    prereqs: ["m10_01_pandas_intro"]
+    challenge: "Crear un programa en Python que salude y evalúe tu edad.",
+    common_errors: "Olvidar la sangría (indentación de 4 espacios) obligatoria en Python dentro de bloques if.",
+    english_vocab: [
+      { term: "Script", trans: "Archivo / Programa Python", ex: "Run the Python script in VS Code." },
+      { term: "Indentation", trans: "Sangría de Código", ex: "Python requires proper indentation." }
+    ]
   },
 
-  // FASE 13: IA APLICADA
+  // FASE 16: EMPLOYABILITY
   {
-    id: "m13_01_groq_ai",
-    phase: "Fase 13: IA Aplicada",
-    cat: "ia",
-    title: "Módulo 13.1: Clasificación de Sentimientos con Groq API y Llama 3",
-    summary: "Clasifica automáticamente 30,000 comentarios de texto libre en Positivo, Negativo o Neutro.",
-    icon: "fa-robot",
-    purpose: "🎯 Propósito: Integrar Inteligencia Artificial generativa para categorizar texto no estructurado.",
-    deliverable: "🏁 Entregable: Script de clasificación con Groq API etiquetando encuestas.",
-    analogy: "💡 Analogía: Un equipo de 100 asistentes leyendo y clasificando cartas por tono en tiempo récord.",
-    step1_theory: `API de Groq (Llama 3):
-Procesamiento del Lenguaje Natural (PLN) ultrarrápido.
-Usamos temperature=0.0 para obtener respuestas deterministas y clasificadas.`,
-    step2_business: "Descubrir los motivos principales de insatisfacción en las 30,000 encuestas de DataCall.",
-    step3_code: `from groq import Groq
-import os
-
-client = Groq(api_key=os.getenv("GROQ_API_KEY"))
-res = client.chat.completions.create(
-    model="llama-3.1-8b-instant",
-    messages=[{"role": "user", "content": "Clasifica este comentario: 'La atención fue pésima'. Responde solo: Positivo, Negativo o Neutro."}],
-    temperature=0.0
-)
-print(res.choices[0].message.content)`,
-    step4_guided: ["1. Revisa tu GROQ_API_KEY en `.env`.", "2. Ejecuta el script de clasificación en Python."],
-    step5_individual: "Envía un comentario positivo y confirma la clasificación de la IA.",
-    solution_individual: "Cambia el texto por: 'Excelente servicio, muy rápidos'. La IA responderá: Positivo.",
-    quiz_question: "¿Qué parámetro de la API de IA se configura en 0.0 para respuestas deterministas sin creatividad?",
-    quiz_options: ["temperature", "max_tokens", "top_p", "frequency_penalty"],
-    quiz_answer: 0,
-    challenge: "Guardar la columna 'sentimiento_ia' en SQL Server.",
-    commonErrors: "Dejar la clave GROQ_API_KEY expuesta en repositorios públicos de GitHub.",
-    english_vocab: [{ term: "Sentiment Analysis", trans: "Análisis de Sentimientos", ex: "Perform sentiment analysis with Llama 3." }],
-    prereqs: ["m12_01_etl_python"]
-  },
-
-  // FASES 14 Y 15: GIT & PROYECTO
-  {
-    id: "m15_01_datacall_project",
-    phase: "Fase 15: Proyecto DataCall",
-    cat: "git",
-    title: "Módulo 15.1: Proyecto Integrador Estelar — DataCall Analytics 🏆",
-    summary: "Combina SQL Server, Power BI, Python, Groq AI y GitHub en un proyecto de portafolio profesional.",
-    icon: "fa-trophy",
-    purpose: "🎯 Propósito: Construir el proyecto completo que te conseguirá las entrevistas de trabajo.",
-    deliverable: "🏁 Entregable: Repositorio público 'DataCall-Analytics' en GitHub con README impecable.",
-    analogy: "💡 Analogía: La obra de arte terminada que exhibes en la galería principal.",
-    step1_theory: `El Proyecto Integrador DataCall Analytics:
-1. Base de datos SQL Server LuchoX12 ➔ Consultas analíticas.
-2. Limpieza y Dashboard en Power BI Desktop ➔ Visualizaciones gerenciales.
-3. Script de Python + Groq AI ➔ Clasificación de encuestas.
-4. Repositorio en GitHub ➔ Código versionado y README.md con Business Insights.`,
-    step2_business: "Resolver el problema real de esperas y satisfacción de 50,000 llamadas de un Call Center.",
-    step3_code: `# DataCall Analytics — Repositorio Estelar
-git init
-git add .
-git commit -m "feat: Proyecto completo DataCall Analytics"
-git push origin main`,
-    step4_guided: ["1. Organiza la carpeta DataCall_Analytics.", "2. Redacta el README.md.", "3. Publica en GitHub."],
-    step5_individual: "Agrega 3 capturas de pantalla de tu dashboard de Power BI al archivo README.md.",
-    solution_individual: "Usa la sintaxis Markdown: ![Dashboard](02_PowerBI/captura_dashboard.png)",
-    quiz_question: "¿Cuál es el documento principal que leen los reclutadores al abrir tu repositorio en GitHub?",
-    quiz_options: ["README.md", "INDEX.html", "CONFIG.json", "MAIN.exe"],
-    quiz_answer: 0,
-    challenge: "Obtener la URL pública de tu repositorio de GitHub.",
-    commonErrors: "Dejar el repositorio en modo Privado.",
-    english_vocab: [{ term: "Portfolio project", trans: "Proyecto de Portafolio", ex: "Showcase your portfolio project." }],
-    prereqs: ["m13_01_groq_ai"]
-  },
-
-  // FASE 16: EMPLEABILIDAD
-  {
-    id: "m16_01_career_star",
+    id: "c16_01_career_star_interviews",
     phase: "Fase 16: Empleabilidad",
     cat: "career",
-    title: "Módulo 16.1: Hoja de Vida ATS, LinkedIn y Método STAR para Entrevistas",
-    summary: "Prepara tu marca personal, CV en formato ATS y ensaya respuestas con el método STAR.",
+    title: "Clase 16.1: Perfil Profesional, CV ATS, LinkedIn y Método STAR para Entrevistas",
+    summary: "Prepara tu marca personal de Data Analyst: redacta tu CV en formato ATS de 1 página, publica en LinkedIn y domina el método STAR para responder preguntas en entrevistas.",
     icon: "fa-briefcase",
-    purpose: "🎯 Propósito: Superar las entrevistas técnicas y asegurar tu contrato como Junior Data Analyst.",
-    deliverable: "🏁 Entregable: CV en PDF de 1 página + Publicación en LinkedIn + Ensayo STAR.",
-    analogy: "💡 Analogía: El pasaporte oficial que te abre las puertas del mercado laboral tech.",
-    step1_theory: `Método STAR para Entrevistas:
-- S (Situación): Contexto de negocio (Call center con esperas altas).
-- T (Tarea): Tu objetivo de analista (Identificar causas de demoras).
+    duration: "45-75 min",
+    capability: "🎯 Capacidad Lograda: Presentar tu historia profesional y responder preguntas técnicas en entrevistas con estructura de impacto cuantitativo.",
+    concepts: ["Perfil de Jr Data Analyst", "CV en formato ATS", "LinkedIn Profesional", "Método STAR (Situación, Tarea, Acción, Resultado)"],
+    intro: "Con esta clase cerrarás el programa lista para postular y triunfar en tus entrevistas de trabajo.",
+    analogy: "💡 Analogía: Tu pasaporte profesional oficial que te abre las puertas de las empresas tecnológicas.",
+    theory: `1. Formato ATS (Applicant Tracking System):
+CV de 1 página simple, sin diseños excesivos que confundan a los robots de selección.
+
+2. Método STAR para Entrevistas:
+- S (Situación): Contexto de negocio (Call center con demoras de esperas).
+- T (Tarea): Tu objetivo de analista (Descubrir las causas raíz).
 - A (Acción): Las herramientas usadas (SQL Server, Power BI, Python, Groq).
-- R (Resultado): El impacto cuantitativo (Reduje las esperas un 15%).`,
-    step2_business: "Demostrar en la entrevista tu capacidad para convertir datos en decisiones de negocio.",
-    step3_code: `MÉTODO STAR:
-"En DataCall (S), debía reducir el tiempo de espera (T). Diseñé un modelo en SSMS y Power BI (A), logrando reducir las esperas en 15% (R)."`,
-    step4_guided: ["1. Prepara tu CV en formato ATS de 1 página.", "2. Publica un post de tu proyecto en LinkedIn."],
-    step5_individual: "Responde en voz alta a la pregunta: ¿Cuál fue tu mayor reto técnico en el proyecto?",
-    solution_individual: "Explica cómo solucionaste los valores nulos y conectaste Python con SQL Server.",
-    quiz_question: "¿Qué significan las siglas del método STAR para responder preguntas de entrevistas?",
+- R (Resultado): El impacto cuantitativo (Reduje las esperas en 15%).`,
+    business_case: "Presentar el proyecto DataCall en entrevistas demostrando cómo convertiste datos en decisiones de negocio.",
+    code_example: `MÉTODO STAR EN ACCIÓN:
+"En DataCall (S), debía reducir el tiempo de espera (T). Diseñé un modelo en SSMS y Power BI (A), logrando reducir las esperas en un 15% (R)."`,
+    guided_practice: ["1. Redacta tu respuesta en formato STAR basada en tu proyecto."],
+    individual_practice: "Responde en voz alta a la pregunta de entrevista: '¿Cuál ha sido tu mayor desafío técnico?'",
+    solution_practice: "Aplica STAR explicando cómo manejaste valores nulos y conectaste SQL Server con Python.",
+    quiz_question: "¿Qué significan las siglas del método STAR para entrevistas laborales?",
     quiz_options: ["Situación, Tarea, Acción, Resultado", "Sistema, Técnica, Análisis, Reporte", "Solución, Trabajo, Agilidad, Rendimiento", "Ninguna"],
     quiz_answer: 0,
-    challenge: "Completar la simulación de entrevista en la pestaña Simulador Mock Trial.",
-    commonErrors: "Dudar de tu capacidad o no mencionar números cuantitativos de impacto.",
+    challenge: "Completar la simulación de entrevista en el Simulador Mock Trial.",
+    common_errors: "Dudar de tus capacidades o responder en entrevistas sin mencionar métricas cuantitativas de resultado.",
     english_vocab: [
       { term: "STAR Method", trans: "Método STAR", ex: "Answer interview questions using STAR method." },
-      { term: "ATS Resume", trans: "Hoja de Vida ATS", ex: "Format your ATS resume cleanly." }
-    ],
-    prereqs: ["m15_01_datacall_project"]
+      { term: "ATS Resume", trans: "Hoja de Vida ATS", ex: "Format your resume for ATS systems." }
+    ]
   }
 ];
 
-// --- DATASET: ENGLISH FOR DATA (A1 -> B1 RUTA PARALELA) ---
+// --- DATASET: ENGLISH TRACK — PARALLEL ROUTE (A1 ➔ A2 ➔ B1) ---
 const ENGLISH_DATA = [
-  // NIVEL A1
+  // NIVEL A1 — CLASES DE 1 HORA (General ➔ Tech Intro)
   {
-    id: "eng_a1_01",
+    id: "eng_c1_a1",
     level: "A1",
-    title: "1. Basic Tech Greetings & Self Presentation",
+    title: "Class 1: Personal Introductions & Basic Work Greetings",
+    duration: "45-75 min",
     grammar: "Verb To Be (I am, You are, It is) & Present Simple",
     vocab: [
-      { term: "Data Analyst", translation: "Analista de Datos", example: "I am a Data Analyst." },
-      { term: "Database", translation: "Base de Datos", example: "This is a database." },
-      { term: "Report", translation: "Reporte / Informe", example: "The report is ready." }
+      { term: "Data Analyst", translation: "Analista de Datos", example: "I am a Junior Data Analyst." },
+      { term: "Database", translation: "Base de Datos", example: "We use a database." },
+      { term: "Report", translation: "Reporte / Informe", example: "The daily report is ready." }
     ],
-    reading_prompt: "Hello! My name is Julieth. I am a Junior Data Analyst. I work with databases, SQL Server, and Power BI.",
-    speaking_prompt: "Say in English: 'Hola, mi nombre es Julieth y soy analista de datos.'",
+    reading_prompt: "Hello! My name is Julieth. I am 24 years old. I live in Bogota and I am a Junior Data Analyst. I work with databases and reports.",
+    speaking_prompt: "Introduce yourself in English: 'Hello, my name is... and I am a Data Analyst.'",
     quiz: {
-      question: "How do you say in English: 'Yo soy una analista de datos'?",
-      options: ["I am a Data Analyst", "I has a Data Analyst", "I be Data Analyst", "I do Data Analyst"],
+      question: "How do you say in English: 'Yo soy analista de datos'?",
+      options: ["I am a Data Analyst", "I has Data Analyst", "I be Data Analyst", "I do Data Analyst"],
       answer: 0
     }
   },
   {
-    id: "eng_a1_02",
+    id: "eng_c2_a1",
     level: "A1",
-    title: "2. Talking About Daily Tasks at Work",
-    grammar: "Present Simple with Daily Verbs (analyze, check, create, run)",
+    title: "Class 2: Daily Routines & Work Environment",
+    duration: "45-75 min",
+    grammar: "Present Simple with Daily Verbs (work, analyze, check, start, finish)",
     vocab: [
-      { term: "Query", translation: "Consulta SQL", example: "I run a query every day." },
-      { term: "Table", translation: "Tabla", example: "The table has ten rows." },
-      { term: "Filter", translation: "Filtro", example: "I apply a filter." }
+      { term: "Computer", translation: "Computador", example: "I turn on my computer." },
+      { term: "Screen", translation: "Pantalla", example: "Look at the computer screen." },
+      { term: "Table", translation: "Tabla", example: "The table contains rows." }
     ],
-    reading_prompt: "Every morning, I open SQL Server Management Studio. I run queries and check customer tables.",
-    speaking_prompt: "Say in English: 'Yo ejecuto consultas en SQL Server todos los días.'",
+    reading_prompt: "Every morning, I start work at 8 AM. I turn on my computer, open SQL Server, and check customer tables.",
+    speaking_prompt: "Say in English: 'Yo empiezo a trabajar a las 8 AM y reviso las tablas.'",
     quiz: {
-      question: "Choose the correct sentence in Present Simple:",
-      options: ["I run SQL queries every morning", "I running SQL queries morning", "I runs SQL queries morning", "I did run query morning"],
+      question: "Choose the correct Present Simple sentence:",
+      options: ["I check customer tables every morning", "I checking customer tables morning", "I checks customer tables morning", "I checked table morning"],
       answer: 0
     }
   },
 
-  // NIVEL A2
+  // NIVEL A2 — CLASES DE 1 HORA (Work Tasks ➔ Data Vocab)
   {
-    id: "eng_a2_01",
+    id: "eng_c3_a2",
     level: "A2",
-    title: "3. Describing Past Projects & Data Cleaning",
-    grammar: "Past Simple (analyzed, cleaned, created, joined)",
+    title: "Class 3: Describing Past Projects & Data Cleaning",
+    duration: "45-75 min",
+    grammar: "Past Simple Regular & Irregular Verbs (analyzed, cleaned, built, found)",
     vocab: [
-      { term: "Cleaned data", translation: "Datos limpios", example: "I cleaned the dataset in Power Query." },
-      { term: "Joined tables", translation: "Tablas unidas", example: "I joined two tables with INNER JOIN." },
-      { term: "Missing values", translation: "Valores faltantes", example: "I removed missing values." }
+      { term: "Cleaned data", translation: "Datos limpios", example: "I cleaned the dataset." },
+      { term: "Query", translation: "Consulta SQL", example: "I wrote an INNER JOIN query." },
+      { term: "Filter", translation: "Filtro", example: "I filtered rows by city." }
     ],
-    reading_prompt: "In my project DataCall Analytics, I analyzed 50,000 call records. I cleaned missing values in Excel and created a star schema model.",
-    speaking_prompt: "Say in English: 'Analicé 50,000 llamadas y limpié datos nulos.'",
+    reading_prompt: "In my DataCall project, I analyzed 50,000 call records. I cleaned missing values and built a star schema model in Power BI.",
+    speaking_prompt: "Say in English: 'Analicé los datos y construí un modelo en Power BI.'",
     quiz: {
-      question: "What is the past tense of the verb 'analyze'?",
-      options: ["Analyzed", "Analyzing", "Analyzes", "Will analyze"],
-      answer: 0
-    }
-  },
-  {
-    id: "eng_a2_02",
-    level: "A2",
-    title: "4. Comparing Metrics & Trends",
-    grammar: "Comparatives & Superlatives (higher than, faster, the longest)",
-    vocab: [
-      { term: "Wait time", translation: "Tiempo de espera", example: "Wait time was higher than expected." },
-      { term: "Increase", translation: "Aumentar / Incremento", example: "Sales showed an increase." },
-      { term: "Decrease", translation: "Disminuir / Caída", example: "Wait times decreased by 15%." }
-    ],
-    reading_prompt: "Call wait times in Bogota were higher than in Cali. After our analysis, average wait times decreased by 15 percent.",
-    speaking_prompt: "Say in English: 'El tiempo de espera disminuyó un 15%.'",
-    quiz: {
-      question: "Complete: 'Wait times in Bogota were ______ than in Cali.'",
-      options: ["higher", "more high", "highest", "highly"],
+      question: "What is the past tense of the verb 'build'?",
+      options: ["Built", "Builded", "Building", "Builds"],
       answer: 0
     }
   },
 
-  // NIVEL B1
+  // NIVEL B1 — CLASES DE 1 HORA (Insights ➔ Technical Interviews)
   {
-    id: "eng_b1_01",
+    id: "eng_c4_b1",
     level: "B1",
-    title: "5. Explaining Dashboard Insights & Business Storytelling",
-    grammar: "Present Perfect & Complex Connectors (However, Therefore, As a result)",
+    title: "Class 4: Technical Job Interview Practice & Storytelling",
+    duration: "45-75 min",
+    grammar: "Present Perfect, Connectors (Therefore, As a result) & STAR Method in English",
     vocab: [
-      { term: "Business insight", translation: "Hallazgo de negocio", example: "We discovered a key business insight." },
-      { term: "Dashboard", translation: "Tablero de control", example: "The dashboard highlights main KPIs." },
-      { term: "Recommendation", translation: "Recomendación", example: "My recommendation is to reallocate agents." }
+      { term: "Business Insight", translation: "Hallazgo de Negocio", example: "We identified a major business insight." },
+      { term: "Stakeholder", translation: "Gerente / Interesado", example: "I presented the dashboard to stakeholders." },
+      { term: "Recommendation", translation: "Recomendación", example: "My recommendation is to reallocate staff." }
     ],
-    reading_prompt: "We have analyzed over 50,000 operational records using SQL Server and Power BI. As a result of our findings, we recommend reallocating call center agents to afternoon shifts to reduce customer drop-off rates.",
-    speaking_prompt: "Explain your main project insight in 2 sentences in English.",
-    interview_question: "Q: 'Can you walk me through a data project where you found an unexpected result?'",
+    reading_prompt: "Interviewer: 'Why should we hire you as a Junior Data Analyst?' Candidate: 'Because I have hands-on experience using SQL Server, Power BI, and Python to extract data and deliver actionable business recommendations.'",
+    speaking_prompt: "Answer in English: 'Why do you want to work as a Data Analyst?'",
+    interview_question: "Q: 'Can you describe a data project where you found an unexpected insight?'",
     quiz: {
       question: "Which connector means 'Por lo tanto' or 'Como resultado'?",
-      options: ["As a result / Therefore", "However", "Because", "Although"],
-      answer: 0
-    }
-  },
-  {
-    id: "eng_b1_02",
-    level: "B1",
-    title: "6. Job Interview Practice for Junior Data Analyst",
-    grammar: "Professional Interview Phrasings & STAR Method in English",
-    vocab: [
-      { term: "Stakeholder", translation: "Gerente / Interesado", ex: "I presented results to key stakeholders." },
-      { term: "Data pipeline", translation: "Tubería de Datos", ex: "I automated the data pipeline." }
-    ],
-    reading_prompt: "Interviewer: 'Why should we hire you as a Junior Data Analyst?' Candidate: 'Because I have practical hands-on experience building end-to-end solutions combining SQL Server, Power BI, and Python to solve real business problems.'",
-    speaking_prompt: "Answer in English: 'Why do you want to work as a Data Analyst?'",
-    interview_question: "Q: 'What is your experience with DAX and Power BI?'",
-    quiz: {
-      question: "How do you professionally answer 'What are your top technical skills?'",
-      options: [
-        "My core technical skills include SQL query writing, Power BI data modeling, DAX measures, and Python data analysis.",
-        "I know computer stuff.",
-        "I like games.",
-        "No idea."
-      ],
+      options: ["Therefore / As a result", "However", "Although", "Because"],
       answer: 0
     }
   }
@@ -1838,20 +990,15 @@ const ENGLISH_DATA = [
 
 // --- LOGROS & MEDALLAS ---
 const BADGES_DATA = [
-  { id: "b1", title: "Fundamentos Tech", icon: "fa-laptop-code", desc: "Completar la Fase 0 de conceptos tecnológicos.", reqModule: "m0_19_medallion" },
-  { id: "b2", title: "Pensamiento Lógico", icon: "fa-brain", desc: "Dominar la lógica de datos y métricas en la Fase 1.", reqModule: "m1_09_logic_problem_solving" },
-  { id: "b3", title: "Primera Consulta SSMS", icon: "fa-database", desc: "Completar la conexión a LuchoX12 y ejecutar F5.", reqModule: "m2_01_ssms_intro" },
-  { id: "b4", title: "Reina del SELECT", icon: "fa-eye", desc: "Dominar la extracción de columnas específicas.", reqModule: "m2_03_select_from" },
-  { id: "b5", title: "Filtro Magistral WHERE", icon: "fa-filter", desc: "Filtrar llamadas y clientes por condiciones de negocio.", reqModule: "m2_05_where_basic" },
-  { id: "b6", title: "Maestra de JOINs", icon: "fa-link", desc: "Cruzar tablas relacionales con INNER JOIN y LEFT JOIN.", reqModule: "m3_03_joins" },
-  { id: "b7", title: "SQL Avanzado & Vistas", icon: "fa-cubes", desc: "Crear CTEs y Vistas en SQL Server.", reqModule: "m4_01_cte_views" },
-  { id: "b8", title: "Excel Data Analyst", icon: "fa-file-excel", desc: "Dominar Tablas Dinámicas y Power Query en Excel.", reqModule: "m5_02_pivots" },
-  { id: "b9", title: "Arquitecta de Power BI", icon: "fa-project-diagram", desc: "Construir el Modelo Estrella y la Tabla Calendario.", reqModule: "m7_01_pbi_desktop" },
-  { id: "b10", title: "Calculadora DAX", icon: "fa-calculator", desc: "Crear medidas con CALCULATE y DIVIDE.", reqModule: "m8_01_dax_measures" },
-  { id: "b11", title: "Programadora Python", icon: "fa-brands fa-python", desc: "Manipular DataFrames de Pandas en VS Code.", reqModule: "m10_01_pandas_intro" },
-  { id: "b12", title: "Especialista Groq AI", icon: "fa-robot", desc: "Clasificar encuestas masivas con Llama 3.", reqModule: "m13_01_groq_ai" },
-  { id: "b13", title: "Portafolio en GitHub", icon: "fa-brands fa-github", desc: "Publicar el proyecto DataCall con README profesional.", reqModule: "m15_01_datacall_project" },
-  { id: "b14", title: "100% Empleable Pro 🏆", icon: "fa-crown", desc: "Completar la ruta integral de 17 Fases a Junior Data Analyst.", reqModule: "m16_01_career_star" }
+  { id: "b1", title: "Tech Foundations Pro", icon: "fa-laptop-code", desc: "Completar la Fase 0 de conceptos tecnológicos.", reqModule: "c0_07_cloud_etl_architecture" },
+  { id: "b2", title: "Pensamiento Lógico", icon: "fa-brain", desc: "Dominar la lógica de datos y métricas en la Fase 1.", reqModule: "c1_05_analytical_thinking_kpis" },
+  { id: "b3", title: "Primera Consulta SSMS", icon: "fa-database", desc: "Completar la conexión a LuchoX12 y ejecutar F5.", reqModule: "c2_01_ssms_connect" },
+  { id: "b4", title: "Reina del SELECT & WHERE", icon: "fa-eye", desc: "Dominar la extracción y filtrado en SQL.", reqModule: "c2_03_where_filtering" },
+  { id: "b5", title: "Maestra de JOINs & Agregaciones", icon: "fa-link", desc: "Cruzar tablas relacionales y agrupar KPIs.", reqModule: "c3_02_joins_relations" },
+  { id: "b6", title: "Excel Data Analyst", icon: "fa-file-excel", desc: "Dominar Tablas Dinámicas y Power Query en Excel.", reqModule: "c5_01_excel_data_foundations" },
+  { id: "b7", title: "Arquitecta de Power BI", icon: "fa-chart-column", desc: "Construir dashboards gerenciales en Power BI.", reqModule: "c7_01_pbi_foundations_dashboard" },
+  { id: "b8", title: "Programadora Python", icon: "fa-brands fa-python", desc: "Escribir scripts autónomos en VS Code.", reqModule: "c9_01_python_first_steps" },
+  { id: "b9", title: "100% Empleable Pro 🏆", icon: "fa-crown", desc: "Completar la ruta integral de clases de 1 hora.", reqModule: "c16_01_career_star_interviews" }
 ];
 
 // --- GLOSARIO INTERACTIVO ---
@@ -1920,12 +1067,6 @@ document.addEventListener('DOMContentLoaded', () => {
   renderBadges();
 });
 
-// --- PREREQUISITE CHECK LOGIC ---
-function isModuleUnlocked(m) {
-  if (!m.prereqs || m.prereqs.length === 0) return true;
-  return m.prereqs.every(prereqId => completedModules.includes(prereqId));
-}
-
 // --- RENDER BADGES ---
 function renderBadges() {
   const container = document.getElementById('badges-grid');
@@ -1976,7 +1117,7 @@ function filterGlossary() {
   renderGlossary(text);
 }
 
-// --- RENDER MODULES (ROADMAP DASHBOARD) ---
+// --- RENDER MODULES (ROADMAP DASHBOARD - NO LOCKS!) ---
 function renderModules(filterCat = 'all', searchQuery = '') {
   const container = document.getElementById('modules-container');
   if (!container) return;
@@ -2002,37 +1143,31 @@ function renderModules(filterCat = 'all', searchQuery = '') {
 
   filtered.forEach(m => {
     const isCompleted = completedModules.includes(m.id);
-    const unlocked = isModuleUnlocked(m);
 
     const card = document.createElement('div');
-    card.className = `module-card ${isCompleted ? 'completed' : ''} ${!unlocked ? 'locked-module' : ''}`;
-    card.onclick = () => {
-      if (unlocked) {
-        openModuleModal(m.id);
-      } else {
-        alert("🔒 Módulo Bloqueado por Prerrequisito:\nCompleta las lecciones anteriores de la fase para desbloquear este módulo.");
-      }
-    };
+    card.className = `module-card ${isCompleted ? 'completed' : ''}`;
+    // REGLA CRÍTICA: Acceso libre sin bloqueos!
+    card.onclick = () => openModuleModal(m.id);
 
     card.innerHTML = `
       <div class="card-top">
         <span class="phase-tag ${m.cat}">${m.phase}</span>
         <div class="check-box" onclick="event.stopPropagation(); toggleModuleCompletion('${m.id}')">
-          <i class="fa-solid ${isCompleted ? 'fa-heart' : 'fa-heart'}"></i>
+          <i class="fa-solid fa-heart"></i>
         </div>
       </div>
       <h3 class="module-title">${m.title}</h3>
       <p class="module-summary">${m.summary}</p>
       
-      ${!unlocked ? `
-        <div style="margin-top: 10px;">
-          <span class="prereq-pill"><i class="fa-solid fa-lock"></i> Requiere completar lección previa</span>
-        </div>
-      ` : ''}
+      <div style="margin-top: 10px; display: flex; align-items: center; justify-content: space-between;">
+        <span class="status-pill ${isCompleted ? 'completed' : 'not-started'}">
+          <i class="fa-solid ${isCompleted ? 'fa-check' : 'fa-play'}"></i> ${isCompleted ? 'Completado 💖' : 'Acceso Libre ✨'}
+        </span>
+        <span style="font-size: 11px; font-weight: 800; color: var(--kitty-hotpink);">⏱️ ${m.duration || '60 min'}</span>
+      </div>
 
       <div style="margin-top: 12px; display: flex; justify-content: space-between; align-items: center; font-size: 12px; color: var(--kitty-hotpink); font-weight: 800;">
-        <span><i class="fa-solid ${m.icon}"></i> Abrir Lección (10 Pasos)</span>
-        <span>${isCompleted ? 'Completado 💖' : (unlocked ? 'Disponible ✨' : 'Bloqueado 🔒')}</span>
+        <span><i class="fa-solid ${m.icon}"></i> Abrir Clase de 1 Hora (7 Partes)</span>
       </div>
     `;
 
@@ -2040,7 +1175,7 @@ function renderModules(filterCat = 'all', searchQuery = '') {
   });
 }
 
-// --- RENDER ENGLISH SECTION ---
+// --- RENDER ENGLISH SECTION (A1 -> A2 -> B1 PROGRESIVO) ---
 function renderEnglishSection() {
   const container = document.getElementById('english-container');
   if (!container) return;
@@ -2068,7 +1203,7 @@ function renderEnglishSection() {
     card.innerHTML = `
       <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
         <span class="phase-tag english">Level ${e.level}</span>
-        <span style="font-size: 11px; font-weight: 800; color: var(--kitty-hotpink);">English for Data</span>
+        <span style="font-size: 11px; font-weight: 800; color: var(--kitty-hotpink);">⏱️ ${e.duration || '60 min'}</span>
       </div>
 
       <h3 style="font-size: 18px; color: var(--text-dark); margin-bottom: 8px; font-weight: 900;">${e.title}</h3>
@@ -2078,7 +1213,7 @@ function renderEnglishSection() {
 
       <div style="background: #fffdfd; border: 1px solid #f8bbd0; padding: 14px; border-radius: 14px; margin-bottom: 14px;">
         <h4 style="color: var(--kitty-hotpink); font-size: 13px; font-weight: 800; margin-bottom: 6px;">
-          📖 Reading & Pronunciation Prompt:
+          📖 Reading & Pronunciation Practice:
         </h4>
         <p style="font-size: 13px; color: var(--text-dark); font-weight: 600; line-height: 1.5; font-style: italic;">
           "${e.reading_prompt}"
@@ -2086,14 +1221,14 @@ function renderEnglishSection() {
       </div>
 
       <div style="margin-bottom: 14px;">
-        <h4 style="color: var(--text-dark); font-size: 13px; font-weight: 800;">🗣️ Essential Data Analyst Vocabulary:</h4>
+        <h4 style="color: var(--text-dark); font-size: 13px; font-weight: 800;">🗣️ Key Class Vocabulary:</h4>
         <div class="vocab-grid">
           ${vocabList}
         </div>
       </div>
 
       <div style="background: #fff0f5; border: 1px solid #ff4081; padding: 14px; border-radius: 14px; margin-bottom: 14px;">
-        <h4 style="color: #ff1493; font-size: 13px; font-weight: 800; margin-bottom: 4px;">💬 Speaking Practice Challenge:</h4>
+        <h4 style="color: #ff1493; font-size: 13px; font-weight: 800; margin-bottom: 4px;">💬 Speaking Challenge:</h4>
         <p style="font-size: 13px; font-weight: 700; color: #3c1a26;">${e.speaking_prompt}</p>
       </div>
 
@@ -2160,6 +1295,8 @@ function renderDailyClass() {
     <li><strong>${v.term}:</strong> ${v.trans} — <em>"${v.ex}"</em></li>
   `).join('') : '<li>Data Analyst vocabulary</li>';
 
+  let conceptsList = m.concepts ? m.concepts.map(c => `<span style="background: #fff0f5; color: #ff1493; padding: 4px 10px; border-radius: 12px; font-size: 12px; font-weight: 700;">• ${c}</span>`).join(' ') : '';
+
   container.innerHTML = `
     <div style="background: #ffffff; border: 3px solid var(--border-pink); border-radius: var(--radius-lg); padding: 24px; box-shadow: var(--shadow-glow); margin-top: 20px;">
       
@@ -2167,75 +1304,81 @@ function renderDailyClass() {
         <div>
           <span class="phase-tag ${m.cat}">${m.phase}</span>
           <h2 style="font-size: 22px; color: var(--kitty-hotpink); font-weight: 900; margin-top: 6px;">${m.title}</h2>
+          <div style="margin-top: 8px; display: flex; flex-wrap: wrap; gap: 6px;">
+            ${conceptsList}
+          </div>
         </div>
-        <div style="background: #fff0f5; padding: 8px 16px; border-radius: 20px; border: 2px solid #ff4081; font-weight: 800; color: #ff1493;">
-          ⏱️ Duración Total: 60 - 120 min
+        <div style="background: #fff0f5; padding: 8px 16px; border-radius: 20px; border: 2px solid #ff4081; font-weight: 800; color: #ff1493; white-space: nowrap;">
+          ⏱️ Clase de 1 Hora (45-75 min)
         </div>
       </div>
 
-      <!-- TIME BREAKDOWN BLOCKS -->
+      <!-- ESTRUCTURA DE 7 PARTES DE LA CLASE DE 1 HORA -->
       <div class="time-block-grid">
         <div class="time-block-card">
-          <span class="time-badge">10 MIN</span>
-          <h4 style="font-size: 13px; font-weight: 800;">1. Repaso</h4>
-          <p style="font-size: 11px; color: var(--text-muted); font-weight: 600;">Calentamiento y conceptos de la clase anterior.</p>
-        </div>
-        <div class="time-block-card">
-          <span class="time-badge">25 MIN</span>
-          <h4 style="font-size: 13px; font-weight: 800;">2. Teoría & Analogía</h4>
-          <p style="font-size: 11px; color: var(--text-muted); font-weight: 600;">Explicación cotidiana y caso DataCall.</p>
-        </div>
-        <div class="time-block-card">
-          <span class="time-badge">30 MIN</span>
-          <h4 style="font-size: 13px; font-weight: 800;">3. Práctica Guiada</h4>
-          <p style="font-size: 11px; color: var(--text-muted); font-weight: 600;">Ejercicios guiados e independientes en SSMS/Excel/VS Code.</p>
+          <span class="time-badge">5 MIN</span>
+          <h4 style="font-size: 13px; font-weight: 800;">1. Introducción</h4>
+          <p style="font-size: 11px; color: var(--text-muted); font-weight: 600;">Objetivo y capacidad final a lograr.</p>
         </div>
         <div class="time-block-card">
           <span class="time-badge">15 MIN</span>
-          <h4 style="font-size: 13px; font-weight: 800;">4. Mini Quiz</h4>
-          <p style="font-size: 11px; color: var(--text-muted); font-weight: 600;">Comprobación autónoma de conocimientos.</p>
+          <h4 style="font-size: 13px; font-weight: 800;">2. Conceptos & Analogía</h4>
+          <p style="font-size: 11px; color: var(--text-muted); font-weight: 600;">Teoría agrupada y ejemplos cotidianos.</p>
         </div>
         <div class="time-block-card">
-          <span class="time-badge">20 MIN</span>
-          <h4 style="font-size: 13px; font-weight: 800;">5. Reto Final</h4>
-          <p style="font-size: 11px; color: var(--text-muted); font-weight: 600;">Desafío de aplicación de negocio.</p>
+          <span class="time-badge">10 MIN</span>
+          <h4 style="font-size: 13px; font-weight: 800;">3. Ejemplo Guiado</h4>
+          <p style="font-size: 11px; color: var(--text-muted); font-weight: 600;">El profesor muestra y la estudiante sigue.</p>
         </div>
         <div class="time-block-card">
-          <span class="time-badge">20 MIN</span>
-          <h4 style="font-size: 13px; font-weight: 800;">6. English Session</h4>
-          <p style="font-size: 11px; color: var(--text-muted); font-weight: 600;">Vocabulario técnico de la clase en Inglés.</p>
+          <span class="time-badge">15 MIN</span>
+          <h4 style="font-size: 13px; font-weight: 800;">4. Práctica en Vivo</h4>
+          <p style="font-size: 11px; color: var(--text-muted); font-weight: 600;">Ejercicios progresivos guiados e independientes.</p>
+        </div>
+        <div class="time-block-card">
+          <span class="time-badge">10 MIN</span>
+          <h4 style="font-size: 13px; font-weight: 800;">5. Reto Práctico</h4>
+          <p style="font-size: 11px; color: var(--text-muted); font-weight: 600;">Problema de negocio sin copiar ejemplo.</p>
+        </div>
+        <div class="time-block-card">
+          <span class="time-badge">5 MIN</span>
+          <h4 style="font-size: 13px; font-weight: 800;">6. Quiz Autónoma</h4>
+          <p style="font-size: 11px; color: var(--text-muted); font-weight: 600;">Evaluación rápida de comprobación.</p>
+        </div>
+        <div class="time-block-card">
+          <span class="time-badge">5 MIN</span>
+          <h4 style="font-size: 13px; font-weight: 800;">7. Cierre & English</h4>
+          <p style="font-size: 11px; color: var(--text-muted); font-weight: 600;">Resumen, capacidad y vocabulario en inglés.</p>
         </div>
       </div>
 
-      <!-- GUIA DE LA CLASE EN VIVO -->
+      <!-- DETALLE GUIA DE LA CLASE -->
       <div style="display: flex; flex-direction: column; gap: 16px; margin-top: 20px;">
         <div style="background: #fffdfd; border: 2px solid #f8bbd0; padding: 18px; border-radius: 16px;">
           <h3 style="color: var(--kitty-hotpink); font-size: 15px; font-weight: 800; margin-bottom: 6px;">
-            📌 Bloque 1: Objetivo y Caso de Negocio DataCall (35 min)
+            🎯 Capacidad al Finalizar la Clase:
           </h3>
-          <p style="font-size: 13px; font-weight: 600; color: var(--text-dark);">${m.purpose}</p>
-          <p style="font-size: 13px; font-weight: 600; color: var(--text-muted); margin-top: 6px;">💡 <strong>Analogía:</strong> ${m.analogy}</p>
+          <p style="font-size: 13px; font-weight: 700; color: var(--text-dark);">${m.capability}</p>
         </div>
 
         <div style="background: #fffdfd; border: 2px solid #f8bbd0; padding: 18px; border-radius: 16px;">
           <h3 style="color: var(--kitty-hotpink); font-size: 15px; font-weight: 800; margin-bottom: 6px;">
-            💻 Bloque 2: Práctica en Vivo & Código de la Clase (30 min)
+            💻 Código & Sintaxis Principal de la Sesión:
           </h3>
-          <div class="code-block">${m.step3_code}</div>
+          <div class="code-block">${m.code_example || m.step3_code}</div>
         </div>
 
         <div style="background: #fff0f5; border: 2px solid #ff4081; padding: 18px; border-radius: 16px;">
           <h3 style="color: #ff1493; font-size: 15px; font-weight: 800; margin-bottom: 6px;">
-            🇬🇧 Bloque 3: English for Data Session (20 min)
+            🇬🇧 English for Data Vocabulary Session:
           </h3>
-          <p style="font-size: 13px; font-weight: 700; margin-bottom: 8px;">Vocabulario técnico a dominar en esta clase:</p>
           <ul style="padding-left: 20px; font-size: 13px; font-weight: 600; color: #3c1a26;">
             ${vocabList}
           </ul>
         </div>
 
         <button class="btn btn-primary" onclick="openModuleModal('${m.id}')" style="justify-content: center; font-size: 14px; padding: 12px;">
-          <i class="fa-solid fa-graduation-cap"></i> Abrir Lección Guiada Completa de 10 Pasos
+          <i class="fa-solid fa-graduation-cap"></i> Abrir Clase Completa de 1 Hora (7 Partes Interactivas)
         </button>
       </div>
 
@@ -2243,7 +1386,7 @@ function renderDailyClass() {
   `;
 }
 
-// --- MODAL DIALOG WITH 10 STEPS ---
+// --- MODAL DIALOG WITH 7 PARTS OF A 1-HOUR CLASS ---
 function openModuleModal(id) {
   const m = MODULES_DATA.find(item => item.id === id);
   if (!m) return;
@@ -2252,7 +1395,7 @@ function openModuleModal(id) {
   const content = document.getElementById('modal-content');
   const isCompleted = completedModules.includes(m.id);
 
-  let guidedStepsHtml = m.step4_guided.map(step => `<li style="margin-bottom: 8px;">${step}</li>`).join('');
+  let guidedStepsHtml = m.guided_practice ? m.guided_practice.map(step => `<li style="margin-bottom: 8px;">${step}</li>`).join('') : '';
 
   let quizOptionsHtml = m.quiz_options ? m.quiz_options.map((opt, idx) => `
     <button class="btn btn-secondary" onclick="checkQuizAnswer('${m.id}', ${idx}, ${m.quiz_answer})" style="font-size: 13px; text-align: left; width: 100%; justify-content: flex-start;">
@@ -2268,106 +1411,125 @@ function openModuleModal(id) {
     </div>
   `).join('') : '';
 
+  let conceptsList = m.concepts ? m.concepts.map(c => `<span style="background: #fff0f5; color: #ff1493; padding: 3px 8px; border-radius: 10px; font-size: 11px; font-weight: 700;">• ${c}</span>`).join(' ') : '';
+
   content.innerHTML = `
-    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
-      <span class="phase-tag ${m.cat}">${m.phase}</span>
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+      <div>
+        <span class="phase-tag ${m.cat}">${m.phase}</span>
+        <span style="font-size: 12px; font-weight: 800; color: var(--kitty-hotpink); margin-left: 8px;">⏱️ Clase de 1 Hora (${m.duration || '45-75 min'})</span>
+      </div>
       <button class="btn ${isCompleted ? 'btn-secondary' : 'btn-primary'}" onclick="toggleModuleCompletion('${m.id}'); closeModal();">
-        <i class="fa-solid ${isCompleted ? 'fa-rotate-left' : 'fa-heart'}"></i> ${isCompleted ? 'Marcar Pendiente' : 'Completado con Éxito 💕 (+100 XP)'}
+        <i class="fa-solid ${isCompleted ? 'fa-rotate-left' : 'fa-heart'}"></i> ${isCompleted ? 'Marcar Pendiente' : 'Clase Completada 💕 (+100 XP)'}
       </button>
     </div>
 
-    <h2 style="font-size: 24px; margin-bottom: 12px; color: var(--kitty-hotpink); font-weight: 900;">${m.title}</h2>
-    <p style="color: var(--text-muted); font-size: 15px; margin-bottom: 20px; font-weight: 600;">${m.summary}</p>
+    <h2 style="font-size: 24px; margin-bottom: 8px; color: var(--kitty-hotpink); font-weight: 900;">${m.title}</h2>
+    <div style="margin-bottom: 16px; display: flex; flex-wrap: wrap; gap: 4px;">
+      ${conceptsList}
+    </div>
+    <p style="color: var(--text-muted); font-size: 14px; margin-bottom: 20px; font-weight: 600;">${m.summary}</p>
 
-    <!-- PASO 1: PROPOSITO Y ENTREGABLE -->
-    <div style="background: linear-gradient(135deg, #fff0f5, #fce4ec); border: 2px solid #ff4081; padding: 20px; border-radius: 18px; margin-bottom: 20px;">
-      <h3 style="color: #ff1493; font-size: 16px; font-weight: 900; margin-bottom: 8px; display: flex; align-items: center; gap: 8px;">
-        <i class="fa-solid fa-bullseye"></i> Paso 1: Objetivo & Entregable Tangible
-      </h3>
-      <p style="color: #3c1a26; font-size: 14px; font-weight: 700; line-height: 1.6; margin-bottom: 12px;">${m.purpose}</p>
-      
-      <div style="background-color: #ffffff; border: 2px solid #ff1493; padding: 14px; border-radius: 14px;">
-        <h4 style="color: #ff1493; font-size: 14px; font-weight: 900; margin-bottom: 4px;">
-          <i class="fa-solid fa-flag-checkered"></i> ${m.deliverable}
-        </h4>
+    <!-- PARTE 1: INTRODUCCIÓN Y CAPACIDAD FINAL (5 MIN) -->
+    <div class="class-part-card" style="border-color: #ff4081; background: linear-gradient(135deg, #fff0f5, #fce4ec);">
+      <div class="class-part-header">
+        <span class="class-part-title"><i class="fa-solid fa-flag-checkered"></i> PARTE 1 — INTRODUCCIÓN & CAPACIDAD A LOGRAR</span>
+        <span class="time-badge">5 MIN</span>
+      </div>
+      <p style="font-size: 13px; color: var(--text-dark); font-weight: 600; margin-bottom: 8px;">${m.intro || ''}</p>
+      <div style="background: #ffffff; border: 2px solid #ff1493; padding: 12px; border-radius: 12px;">
+        <h4 style="color: #ff1493; font-size: 13px; font-weight: 900;">${m.capability}</h4>
       </div>
     </div>
 
-    <!-- PASO 2: ANALOGIA COTIDIANA -->
-    <div style="background-color: #fffdfd; border: 2px solid #f8bbd0; padding: 18px; border-radius: 16px; margin-bottom: 20px;">
-      <h3 style="color: var(--kitty-hotpink); font-size: 16px; margin-bottom: 6px;"><i class="fa-solid fa-lightbulb"></i> Paso 2: Analogía Cotidiana desde Cero</h3>
-      <p style="color: var(--text-dark); font-weight: 600; font-size: 14px;">${m.analogy}</p>
+    <!-- PARTE 2: CONCEPTOS RELACIONADOS Y ANALOGÍA (15 MIN) -->
+    <div class="class-part-card">
+      <div class="class-part-header">
+        <span class="class-part-title"><i class="fa-solid fa-lightbulb"></i> PARTE 2 — CONCEPTOS RELACIONADOS & ANALOGÍA</span>
+        <span class="time-badge">15 MIN</span>
+      </div>
+      <div style="background-color: #fffdfd; border: 1px solid #f8bbd0; padding: 12px; border-radius: 12px; margin-bottom: 12px;">
+        <p style="color: var(--text-dark); font-weight: 600; font-size: 13px;">${m.analogy}</p>
+      </div>
+      <div style="color: var(--text-dark); font-weight: 500; font-size: 13px; white-space: pre-wrap; line-height: 1.6;">${m.theory}</div>
     </div>
 
-    <!-- PASO 3: EXPLICACIÓN TEÓRICA -->
-    <div style="background-color: #fffdfd; border: 2px solid #f8bbd0; padding: 20px; border-radius: 16px; margin-bottom: 20px;">
-      <h3 style="color: var(--kitty-hotpink); font-size: 16px; margin-bottom: 8px;"><i class="fa-solid fa-book-open"></i> Paso 3: Explicación y Conceptos Clave</h3>
-      <div style="color: var(--text-dark); font-weight: 500; font-size: 14px; white-space: pre-wrap; line-height: 1.6;">${m.step1_theory}</div>
+    <!-- PARTE 3: EJEMPLO GUIADO CON EL PROFESOR (10 MIN) -->
+    <div class="class-part-card">
+      <div class="class-part-header">
+        <span class="class-part-title"><i class="fa-solid fa-chalkboard-user"></i> PARTE 3 — EJEMPLO GUIADO CON EL PROFESOR</span>
+        <span class="time-badge">10 MIN</span>
+      </div>
+      <p style="font-size: 13px; color: var(--text-dark); font-weight: 600; margin-bottom: 8px;">${m.business_case || ''}</p>
+      <div class="code-block">${m.code_example || m.step3_code}</div>
     </div>
 
-    <!-- PASO 4: CASO DE NEGOCIO DATACALL -->
-    <div style="background-color: #fffdfd; border: 2px solid #f8bbd0; padding: 18px; border-radius: 16px; margin-bottom: 20px;">
-      <h3 style="color: var(--kitty-hotpink); font-size: 16px; margin-bottom: 6px;"><i class="fa-solid fa-briefcase"></i> Paso 4: ¿Cómo funciona en el Call Center DataCall?</h3>
-      <p style="color: var(--text-dark); font-weight: 600; font-size: 14px;">${m.step2_business}</p>
-    </div>
-
-    <!-- PASO 5: CODIGO Y SINTAXIS -->
-    <div style="margin-bottom: 20px;">
-      <h3 style="color: var(--kitty-hotpink); font-size: 16px; margin-bottom: 6px;"><i class="fa-solid fa-code"></i> Paso 5: Código / Sintaxis de Ejemplo</h3>
-      <div class="code-block">${m.step3_code}</div>
-    </div>
-
-    <!-- PASO 6: EJERCICIO GUIADO -->
-    <div style="background-color: #fff8fa; border: 2px solid #f8bbd0; padding: 20px; border-radius: 16px; margin-bottom: 20px;">
-      <h3 style="color: var(--kitty-hotpink); font-size: 16px; margin-bottom: 10px;"><i class="fa-solid fa-list-check"></i> Paso 6: Instrucciones Guiadas Paso a Paso (¡Hazlo Ahora!)</h3>
-      <ol style="padding-left: 20px; color: var(--text-dark); font-weight: 600; font-size: 14px;">
-        ${guidedStepsHtml}
-      </ol>
-    </div>
-
-    <!-- PASO 7: EJERCICIO INDEPENDIENTE -->
-    <div style="background-color: #fffdfd; border: 2px solid #f8bbd0; padding: 18px; border-radius: 16px; margin-bottom: 20px;">
-      <h3 style="color: var(--kitty-hotpink); font-size: 16px; margin-bottom: 6px;"><i class="fa-solid fa-user-pen"></i> Paso 7: Ejercicio Independiente para Julieth</h3>
-      <p style="color: var(--text-dark); font-weight: 600; font-size: 14px; margin-bottom: 10px;">${m.step5_individual}</p>
+    <!-- PARTE 4: PRÁCTICA EN VIVO Y EJERCICIOS (15 MIN) -->
+    <div class="class-part-card">
+      <div class="class-part-header">
+        <span class="class-part-title"><i class="fa-solid fa-laptop-code"></i> PARTE 4 — PRÁCTICA EN VIVO & EJERCICIOS</span>
+        <span class="time-badge">15 MIN</span>
+      </div>
       
-      <button class="btn btn-secondary" onclick="toggleSolution('sol-${m.id}')" style="font-size: 12px; padding: 6px 14px;">
-        <i class="fa-solid fa-eye"></i> Revelar / Ocultar Pista y Solución
-      </button>
-      <div id="sol-${m.id}" style="display: none; margin-top: 10px; background-color: #e8f5e9; color: #1b5e20; padding: 12px; border-radius: 10px; font-size: 13px; font-weight: 600;">
-        <strong>Solución Paso a Paso:</strong><br>${m.solution_individual}
+      <div style="margin-bottom: 14px;">
+        <h4 style="color: var(--kitty-hotpink); font-size: 13px; font-weight: 800; margin-bottom: 6px;">📝 Paso a Paso Guiado:</h4>
+        <ol style="padding-left: 20px; color: var(--text-dark); font-weight: 600; font-size: 13px;">
+          ${guidedStepsHtml}
+        </ol>
+      </div>
+
+      <div style="background-color: #fffdfd; border: 1px solid #f8bbd0; padding: 14px; border-radius: 12px;">
+        <h4 style="color: var(--kitty-hotpink); font-size: 13px; font-weight: 800; margin-bottom: 4px;">✏️ Ejercicio Independiente:</h4>
+        <p style="color: var(--text-dark); font-weight: 600; font-size: 13px; margin-bottom: 8px;">${m.individual_practice}</p>
+        <button class="btn btn-secondary" onclick="toggleSolution('sol-${m.id}')" style="font-size: 11px; padding: 4px 10px;">
+          <i class="fa-solid fa-eye"></i> Ver Pista y Solución Paso a Paso
+        </button>
+        <div id="sol-${m.id}" style="display: none; margin-top: 8px; background-color: #e8f5e9; color: #1b5e20; padding: 10px; border-radius: 8px; font-size: 12px; font-weight: 600;">
+          <strong>Solución Paso a Paso:</strong><br>${m.solution_practice}
+        </div>
       </div>
     </div>
 
-    <!-- PASO 8: QUIZ INTERACTIVO -->
+    <!-- PARTE 5: RETO PRÁCTICO DE NEGOCIO (10 MIN) -->
+    <div class="class-part-card" style="border-color: #ffe082; background-color: #fff8e1;">
+      <div class="class-part-header">
+        <span class="class-part-title" style="color: #f57f17;"><i class="fa-solid fa-trophy"></i> PARTE 5 — RETO PRÁCTICO DE NEGOCIO</span>
+        <span class="time-badge" style="background-color: #f57f17;">10 MIN</span>
+      </div>
+      <p style="color: #5d4037; font-weight: 700; font-size: 13px;">${m.challenge}</p>
+    </div>
+
+    <!-- PARTE 6: EVALUACIÓN AUTÓNOMA Y QUIZ (5 MIN) -->
     ${m.quiz_question ? `
-      <div style="background-color: #fff0f5; border: 2px solid #ff4081; padding: 20px; border-radius: 16px; margin-bottom: 20px;">
-        <h3 style="color: #ff1493; font-size: 16px; margin-bottom: 8px;"><i class="fa-solid fa-circle-question"></i> Paso 8: Quiz de Comprobación Autónoma</h3>
-        <p style="color: #3c1a26; font-weight: 700; font-size: 14px; margin-bottom: 12px;">${m.quiz_question}</p>
-        <div style="display: flex; flex-direction: column; gap: 8px;">
+      <div class="class-part-card" style="border-color: #ff4081; background-color: #fff0f5;">
+        <div class="class-part-header">
+          <span class="class-part-title" style="color: #ff1493;"><i class="fa-solid fa-circle-question"></i> PARTE 6 — EVALUACIÓN AUTÓNOMA</span>
+          <span class="time-badge">5 MIN</span>
+        </div>
+        <p style="color: #3c1a26; font-weight: 700; font-size: 13px; margin-bottom: 10px;">${m.quiz_question}</p>
+        <div style="display: flex; flex-direction: column; gap: 6px;">
           ${quizOptionsHtml}
         </div>
-        <div id="quiz-feedback-${m.id}" style="margin-top: 12px; display: none;"></div>
+        <div id="quiz-feedback-${m.id}" style="margin-top: 10px; display: none;"></div>
       </div>
     ` : ''}
 
-    <!-- PASO 9: RETO DEL MODULO Y ERRORES A RECORDAR -->
-    <div style="background-color: #fff8e1; padding: 18px; border-radius: 16px; border: 1px solid #ffe082; margin-bottom: 20px;">
-      <h3 style="color: #f57f17; font-size: 16px; margin-bottom: 6px;"><i class="fa-solid fa-trophy"></i> Paso 9: Reto Final & Puntos a Recordar</h3>
-      <p style="color: #5d4037; font-weight: 700; font-size: 14px; margin-bottom: 8px;">${m.challenge}</p>
-      <div style="margin-top: 8px; background-color: #ffebee; padding: 10px; border-radius: 8px; color: #b71c1c; font-size: 12px; font-weight: 700;">
-        ⚠️ Errores comunes a evitar: ${m.commonErrors}
+    <!-- PARTE 7: CIERRE & VOCABULARIO EN INGLÉS (5 MIN) -->
+    <div class="class-part-card" style="border-color: #81d4fa; background-color: #e1f5fe;">
+      <div class="class-part-header">
+        <span class="class-part-title" style="color: #0277bd;"><i class="fa-solid fa-language"></i> PARTE 7 — CIERRE & VOCABULARIO EN INGLÉS</span>
+        <span class="time-badge" style="background-color: #0277bd;">5 MIN</span>
       </div>
-    </div>
-
-    <!-- PASO 10: VOCABULARIO TECNICO EN INGLES -->
-    ${m.english_vocab ? `
-      <div style="background-color: #e1f5fe; border: 2px solid #0288d1; padding: 20px; border-radius: 16px; margin-bottom: 20px;">
-        <h3 style="color: #0277bd; font-size: 16px; margin-bottom: 10px;"><i class="fa-solid fa-language"></i> Paso 10: Vocabulario Técnico en Inglés de la Clase</h3>
+      <p style="color: #01579b; font-weight: 700; font-size: 12px; margin-bottom: 8px;">
+        ⚠️ <strong>Puntos a Recordar:</strong> ${m.common_errors || 'Revisa tus ejercicios antes de cerrar.'}
+      </p>
+      ${m.english_vocab ? `
+        <h4 style="color: #0277bd; font-size: 12px; font-weight: 800; margin-bottom: 6px;">Fichas de Vocabulario en Inglés de la Clase:</h4>
         <div class="vocab-grid">
           ${englishVocabHtml}
         </div>
-      </div>
-    ` : ''}
+      ` : ''}
+    </div>
   `;
 
   modal.style.display = 'flex';
@@ -2379,14 +1541,14 @@ function checkQuizAnswer(moduleId, selectedIdx, correctIdx) {
   fb.style.display = 'block';
   if (selectedIdx === correctIdx) {
     fb.innerHTML = `
-      <div style="background-color: #e8f5e9; color: #2e7d32; padding: 12px; border-radius: 10px; font-weight: 800; font-size: 13px;">
-        🎉 ¡Correcto Julieth hermosa! Has entendido el concepto a la perfección (+50 XP).
+      <div style="background-color: #e8f5e9; color: #2e7d32; padding: 10px; border-radius: 8px; font-weight: 800; font-size: 12px;">
+        🎉 ¡Correcto Julieth hermosa! Has entendido los conceptos de la clase a la perfección (+50 XP).
       </div>
     `;
   } else {
     fb.innerHTML = `
-      <div style="background-color: #ffebee; color: #c62828; padding: 12px; border-radius: 10px; font-weight: 700; font-size: 13px;">
-        💡 ¡Casi! Inténtalo de nuevo o repasa el Paso 3 para ver la respuesta.
+      <div style="background-color: #ffebee; color: #c62828; padding: 10px; border-radius: 8px; font-weight: 700; font-size: 12px;">
+        💡 ¡Casi! Inténtalo de nuevo o repasa la Parte 2 para ver la respuesta.
       </div>
     `;
   }
